@@ -34,7 +34,7 @@ DEP := $(OBJ:.o=.d)
 DEPFLAGS := -MMD -MP
 
 CFLAGS := -g -O0 -Wall -Wextra -Iinclude $(DEPFLAGS)
-LDFLAGS :=
+LDFLAGS := -lglfw -lGL
 
 # ====================================================
 # Outputs (same names)
