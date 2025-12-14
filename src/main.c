@@ -1,29 +1,26 @@
 #include <fireset/fireset.h>
-
 #include <GLFW/glfw3.h>
 
+void loop(){
+    
+}
+
 int main(void){
-    // inits glfw
-    if (!glfwInit()) return 1;
+    // inits engine
+    if (!fsInit()) return 1;
 
     // creates window
     FsWindow window;
     window.w = 640;
     window.h = 480;
     window.name = "Example Game";
-
     fsCreateWindow(&window);
 
     // main loop
-    while (!glfwWindowShouldClose(window.handle)){
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    fsMainLoop(&window, loop);
 
-        // render here
-
-        glfwSwapBuffers(window.handle);
-        glfwPollEvents();
-    }
-
-    glfwTerminate();
+    // destroy window and closes engine
+    fsDestroyWindow(&window);
+    fsExit();
     return 0;
 }

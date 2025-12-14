@@ -10,3 +10,7 @@ typedef struct{
 }FsWindow;
 
 FsWindow* fsCreateWindow(FsWindow* window);
+
+static inline void fsDestroyWindow(FsWindow* window){
+    glfwDestroyWindow(window->handle);
+}
