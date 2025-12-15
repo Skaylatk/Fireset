@@ -14,7 +14,7 @@ RM := rm -rf
 # Sources
 # ====================================================
 SRC := $(shell find src -name "*.c")
-LIB_SRC := $(filter-out src/main.c,$(SRC))  # <-- remove main.c da lib
+LIB_SRC := $(filter-out src/main.c,$(SRC))
 
 # ====================================================
 # Build dirs (default = debug)
@@ -25,7 +25,7 @@ BUILD_DIR := build/debug
 # Objects
 # ====================================================
 OBJ := $(patsubst src/%.c,$(BUILD_DIR)/%.o,$(SRC))
-LIB_OBJ := $(patsubst src/%.c,$(BUILD_DIR)/%.o,$(LIB_SRC))  # <-- objetos da lib
+LIB_OBJ := $(patsubst src/%.c,$(BUILD_DIR)/%.o,$(LIB_SRC))
 DEP := $(OBJ:.o=.d)
 
 # ====================================================
@@ -34,7 +34,7 @@ DEP := $(OBJ:.o=.d)
 DEPFLAGS := -MMD -MP
 
 CFLAGS := -g -O0 -Wall -Wextra -Iinclude $(DEPFLAGS)
-LDFLAGS := -lglfw -lGL
+LDFLAGS := -lglfw -lGL -lm
 
 # ====================================================
 # Outputs (same names)

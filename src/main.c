@@ -16,17 +16,11 @@ int main(void){
     window.name = "Example Game";
     fsCreateWindow(&window);
 
-    FsVec2 vertices[3] = {
-        {260, 270},
-        {360, 270},
-        {310, 170}
-    };
-
     // main loop
     while (!fsWindowShouldClose(window)){
-        fsClear(0, 0, 0);
+        fsClear((FsColor){0, 0, 0});
 
-        fsDrawTriangle(vertices, (FsColor){255, 128, 0});
+        // render here
 
         fsHandleWindow(&window);
     }
