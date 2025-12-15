@@ -1,3 +1,7 @@
+// this file is just for internal testing, its not important for the engine
+// but needed for compiling, you can just left it as it is or use as
+// example for using the engine, or even to test modifications on the library.
+
 #include <fireset/fireset.h>
 
 int main(void){
