@@ -1,6 +1,6 @@
 // this file is just for internal testing, its not important for the engine
-// but needed for compiling, you can just left it as it is or use as
-// example for using the engine, or even to test modifications on the library.
+// but needed for compiling, you can just left it as is or use as
+// example for using the engine, or even to test modifications on the engine.
 
 #include <fireset/fireset.h>
 
@@ -14,19 +14,19 @@ int main(void){
     window.height = 480;
     window.name = "Example Game";
     fsCreateWindow(&window);
+    fsSetOrtho(window.width, window.height);
 
-    FsVec2f vertices[4] = {
-        {-0.5f, -0.5f },
-        { 0.5f, -0.5f },
-        { 0.5f,  0.5f },
-        {-0.5f,  0.5f }
+    FsVec2 vertices[3] = {
+        {100, 100},
+        {200, 100},
+        {150, 200}
     };
 
     // main loop
     while (!fsWindowShouldClose(window)){
         fsClear(0, 0, 0);
 
-        fsDrawQuad(vertices);
+        fsDrawTriangle(vertices);
 
         fsHandleWindow(&window);
     }

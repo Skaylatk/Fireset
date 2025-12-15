@@ -3,10 +3,10 @@
 typedef struct{
     float x;
     float y;
-}FsVec2f;
+}FsVec2;
 
 typedef struct{
     float x;
     float y;
     float z;
-}FsVec3f;
+}FsVec3;
