@@ -1,11 +1,18 @@
 #include "fireset/render.h"
 
-void fsDrawTriangle(const FsVec2* vertices){
-    glColor3f(1.0f, 1.0f, 1.0f);
+void fsDrawTriangle(const FsVec2* vertices, FsColor color){
+    glColor3f(color.r / 255.0f, color.g / 255.0f, color.b / 255.0f);
     glBegin(GL_TRIANGLES);
         glVertex2f(vertices[0].x, vertices[0].y);
         glVertex2f(vertices[1].x, vertices[1].y);
         glVertex2f(vertices[2].x, vertices[2].y);
+    glEnd();
+}
+
+void fsDrawPixel(const FsVec2 pos, FsColor color){
+    glColor3f(color.r / 255.0f, color.g / 255.0f, color.b / 255.0f);
+    glBegin(GL_POINT);
+        glVertex2f(pos.x, pos.y);
     glEnd();
 }
 

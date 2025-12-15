@@ -3,6 +3,7 @@
 // example for using the engine, or even to test modifications on the engine.
 
 #include <fireset/fireset.h>
+#include <stdio.h>
 
 int main(void){
     // inits engine
@@ -14,19 +15,18 @@ int main(void){
     window.height = 480;
     window.name = "Example Game";
     fsCreateWindow(&window);
-    fsSetOrtho(window.width, window.height);
 
     FsVec2 vertices[3] = {
-        {100, 100},
-        {200, 100},
-        {150, 200}
+        {260, 270},
+        {360, 270},
+        {310, 170}
     };
 
     // main loop
     while (!fsWindowShouldClose(window)){
         fsClear(0, 0, 0);
 
-        fsDrawTriangle(vertices);
+        fsDrawTriangle(vertices, (FsColor){255, 128, 0});
 
         fsHandleWindow(&window);
     }
