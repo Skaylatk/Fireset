@@ -10,8 +10,9 @@ FsWindow* fsCreateWindow(FsWindow* window){
         return window;
     }
 
-    // sets context
+    // sets context and viewport
     glfwMakeContextCurrent(window->handle);
+    glViewport(0, 0, window->width, window->height);
 
     // enables depth test for 3D
     glEnable(GL_DEPTH_TEST);
@@ -19,8 +20,7 @@ FsWindow* fsCreateWindow(FsWindow* window){
     return window;
 }
 
-void fsHandleWindow(FsWindow window){
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glfwSwapBuffers(window.handle);
+void fsHandleWindow(FsWindow* window){
+    glfwSwapBuffers(window->handle);
     glfwPollEvents();
 }
