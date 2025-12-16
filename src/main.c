@@ -11,16 +11,27 @@ int main(void){
 
     // creates window
     FsWindow window;
-    window.width = 640;
-    window.height = 480;
+    window.width = 800;
+    window.height = 600;
     window.name = "Example Game";
     fsCreateWindow(&window);
+
+    FsVec2 vertices[4] = {
+        {300, 400},
+        {500, 400},
+        {500, 200},
+        {300, 200},
+    };
+
+    FsColor color = {255, 128, 0};
+
+    int i = 1;
 
     // main loop
     while (!fsWindowShouldClose(window)){
         fsClear((FsColor){0, 0, 0});
 
-        // render here
+        fsDrawQuad(vertices, color);
 
         fsHandleWindow(&window);
     }
