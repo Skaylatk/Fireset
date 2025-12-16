@@ -3,6 +3,11 @@
 #include <GLFW/glfw3.h>
 #include <stdbool.h>
 
+/** 
+ * @defgroup Window
+ * @{
+ */
+
 typedef struct{
     GLFWwindow* handle;
     int width;
@@ -20,3 +25,5 @@ static inline void fsDestroyWindow(FsWindow* window){
 static inline bool fsWindowShouldClose(FsWindow window){
     return glfwWindowShouldClose(window.handle);
 }
+
+/** @} */

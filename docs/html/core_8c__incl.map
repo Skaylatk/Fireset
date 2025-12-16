@@ -1,0 +1,13 @@
+<map id="src/core.c" name="src/core.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="79,5,162,33"/>
+<area shape="rect" id="Node000002" href="$core_8h.html" title=" " alt="" coords="67,81,174,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,31,123,66,118,65,120,36"/>
+<area shape="rect" id="Node000003" href="$window_8h.html" title=" " alt="" coords="57,157,184,184"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="122,107,123,142,118,140,119,112"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,232,116,260"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="92,111,68,131,47,158,43,172,43,188,50,219,45,219,37,188,37,172,42,155,65,127,95,107"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="160,232,241,260"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="147,107,176,127,199,155,208,187,207,219,203,216,202,187,194,158,172,131,146,112"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="112,184,83,222,79,218,107,186"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="136,182,178,221,172,222,134,187"/>
+</map>

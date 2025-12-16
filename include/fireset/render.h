@@ -4,6 +4,11 @@
 #include "stdint.h"
 #include "fireset/vertex.h"
 
+/** 
+ * @defgroup Render
+ * @{
+ */
+
 typedef struct{
     uint8_t r, g, b;
 }FsColor;
@@ -16,3 +21,5 @@ void fsDrawCircle(FsVec2 center, int radius, int segments, FsColor color);
 void fsDrawPolygon(const FsVec2* vertices, int count, FsColor color);
 void fsSetOrtho(int width, int height);
 void fsClear(FsColor color);
+
+/** @} */

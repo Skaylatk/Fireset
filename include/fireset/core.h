@@ -5,13 +5,12 @@
 #include <GLFW/glfw3.h>
 #include <stdbool.h>
 
-static inline bool fsInit(){
-    if(!glfwInit()) return false;
-    return true;
-}
+/** 
+ * @defgroup Core Core
+ * @{
+ */
 
-static inline void fsExit(){
-    glfwTerminate();
-}
+inline bool fsInit();
+inline void fsExit();
 
-void fsMainLoop(FsWindow* window, void (*f)(void));
+/** @} */

@@ -1,5 +1,10 @@
 #pragma once
 
+/** 
+ * @defgroup Vertex
+ * @{
+ */
+
 typedef struct{
     float x;
     float y;
@@ -10,3 +15,5 @@ typedef struct{
     float y;
     float z;
 }FsVec3;
+
+/** @} */
