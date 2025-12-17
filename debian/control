@@ -3,7 +3,7 @@ Version: 0.1.0
 Section: libdevel
 Priority: optional
 Architecture: amd64
-Depends: libc6-dev
+Depends: libglfw3-dev
 Maintainer: Henrique <hiqkrs@gmail.com>
 Description: Fireset Engine
  Retro C Game Engine
