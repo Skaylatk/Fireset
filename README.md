@@ -3,7 +3,6 @@
 ---
 
 ![Static Badge](https://img.shields.io/badge/Language%20-%20C%20-%20rgb(50%2C%2050%2C%20255))
-![GitHub Downloads](https://img.shields.io/github/downloads/saintsHr/Fireset/total)
 ![GitHub License](https://img.shields.io/github/license/saintsHr/Fireset)
 ![GitHub Release](https://img.shields.io/github/v/release/saintsHr/Fireset)
 
