@@ -3,7 +3,7 @@
 
 #include <stdbool.h>
 
-void fsFramebufferSizeCallback(GLFWwindow* window, int width, int height){
+static void fsFramebufferSizeCallback(GLFWwindow* window, int width, int height){
     glViewport(0, 0, width, height);
     fsSetOrtho(width, height);
 }
@@ -36,4 +36,12 @@ void fsHandleWindow(FsWindow* window){
     glfwGetWindowSize(window->handle, &window->width, &window->height);
     glfwSwapBuffers(window->handle);
     glfwPollEvents();
+}
+
+void fsDestroyWindow(FsWindow* window){
+    glfwDestroyWindow(window->handle);
+}
+
+bool fsWindowShouldClose(FsWindow window){
+    return glfwWindowShouldClose(window.handle);
 }
