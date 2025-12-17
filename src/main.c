@@ -3,7 +3,6 @@
 // example for using the engine, or even to test modifications on the engine.
 
 #include <fireset/fireset.h>
-#include <stdio.h>
 
 int main(void){
     // inits engine
@@ -16,20 +15,11 @@ int main(void){
     window.name = "Example Game";
     fsCreateWindow(&window);
 
-    FsVec2 vertices[4] = {
-        {300, 400},
-        {500, 400},
-        {500, 200},
-        {300, 200},
-    };
-
-    FsColor color = {255, 128, 0};
-
     // main loop
     while (!fsWindowShouldClose(window)){
         fsClear((FsColor){0, 0, 0});
 
-        fsDrawQuad(vertices, color);
+        // render here
 
         fsHandleWindow(&window);
     }

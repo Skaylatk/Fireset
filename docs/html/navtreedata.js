@@ -28,6 +28,7 @@ var NAVTREE =
     [ "Introduction", "index.html#Introduction", null ],
     [ "Installing", "index.html#Installing", null ],
     [ "Compiling", "index.html#Compiling", null ],
+    [ "Quickstart", "index.html#Quickstart", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

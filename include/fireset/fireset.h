@@ -45,10 +45,17 @@
  * This guide is for those who want to compile the engine by hand,
  * we do not recommend \n doing this for normal usage, anyways, heres the
  * step-by-step guide:
+ * - Install the dependencies:
+ *  - OpenGL Immediate Mode (3.3 or less)
+ *  - GLFW
  * - Go to https://github.com/saintsHr/Fireset
  * - Press de "Code" button
  * - Click "Download ZIP"
  * - Extract it
+ * - Now you should see some folders, like:
+ *  - **src**, source files (.c)
+ *  - **include**, header files (.h)
+ *  - etc.
  * - Open your terminal in that folder
  * - for a debug version, run:
  * ```bash
@@ -66,6 +73,57 @@
  * ```bash
  * make clean
  * ```
+ * - now you should see 3 extra folders: \n
+ *  - **bin**: contains the test executable \n
+ *  - **build**: contains the object (.o) and dependencies files (.d) \n
+ *  - **lib**: contains the compiled engine (.a)
+ * - done, you have compiled the engine!
+ * 
+ * ---
+ * 
+ * \section Quickstart
+ * This guide is for those in urge to have a window as fast as possible, \n
+ * so heres a simple example:
+ * 
+ * ```c
+ *  #include <fireset/fireset.h>
+ *
+ *  int main(void){
+ *      // inits engine
+ *      if (!fsInit()) return 1;
+ * 
+ *      // creates window
+ *      FsWindow window;
+ *      window.width = 800;
+ *      window.height = 600;
+ *      window.name = "Example Game";
+ *      fsCreateWindow(&window);
+ * 
+ *      // main loop
+ *      while (!fsWindowShouldClose(window)){
+ *          fsClear((FsColor){0, 0, 0});
+ * 
+ *          // render here
+ * 
+ *          fsHandleWindow(&window);
+ *      }
+ * 
+ *      // destroy window and closes engine
+ *      fsDestroyWindow(&window);
+ *      fsExit();
+ *      return 0;
+ *  }
+ * ```
+ * This code:
+ * - opens a window
+ * - loops until you close it
+ * - then shutdowns the engine
+ * 
+ * The engine can do much more than it, so take a time to explore it!
+ * 
+ * Used modules:
+ * - \ref Core
+ * - \ref Window 
  * 
  * ---
  */
