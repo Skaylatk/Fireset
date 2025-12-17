@@ -1,0 +1,10 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: fireset
+Description: Fireset Engine
+Version: 0.1.0
+Libs: -lfireset
+Cflags: -I${includedir}/fireset

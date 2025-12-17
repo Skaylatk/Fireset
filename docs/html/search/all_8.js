@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['width_0',['width',['../structFsWindow.html#a6cc5523b876ea62bc17df2b5bbe9b3ff',1,'FsWindow']]],
-  ['window_1',['Window',['../group__Window.html',1,'']]]
+  ['r_0',['r',['../structFsColor.html#aa0b150b1eb57041cabc37cf85f3088f0',1,'FsColor']]],
+  ['render_1',['Render',['../group__Render.html',1,'']]]
 ];

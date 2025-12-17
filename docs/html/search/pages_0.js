@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fireset_0',['Fireset',['../index.html',1,'']]]
+  ['debian_3a_0',['Debian:',['../index.html#autotoc_md2',1,'']]]
 ];

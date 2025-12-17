@@ -23,7 +23,28 @@
  * ---
  * 
  * \section Installing
- * To install Fireset Engine, you can follow this step-by-step guide:
+ * ### Debian:
+ * - go to https://github.com/saintsHr/Fireset
+ * - go to Releases tab and install the latest stable release
+ * - install your .deb:
+ * ```bash
+ * sudo apt install ./fireset-dev_<version>_amd64.deb
+ * ```
+ * - now use those flags in your compilation:
+ * ```bash
+ * -Ifireset -lfireset
+ * ```
+ * or:
+ * ```bash
+ * $(pkg-config --cflags --libs fireset)
+ * ```
+ * - and this line in your source files:
+ * ```c
+ * #include <fireset/fireset.h>
+ * ```
+ * - done, now you're ready to go!
+ * 
+ * ### Manual:
  * - go to https://github.com/saintsHr/Fireset
  * - go to Releases tab and install the latest stable release
  * - extract your .zip
@@ -31,7 +52,7 @@
  * - move those to any place you like
  * - now use those flags in your compilation:
  * ```bash
- * -Lpath/to/lib/folder -lfireset -ipath/to/include/folder
+ * -Lpath/to/lib/folder -lfireset -Ipath/to/include/folder
  * ```
  * - and this line in your source files:
  * ```c
@@ -68,6 +89,10 @@
  * - to compile the docs, run:
  * ```bash
  * make doc
+ * ```
+ * - to compile the .deb, run:
+ * ```bash
+ * make deb
  * ```
  * - to remove build files, run:
  * ```bash

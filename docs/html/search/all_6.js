@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['r_0',['r',['../structFsColor.html#aa0b150b1eb57041cabc37cf85f3088f0',1,'FsColor']]],
-  ['render_1',['Render',['../group__Render.html',1,'']]]
+  ['manual_3a_0',['Manual:',['../index.html#autotoc_md3',1,'']]]
 ];

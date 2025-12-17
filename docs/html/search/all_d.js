@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_0',['x',['../structFsVec2.html#af9afe2cfd0a4eaf88f62565af112551c',1,'FsVec2::x'],['../structFsVec3.html#a80420e499423430ce24e73964a17eba6',1,'FsVec3::x']]]
+  ['z_0',['z',['../structFsVec3.html#afe191450fcbbdd780d9d9afa480c4481',1,'FsVec3']]]
 ];

@@ -1,9 +1,0 @@
-<map id="include/fireset/render.h" name="include/fireset/render.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="45,5,216,33"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,81,72,109"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,33,68,73,65,69,112,34"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="95,81,166,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="132,32,133,66,128,64,129,36"/>
-<area shape="rect" id="Node000004" href="$vertex_8h.html" title=" " alt="" coords="190,81,311,109"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="153,31,219,72,214,73,151,36"/>
-</map>

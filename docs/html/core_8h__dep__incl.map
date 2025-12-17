@@ -1,9 +1,0 @@
-<map id="include/fireset/core.h" name="include/fireset/core.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="86,5,244,33"/>
-<area shape="rect" id="Node000002" href="$fireset_8h.html" title=" " alt="" coords="5,81,176,109"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,46,106,82,102,79,143,42"/>
-<area shape="rect" id="Node000004" href="$core_8c.html" title=" " alt="" coords="200,81,283,109"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="190,41,230,80,225,81,189,46"/>
-<area shape="rect" id="Node000003" href="$main_8c.html" title=" " alt="" coords="46,157,135,184"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="92,123,93,157,88,155,89,126"/>
-</map>
