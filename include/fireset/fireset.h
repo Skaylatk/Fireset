@@ -41,5 +41,31 @@
  * 
  * ---
  * 
+ * \section Compiling
+ * This guide is for those who want to compile the engine by hand,
+ * we do not recommend \n doing this for normal usage, anyways, heres the
+ * step-by-step guide:
+ * - Go to https://github.com/saintsHr/Fireset
+ * - Press de "Code" button
+ * - Click "Download ZIP"
+ * - Extract it
+ * - Open your terminal in that folder
+ * - for a debug version, run:
+ * ```bash
+ * make
+ * ```
+ * - for a release version, run:
+ * ```bash
+ * make release
+ * ```
+ * - to compile the docs, run:
+ * ```bash
+ * make doc
+ * ```
+ * - to remove build files, run:
+ * ```bash
+ * make clean
+ * ```
  * 
+ * ---
  */
