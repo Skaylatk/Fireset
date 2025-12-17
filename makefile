@@ -91,4 +91,4 @@ $(BUILD_DIR)/%.o: src/%.c
 # Cleaning
 # ====================================================
 clean:
-	$(RM) build bin lib
+	$(RM) build bin lib docs
