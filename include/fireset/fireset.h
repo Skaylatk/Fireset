@@ -32,7 +32,7 @@
  * ```
  * - now use those flags in your compilation:
  * ```bash
- * -Ifireset -lfireset
+ * -Ifireset -lfireset -lglfw -lGL
  * ```
  * or:
  * ```bash
@@ -52,8 +52,10 @@
  * - move those to any place you like
  * - now use those flags in your compilation:
  * ```bash
- * -Lpath/to/lib/folder -lfireset -Ipath/to/include/folder
+ * -Lpath/to/lib/folder -lfireset -Ifireset -lfireset -lglfw -lGL -Ipath/to/include/folder
  * ```
+ * - if you get any linking errors related to OpenGL or GLFW, make sure you
+ * have it installed and also add a "-L" flag for those
  * - and this line in your source files:
  * ```c
  * #include <fireset/fireset.h>
