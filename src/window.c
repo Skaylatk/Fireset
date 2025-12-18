@@ -2,6 +2,7 @@
 #include "fireset/render.h"
 
 #include <stdbool.h>
+#include <stdio.h>
 
 static void fsFramebufferSizeCallback(GLFWwindow* window, int width, int height){
     glViewport(0, 0, width, height);

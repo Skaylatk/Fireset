@@ -16,9 +16,9 @@ void fsDrawTriangle(FsTriangle tri){
         );
 
         glBegin(GL_TRIANGLES);
-            glVertex2f(0.0f, 0.0f);
-            glVertex2f(1.0f, 0.0f);
-            glVertex2f(0.5f, 1.0f);
+            glVertex2f( 0.0f,    0.5f);
+            glVertex2f(-0.433f, -0.25f);
+            glVertex2f( 0.433f, -0.25f);
         glEnd();
     glPopMatrix();
 }
@@ -33,7 +33,7 @@ void fsDrawPixel(FsPoint p){
             p.color.b / 255.0f
         );
 
-        glBegin(GL_POINT);
+        glBegin(GL_POINTS);
             glVertex2f(0.0f, 0.0f);
         glEnd();
     glPopMatrix();
@@ -73,10 +73,10 @@ void fsDrawQuad(FsQuad quad){
         );
 
         glBegin(GL_QUADS);
-            glVertex2f(0, 0);
-            glVertex2f(1, 0);
-            glVertex2f(1, 1);
-            glVertex2f(0, 1);
+            glVertex2f(-0.5f, -0.5f);
+            glVertex2f(0.5f, -0.5f);
+            glVertex2f(0.5f, 0.5f);
+            glVertex2f(-0.5f, 0.5f);
         glEnd();
     glPopMatrix();
 }
@@ -98,11 +98,11 @@ void fsDrawCircle(FsCircle circle){
         );
 
         glBegin(GL_TRIANGLE_FAN);
-            glVertex2f(0.5f, 0.5f);
+            glVertex2f(0.0f, 0.0f);
             for(int i = 0; i <= segments; i++){
                 float theta = (float)i / (float)segments * 2.0f * PI;
-                float x = 0.5f + cosf(theta) * 0.5f;
-                float y = 0.5f + sinf(theta) * 0.5f;
+                float x = cosf(theta) * 0.5f;
+                float y = sinf(theta) * 0.5f;
                 glVertex2f(x, y);
             }
         glEnd();
