@@ -1,3 +1,10 @@
+fireset-dev (0.2.0) unstable; urgency=mid
+
+  * Added Transformations
+  * Added Objects API
+
+ -- Henrique <hiqkrs@gmail.com>  Thu, 18 Dec 2025 20:03:00 +0000
+
 fireset-dev (0.1.0) unstable; urgency=low
 
   * Initial release.
