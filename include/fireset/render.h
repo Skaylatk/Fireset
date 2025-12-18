@@ -87,19 +87,16 @@ typedef struct {
  * 
  * Draws a colored point/pixel on a specific position on the window.
  * 
- * @param pos The position to plot the pixel on the window.
- * @param color The color of the pixel to be plotted on the window.
+ * @param p Object to draw.
  */
 void fsDrawPixel(FsPoint p);
 
 /**
  * @brief Draws a line.
  * 
- * Draws a colored, 1 pixel width line between 2 points on the window.
+ * Draws a colored line between 2 points on the window.
  * 
- * @param p1 The first point used to draw the line.
- * @param p2 The second point used to draw the line.
- * @param color Color used to draw the line.
+ * @param line Object to draw.
  */
 void fsDrawLine(FsLine line);
 
@@ -108,8 +105,7 @@ void fsDrawLine(FsLine line);
  * 
  * Draws a colored triangle on the window.
  * 
- * @param vertices The 3 vertices used to draw the triangle.
- * @param color Color used to draw the triangle.
+ * @param tri Object to draw.
  */
 void fsDrawTriangle(FsTriangle tri);
 
@@ -118,8 +114,7 @@ void fsDrawTriangle(FsTriangle tri);
  * 
  * Draws a colored quadrilateral on the window.
  * 
- * @param vertices The 4 vertices used to draw the quadrilateral.
- * @param color Color used to draw the quadrilateral.
+ * @param quad Object to draw.
  */
 void fsDrawQuad(const FsQuad quad);
 
@@ -128,10 +123,7 @@ void fsDrawQuad(const FsQuad quad);
  * 
  * Draws a colored circle on the window.
  * 
- * @param center The center of the circle.
- * @param radius The radius of the circle.
- * @param segments The amount of segments used to draw the circle.
- * @param color Color used to draw the circle.
+ * @param circle Object to draw.
  */
 void fsDrawCircle(FsCircle circle);
 
