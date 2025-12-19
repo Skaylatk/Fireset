@@ -15,7 +15,6 @@ Thank you for your interest in contributing! Please follow these guidelines:
 3. **Testing**  
    - Test your changes locally.  
    - Ensure existing examples or test programs still compile and run.  
-   - Include new test code for added features when possible.
 
 4. **Pull Request**  
    - Push your changes to your fork.  
