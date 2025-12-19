@@ -107,9 +107,9 @@ Debian:</h3>
 <ul>
 <li>go to <a href="https://github.com/saintsHr/Fireset">https://github.com/saintsHr/Fireset</a></li>
 <li>go to Releases tab and install the latest stable release</li>
-<li>install your .deb: <div class="fragment"><div class="line">sudo apt install ./fireset-dev_&lt;version&gt;_amd64.deb</div>
+<li>install your .deb: <div class="fragment"><div class="line">sudo apt install ./fireset-dev.deb</div>
 </div><!-- fragment --></li>
-<li>now use those flags in your compilation: <div class="fragment"><div class="line">-Ifireset -lfireset -lglfw -lGL</div>
+<li>now use those flags in your compilation: <div class="fragment"><div class="line">-Ifireset -lfireset -lglfw -lGL -lm</div>
 </div><!-- fragment --> or: <div class="fragment"><div class="line">$(pkg-config --cflags --libs fireset)</div>
 </div><!-- fragment --></li>
 <li>and this line in your source files: <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fireset/fireset.h&gt;</span></div>
@@ -124,7 +124,7 @@ Manual:</h3>
 <li>extract your .zip</li>
 <li>now you should see the folder <b>lib</b> and also <b>include</b></li>
 <li>move those to any place you like</li>
-<li>now use those flags in your compilation: <div class="fragment"><div class="line">-Lpath/to/lib/folder -lfireset -Ifireset -lfireset -lglfw -lGL -lm -Ipath/to/include/folder</div>
+<li>now use those flags in your compilation: <div class="fragment"><div class="line">-Lpath/to/lib/folder -lfireset -lglfw -lGL -lm -Ipath/to/include/folder</div>
 </div><!-- fragment --></li>
 <li>if you get any linking errors related to OpenGL or GLFW, make sure you have it installed and also add a "-L" flag for those</li>
 <li>and this line in your source files: <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fireset/fireset.h&gt;</span></div>
