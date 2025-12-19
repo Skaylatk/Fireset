@@ -23,7 +23,6 @@ var searchData=
   ['fstimeinit_20',['fsTimeInit',['../group__Time.html#gadcaf98e33c05c790b1e8003de0a7aa68',1,'fsTimeInit(void):&#160;fstime.c'],['../group__Time.html#gadcaf98e33c05c790b1e8003de0a7aa68',1,'fsTimeInit(void):&#160;fstime.c']]],
   ['fstriangle_21',['FsTriangle',['../structFsTriangle.html',1,'']]],
   ['fsvec2_22',['FsVec2',['../structFsVec2.html',1,'']]],
-  ['fsvec3_23',['FsVec3',['../structFsVec3.html',1,'']]],
-  ['fswindow_24',['FsWindow',['../structFsWindow.html',1,'']]],
-  ['fswindowshouldclose_25',['fsWindowShouldClose',['../group__Window.html#ga5d85cbda490cad2e83322e8dce9f7d1f',1,'fsWindowShouldClose(FsWindow window):&#160;window.c'],['../group__Window.html#ga5d85cbda490cad2e83322e8dce9f7d1f',1,'fsWindowShouldClose(FsWindow window):&#160;window.c']]]
+  ['fswindow_23',['FsWindow',['../structFsWindow.html',1,'']]],
+  ['fswindowshouldclose_24',['fsWindowShouldClose',['../group__Window.html#ga5d85cbda490cad2e83322e8dce9f7d1f',1,'fsWindowShouldClose(FsWindow window):&#160;window.c'],['../group__Window.html#ga5d85cbda490cad2e83322e8dce9f7d1f',1,'fsWindowShouldClose(FsWindow window):&#160;window.c']]]
 ];

@@ -7,6 +7,5 @@ var searchData=
   ['fsquad_4',['FsQuad',['../structFsQuad.html',1,'']]],
   ['fstriangle_5',['FsTriangle',['../structFsTriangle.html',1,'']]],
   ['fsvec2_6',['FsVec2',['../structFsVec2.html',1,'']]],
-  ['fsvec3_7',['FsVec3',['../structFsVec3.html',1,'']]],
-  ['fswindow_8',['FsWindow',['../structFsWindow.html',1,'']]]
+  ['fswindow_7',['FsWindow',['../structFsWindow.html',1,'']]]
 ];

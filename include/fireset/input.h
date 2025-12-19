@@ -5,6 +5,12 @@
 
 #include "fireset/window.h"
 
+/**
+ * @brief Keys Enum.
+ * 
+ * keys enum used by the engine for most input
+ * related functions.
+ */
 typedef enum{
     FS_KEY_A = GLFW_KEY_A,
     FS_KEY_B = GLFW_KEY_B,
@@ -95,8 +101,49 @@ typedef enum{
     FS_KEY_KP_EQUAL    = GLFW_KEY_KP_EQUAL
 }FsKey;
 
+/**
+ * @brief Keyboard Update.
+ * 
+ * Updates the keyboard and keys states.
+ */
 void fsUpdateKeyboard(FsWindow* window);
+
+/**
+ * @brief Checks Key Just Pressed.
+ * 
+ * Checks if key has just pressed in the actual frame.
+ * 
+ * @retval true key just pressed.
+ * @retval false key already pressed.
+ */
 bool fsIsKeyJustPressed(FsKey key);
+
+/**
+ * @brief Checks Key Just Released.
+ * 
+ * Checks if key has just released in the actual frame.
+ * 
+ * @retval true key just released.
+ * @retval false key already released.
+ */
 bool fsIsKeyJustReleased(FsKey key);
+
+/**
+ * @brief Checks Key Down.
+ * 
+ * Checks if key is down.
+ * 
+ * @retval true key down.
+ * @retval false key up.
+ */
 bool fsIsKeyDown(FsKey key);
+
+/**
+ * @brief Checks Key Down.
+ * 
+ * Checks if key is down.
+ * 
+ * @retval true key up.
+ * @retval false key down.
+ */
 bool fsIsKeyUp(FsKey key);
