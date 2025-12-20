@@ -8,6 +8,7 @@
 #include <stdbool.h>
 
 #include "fireset/window.h"
+#include "fireset/vertex.h"
 
 /** 
  * @defgroup Input Input
@@ -165,5 +166,7 @@ bool fsIsKeyDown(FsKey key);
  * @retval false Key is not released.
  */
 bool fsIsKeyUp(FsKey key);
+
+FsVec2 fsGetCursorPos(const FsWindow* window);
 
 /** @} */

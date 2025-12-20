@@ -1,4 +1,9 @@
+// Copyright (c) 2025 Henrique Rodrigues Santos
+// Licensed under the MIT License
+// Repo: https://github.com/saintsHr/Fireset
+
 #include "fireset/input.h"
+#include "fireset/vertex.h"
 
 typedef struct{
     bool pressed;
@@ -33,4 +38,16 @@ bool fsIsKeyDown(FsKey key){
 
 bool fsIsKeyUp(FsKey key){
     return !(keys[key].pressed);
+}
+
+FsVec2 fsGetCursorPos(const FsWindow* window){
+    double x, y;
+
+    glfwGetCursorPos(window->handle, &x, &y);
+
+    float fx = (float)x;
+    float fy = (float)y;
+
+    FsVec2 vec = FsVec2_new(fx, fy);
+    return vec;
 }
