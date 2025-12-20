@@ -63,7 +63,7 @@ bool fsIsMouseButtonDown(const FsWindow* window, FsMouseButton bt){
 
 bool fsMouseButtonJustPressed(const FsWindow* window, FsMouseButton bt){
     static bool wasPressed = false;
-    bool isPressed = fsIsMouseButtonDown(window->handle, bt);
+    bool isPressed = fsIsMouseButtonDown(window, bt);
     bool justPressed = isPressed && !wasPressed;
     wasPressed = isPressed;
     return justPressed;
@@ -71,7 +71,7 @@ bool fsMouseButtonJustPressed(const FsWindow* window, FsMouseButton bt){
 
 bool fsMouseButtonJustReleased(const FsWindow* window, FsMouseButton bt) {
     static bool wasPressed = false;
-    bool isPressed = fsIsMouseButtonDown(window->handle, bt);
+    bool isPressed = fsIsMouseButtonDown(window, bt);
     bool justReleased = !isPressed && wasPressed;
     wasPressed = isPressed;
     return justReleased;
