@@ -84,6 +84,7 @@ var group__Input =
       [ "FS_KEY_KP_ENTER", "group__Input.html#gga35313f0b60631dbeddd2a7cf30b5857fa405d263bdbf12939435f622bdecc4871", null ],
       [ "FS_KEY_KP_EQUAL", "group__Input.html#gga35313f0b60631dbeddd2a7cf30b5857fad27d681f3e01b3d0835dffee4e501632", null ]
     ] ],
+    [ "fsGetCursorPos", "group__Input.html#gac41efff3ab2ae8cb25e774155b5a6c04", null ],
     [ "fsIsKeyDown", "group__Input.html#ga4af61bdbad7bdc19c2ca3eb77368392e", null ],
     [ "fsIsKeyJustPressed", "group__Input.html#gae72ec8fa36cf06fcd42d4ce05112df16", null ],
     [ "fsIsKeyJustReleased", "group__Input.html#ga791bef5039266707af79b2f5f31098e7", null ],

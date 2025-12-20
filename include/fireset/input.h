@@ -167,6 +167,15 @@ bool fsIsKeyDown(FsKey key);
  */
 bool fsIsKeyUp(FsKey key);
 
+/**
+ * @brief Gets the current cursor position.
+ *
+ * Returns the position of the cursor relative to the top-left corner
+ * of the specified window.
+ *
+ * @param window Pointer to the window to query.
+ * @return FsVec2 representing the cursor position in pixels.
+ */
 FsVec2 fsGetCursorPos(const FsWindow* window);
 
 /** @} */
