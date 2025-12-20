@@ -81,5 +81,8 @@ var searchData=
   ['fs_5fkey_5fw_78',['FS_KEY_W',['../group__Input.html#gga35313f0b60631dbeddd2a7cf30b5857fa1ebc33b1164c10f72d5854435bd3013e',1,'input.h']]],
   ['fs_5fkey_5fx_79',['FS_KEY_X',['../group__Input.html#gga35313f0b60631dbeddd2a7cf30b5857fa3b4f3a5e77eb9a1096c011afcef3e007',1,'input.h']]],
   ['fs_5fkey_5fy_80',['FS_KEY_Y',['../group__Input.html#gga35313f0b60631dbeddd2a7cf30b5857fafb041a789942c70d4696a4ca01aef8c6',1,'input.h']]],
-  ['fs_5fkey_5fz_81',['FS_KEY_Z',['../group__Input.html#gga35313f0b60631dbeddd2a7cf30b5857fa5efd826847865b525afd7f6117e061c2',1,'input.h']]]
+  ['fs_5fkey_5fz_81',['FS_KEY_Z',['../group__Input.html#gga35313f0b60631dbeddd2a7cf30b5857fa5efd826847865b525afd7f6117e061c2',1,'input.h']]],
+  ['fs_5flmb_82',['FS_LMB',['../group__Input.html#gga1246a820f6fe5405dd16cde550759de4a0d775a891acdd4cb1429a93fd83c4dac',1,'input.h']]],
+  ['fs_5fmmb_83',['FS_MMB',['../group__Input.html#gga1246a820f6fe5405dd16cde550759de4a0f8ca38d10cc99b6da60b36f9644e5a1',1,'input.h']]],
+  ['fs_5frmb_84',['FS_RMB',['../group__Input.html#gga1246a820f6fe5405dd16cde550759de4a77c5c8395d0b8209f2f7ecc4d543ff87',1,'input.h']]]
 ];

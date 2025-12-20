@@ -84,10 +84,17 @@ var group__Input =
       [ "FS_KEY_KP_ENTER", "group__Input.html#gga35313f0b60631dbeddd2a7cf30b5857fa405d263bdbf12939435f622bdecc4871", null ],
       [ "FS_KEY_KP_EQUAL", "group__Input.html#gga35313f0b60631dbeddd2a7cf30b5857fad27d681f3e01b3d0835dffee4e501632", null ]
     ] ],
+    [ "FsMouseButton", "group__Input.html#ga1246a820f6fe5405dd16cde550759de4", [
+      [ "FS_LMB", "group__Input.html#gga1246a820f6fe5405dd16cde550759de4a0d775a891acdd4cb1429a93fd83c4dac", null ],
+      [ "FS_RMB", "group__Input.html#gga1246a820f6fe5405dd16cde550759de4a77c5c8395d0b8209f2f7ecc4d543ff87", null ],
+      [ "FS_MMB", "group__Input.html#gga1246a820f6fe5405dd16cde550759de4a0f8ca38d10cc99b6da60b36f9644e5a1", null ]
+    ] ],
     [ "fsGetCursorPos", "group__Input.html#gac41efff3ab2ae8cb25e774155b5a6c04", null ],
     [ "fsIsKeyDown", "group__Input.html#ga4af61bdbad7bdc19c2ca3eb77368392e", null ],
     [ "fsIsKeyJustPressed", "group__Input.html#gae72ec8fa36cf06fcd42d4ce05112df16", null ],
     [ "fsIsKeyJustReleased", "group__Input.html#ga791bef5039266707af79b2f5f31098e7", null ],
-    [ "fsIsKeyUp", "group__Input.html#gaa81923b4f65c7ecb79a0e34fe104c692", null ],
-    [ "fsUpdateKeyboard", "group__Input.html#ga75a1c6acca2797d2895579621b7e20b7", null ]
+    [ "fsIsMouseButtonDown", "group__Input.html#gabbdb120ea06a54aa6a78bebe8f04a7a2", null ],
+    [ "fsIsMouseButtonJustPressed", "group__Input.html#ga4cf7c40e9df6e3a34be1e41c59e52ef9", null ],
+    [ "fsIsMouseButtonJustReleased", "group__Input.html#ga4b9efce0107be0cddd5f59050c450170", null ],
+    [ "fsUpdateInput", "group__Input.html#gab2ec7699a88cd5106b04d55df99fccec", null ]
 ];
