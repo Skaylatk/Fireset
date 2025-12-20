@@ -150,4 +150,6 @@ void fsSetOrtho(int width, int height);
  */
 void fsClear(FsColor color);
 
+inline FsColor FsColor_new(float r, float g, float b);
+
 /** @} */

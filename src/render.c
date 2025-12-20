@@ -131,3 +131,7 @@ void fsSetOrtho(int width, int height){
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 }
+
+FsColor FsColor_new(float r, float g, float b){
+    return (FsColor){r, g, b};
+}

@@ -19,4 +19,6 @@ typedef struct{
     float y; /**< Vertical axis. */
 }FsVec2;
 
+inline FsVec2 FsVec2_new(float x, float y);
+
 /** @} */
