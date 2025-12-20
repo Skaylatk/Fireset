@@ -46,6 +46,6 @@ void fsDestroyWindow(FsWindow* window){
     glfwDestroyWindow(window->handle);
 }
 
-bool fsWindowShouldClose(FsWindow window){
-    return glfwWindowShouldClose(window.handle);
+bool fsWindowShouldClose(FsWindow* window){
+    return glfwWindowShouldClose(window->handle);
 }

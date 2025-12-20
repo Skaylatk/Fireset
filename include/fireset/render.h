@@ -93,7 +93,7 @@ typedef struct {
  * 
  * @param p Object to draw.
  */
-void fsDrawPixel(FsPoint p);
+void fsDrawPixel(const FsPoint* p);
 
 /**
  * @brief Draws a line.
@@ -102,7 +102,7 @@ void fsDrawPixel(FsPoint p);
  * 
  * @param line Object to draw.
  */
-void fsDrawLine(FsLine line);
+void fsDrawLine(const FsLine* line);
 
 /**
  * @brief Draws a triangle.
@@ -111,7 +111,7 @@ void fsDrawLine(FsLine line);
  * 
  * @param tri Object to draw.
  */
-void fsDrawTriangle(FsTriangle tri);
+void fsDrawTriangle(const FsTriangle* tri);
 
 /**
  * @brief Draws a quadrilateral.
@@ -120,7 +120,7 @@ void fsDrawTriangle(FsTriangle tri);
  * 
  * @param quad Object to draw.
  */
-void fsDrawQuad(const FsQuad quad);
+void fsDrawQuad(const FsQuad* quad);
 
 /**
  * @brief Draws a circle.
@@ -129,7 +129,7 @@ void fsDrawQuad(const FsQuad quad);
  * 
  * @param circle Object to draw.
  */
-void fsDrawCircle(FsCircle circle);
+void fsDrawCircle(const FsCircle* circle);
 
 /**
  * @brief Sets ortographic view.

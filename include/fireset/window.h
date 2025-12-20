@@ -58,6 +58,6 @@ void fsDestroyWindow(FsWindow* window);
  * 
  * @param window Window to check.
  */
-bool fsWindowShouldClose(FsWindow window);
+bool fsWindowShouldClose(FsWindow* window);
 
 /** @} */

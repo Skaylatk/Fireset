@@ -7,16 +7,16 @@
 
 #define PI 3.14159265359
 
-void fsDrawTriangle(FsTriangle tri){
+void fsDrawTriangle(const FsTriangle* tri){
     glPushMatrix();
-        glTranslatef(tri.position.x, tri.position.y, 0.0f);
-        glRotatef(tri.angle, 0, 0, 1.0f);
-        glScalef(tri.size.x, tri.size.y, 1.0f);
+        glTranslatef(tri->position.x, tri->position.y, 0.0f);
+        glRotatef(tri->angle, 0, 0, 1.0f);
+        glScalef(tri->size.x, tri->size.y, 1.0f);
 
         glColor3f(
-            tri.color.r / 255.0f,
-            tri.color.g / 255.0f,
-            tri.color.b / 255.0f
+            tri->color.r / 255.0f,
+            tri->color.g / 255.0f,
+            tri->color.b / 255.0f
         );
 
         glBegin(GL_TRIANGLES);
@@ -27,14 +27,14 @@ void fsDrawTriangle(FsTriangle tri){
     glPopMatrix();
 }
 
-void fsDrawPixel(FsPoint p){
+void fsDrawPixel(const FsPoint* p){
     glPushMatrix();
-        glTranslatef(p.position.x, p.position.y, 0.0f);
+        glTranslatef(p->position.x, p->position.y, 0.0f);
 
         glColor3f(
-            p.color.r / 255.0f,
-            p.color.g / 255.0f,
-            p.color.b / 255.0f
+            p->color.r / 255.0f,
+            p->color.g / 255.0f,
+            p->color.b / 255.0f
         );
 
         glBegin(GL_POINTS);
@@ -43,16 +43,16 @@ void fsDrawPixel(FsPoint p){
     glPopMatrix();
 }
 
-void fsDrawLine(FsLine line){
+void fsDrawLine(const FsLine* line){
     glPushMatrix();
-        glTranslatef(line.position.x, line.position.y, 0.0f);
-        glRotatef(line.angle, 0.0f, 0.0f, 1.0f);
-        glScalef(line.length, line.thickness, 1.0f);
+        glTranslatef(line->position.x, line->position.y, 0.0f);
+        glRotatef(line->angle, 0.0f, 0.0f, 1.0f);
+        glScalef(line->length, line->thickness, 1.0f);
 
         glColor3f(
-            line.color.r / 255.0f,
-            line.color.g / 255.0f,
-            line.color.b / 255.0f
+            line->color.r / 255.0f,
+            line->color.g / 255.0f,
+            line->color.b / 255.0f
         );
 
         glBegin(GL_QUADS);
@@ -64,16 +64,16 @@ void fsDrawLine(FsLine line){
     glPopMatrix();
 }
 
-void fsDrawQuad(FsQuad quad){
+void fsDrawQuad(const FsQuad* quad){
     glPushMatrix();
-        glTranslatef(quad.position.x, quad.position.y, 0.0f);
-        glRotatef(quad.angle, 0, 0, 1.0f);
-        glScalef(quad.size.x, quad.size.y, 1.0f);
+        glTranslatef(quad->position.x, quad->position.y, 0.0f);
+        glRotatef(quad->angle, 0, 0, 1.0f);
+        glScalef(quad->size.x, quad->size.y, 1.0f);
 
         glColor3f(
-            quad.color.r / 255.0f,
-            quad.color.g / 255.0f,
-            quad.color.b / 255.0f
+            quad->color.r / 255.0f,
+            quad->color.g / 255.0f,
+            quad->color.b / 255.0f
         );
 
         glBegin(GL_QUADS);
@@ -85,20 +85,20 @@ void fsDrawQuad(FsQuad quad){
     glPopMatrix();
 }
 
-void fsDrawCircle(FsCircle circle){
-    int segments = circle.segments;
+void fsDrawCircle(const FsCircle* circle){
+    int segments = circle->segments;
     if (segments < 8)   segments = 8;
     if (segments > 128) segments = 128;
 
     glPushMatrix();
-        glTranslatef(circle.position.x, circle.position.y, 0.0f);
-        glRotatef(circle.angle, 0.0f, 0.0f, 1.0f);
-        glScalef(circle.size.x, circle.size.y, 1.0f);
+        glTranslatef(circle->position.x, circle->position.y, 0.0f);
+        glRotatef(circle->angle, 0.0f, 0.0f, 1.0f);
+        glScalef(circle->size.x, circle->size.y, 1.0f);
 
         glColor3f(
-            circle.color.r / 255.0f,
-            circle.color.g / 255.0f,
-            circle.color.b / 255.0f
+            circle->color.r / 255.0f,
+            circle->color.g / 255.0f,
+            circle->color.b / 255.0f
         );
 
         glBegin(GL_TRIANGLE_FAN);
