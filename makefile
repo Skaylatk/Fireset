@@ -45,7 +45,6 @@ LDFLAGS := -lglfw -lGL -lm
 # ====================================================
 # Outputs
 # ====================================================
-# BIN := bin/$(TARGET)  <-- removido
 LIB := lib/lib$(TARGET).a
 
 # ====================================================
@@ -54,7 +53,7 @@ LIB := lib/lib$(TARGET).a
 .PHONY: all debug release clean doc deb
 
 all: debug
-debug: $(LIB)  # só gera a biblioteca agora
+debug: $(LIB)
 
 release: BUILD_DIR := build/release
 release: CFLAGS := -O3 -Wall -Wextra -Iinclude $(DEPFLAGS)

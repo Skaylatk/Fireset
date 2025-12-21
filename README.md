@@ -20,8 +20,6 @@ if you find any issue or have a cool idea/suggestion, share it on github issues 
 - Window Management
 - Keyboard Input
 
-<img src="assets/square.gif" alt="Descrição do GIF" width="150"/>
-
 ---
 
 ### 🗃️ Documentation:
