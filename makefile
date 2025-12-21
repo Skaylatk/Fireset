@@ -6,6 +6,7 @@
 # Project
 # ====================================================
 TARGET := fireset
+VERSION := 0.1.0
 
 # ====================================================
 # Paths
@@ -20,6 +21,7 @@ LIB_DIR = $(PREFIX)/lib
 CC := gcc
 AR := ar
 RM := rm -rf
+INSTALL := install
 
 # ====================================================
 # Sources
@@ -50,9 +52,15 @@ LIB := lib/lib$(TARGET).a
 # ====================================================
 # Phony targets
 # ====================================================
-.PHONY: all debug release clean doc deb
+.PHONY: all debug release clean doc deb install uninstall
 
+# ====================================================
+# Build targets
+# ====================================================
 all: debug
+
+debug: BUILD_DIR := build/debug
+debug: CFLAGS := -g -O0 -Wall -Wextra -Iinclude $(DEPFLAGS)
 debug: $(LIB)
 
 release: BUILD_DIR := build/release
@@ -87,32 +95,26 @@ doc:
 # ====================================================
 # Package configuration files (.pc)
 # ====================================================
-$(TARGET).pc: $(TARGET).pc.in
+$(BUILD_DIR)/$(TARGET).pc: debian/$(TARGET).pc.in
+	@mkdir -p $(BUILD_DIR)
 	sed -e 's|@PREFIX@|$(PREFIX)|g' \
-		-e 's|@VERSION@|$(VERSION)|g' \
-		$(TARGET).pc.in > $(BUILD_DIR)/$(TARGET).pc
+	    -e 's|@VERSION@|$(VERSION)|g' \
+	    debian/$(TARGET).pc.in > $(BUILD_DIR)/$(TARGET).pc
 
 # ====================================================
 # Installation
 # ====================================================
-install: release $(TARGET).pc
-	# Create directories
-	install -d $(DESTDIR)$(INCLUDE_DIR)
-	install -d $(DESTDIR)$(LIB_DIR)
-	# Install headers
-	install -m 644 include/fireset/*.h $(DESTDIR)$(INCLUDE_DIR)
-	# Install binaries
-	install -m 644 $(LIB) $(DESTDIR)$(LIB_DIR)
-	# Install pkg-config file
-	install -d $(DESTDIR)$(PREFIX)/lib/pkgconfig
-	install -m 644 $(BUILD_DIR)/$(TARGET).pc $(DESTDIR)$(PREFIX)/lib/pkgconfig/
+install: release $(BUILD_DIR)/$(TARGET).pc
+	$(INSTALL) -d $(DESTDIR)$(INCLUDE_DIR)
+	$(INSTALL) -d $(DESTDIR)$(LIB_DIR)
+	$(INSTALL) -m 644 include/fireset/*.h $(DESTDIR)$(INCLUDE_DIR)
+	$(INSTALL) -m 644 $(LIB) $(DESTDIR)$(LIB_DIR)
+	$(INSTALL) -d $(DESTDIR)$(PREFIX)/lib/pkgconfig
+	$(INSTALL) -m 644 $(BUILD_DIR)/$(TARGET).pc $(DESTDIR)$(PREFIX)/lib/pkgconfig/
 
-# ====================================================
-# Uninstall
-# ====================================================
 uninstall:
 	$(RM) $(DESTDIR)$(INCLUDE_DIR)
-	$(RM) $(DESTDIR)$(PREFIX)/$(LIB)
+	$(RM) $(DESTDIR)$(LIB_DIR)/lib$(TARGET).a
 	$(RM) $(DESTDIR)$(PREFIX)/lib/pkgconfig/$(TARGET).pc
 
 # ====================================================
@@ -120,7 +122,6 @@ uninstall:
 # ====================================================
 STAGE      := fireset-dev
 PKGNAME    := fireset-dev
-VERSION    := 0.1.0
 DEBIANDIR  := $(STAGE)/DEBIAN
 USRDIR     := $(STAGE)/usr
 LIBDIR     := $(USRDIR)/lib
@@ -129,7 +130,7 @@ DOCDIR     := $(USRDIR)/share/doc/$(PKGNAME)
 PCDIR      := $(LIBDIR)/pkgconfig
 OVERRIDEDIR := $(USRDIR)/share/lintian/overrides
 
-deb: release $(TARGET).pc
+deb: release $(BUILD_DIR)/$(TARGET).pc
 	@set -e
 	$(RM) $(STAGE)
 	mkdir -p $(DEBIANDIR) $(LIBDIR) $(INCDIR) $(DOCDIR) $(PCDIR)
