@@ -18,7 +18,7 @@ if you find any issue or have a cool idea/suggestion, share it on github issues 
 - 2D Rendering
 - Transform (Resize, Rotate, Move)
 - Window Management
-- Keyboard Input
+- Keyboard & Mouse Input
 
 ---
 
