@@ -1,5 +1,6 @@
-bin
-build
-lib
+.vscode/
+bin/
+build/
+lib/
 fireset-dev.deb
-fireset-dev
+fireset-dev/
