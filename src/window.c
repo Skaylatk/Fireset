@@ -11,10 +11,10 @@
 
 static void fsFramebufferSizeCallback(GLFWwindow* window, int width, int height){
     glViewport(0, 0, width, height);
-    fsSetOrtho(width, height);
+    fsOrthoSet(width, height);
 }
 
-FsWindow* fsCreateWindow(FsWindow* window){
+FsWindow* fsWindowCreate(FsWindow* window){
     // creates window object and set context
     window->handle = glfwCreateWindow(window->width, window->height, window->name, NULL, NULL);
     if (!window->handle){
@@ -27,7 +27,7 @@ FsWindow* fsCreateWindow(FsWindow* window){
     glViewport(0, 0, window->width, window->height);
 
     // sets orthographic view
-    fsSetOrtho(window->width, window->height);
+    fsOrthoSet(window->width, window->height);
 
     // binds resizing callback
     glfwSetFramebufferSizeCallback(window->handle, fsFramebufferSizeCallback);
@@ -35,14 +35,14 @@ FsWindow* fsCreateWindow(FsWindow* window){
     return window;
 }
 
-void fsHandleWindow(FsWindow* window){
-    fsUpdateInput(window);
+void fsWindowHandle(FsWindow* window){
+    fsInputUpdate(window);
     glfwGetWindowSize(window->handle, &window->width, &window->height);
     glfwSwapBuffers(window->handle);
     glfwPollEvents();
 }
 
-void fsDestroyWindow(FsWindow* window){
+void fsWindowDestroy(FsWindow* window){
     glfwDestroyWindow(window->handle);
 }
 

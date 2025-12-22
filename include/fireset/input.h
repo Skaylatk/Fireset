@@ -131,7 +131,7 @@ typedef enum {
  *
  * @param window Target window.
  */
-void fsUpdateInput(FsWindow* window);
+void fsInputUpdate(FsWindow* window);
 
 /**
  * @brief Checks if a key was just pressed.
@@ -144,7 +144,7 @@ void fsUpdateInput(FsWindow* window);
  * @retval true  Key was just pressed.
  * @retval false Key was not just pressed.
  */
-bool fsIsKeyJustPressed(FsKey key);
+bool fsKeyJustPressed(FsKey key);
 
 /**
  * @brief Checks if a key was just released.
@@ -157,7 +157,7 @@ bool fsIsKeyJustPressed(FsKey key);
  * @retval true  Key was just released.
  * @retval false Key was not just released.
  */
-bool fsIsKeyJustReleased(FsKey key);
+bool fsKeyJustReleased(FsKey key);
 
 /**
  * @brief Checks if a key is currently pressed.
@@ -167,7 +167,7 @@ bool fsIsKeyJustReleased(FsKey key);
  * @retval true  Key is pressed.
  * @retval false Key is not pressed.
  */
-bool fsIsKeyDown(FsKey key);
+bool fsKeyDown(FsKey key);
 
 /**
  * @brief Gets the current cursor position.
@@ -178,7 +178,7 @@ bool fsIsKeyDown(FsKey key);
  * @param window Pointer to the window to query.
  * @return FsVec2 representing the cursor position in pixels.
  */
-FsVec2 fsGetCursorPos(const FsWindow* window);
+FsVec2 fsCursorGetPos(const FsWindow* window);
 
 /**
  * @brief Checks if a specific mouse button is currently pressed.
@@ -190,7 +190,7 @@ FsVec2 fsGetCursorPos(const FsWindow* window);
  * @param bt Mouse button to check (FS_LMB, FS_RMB, FS_MMB).
  * @return true if the button is pressed, false otherwise.
  */
-bool fsIsMouseButtonDown(const FsWindow* window, FsMouseButton bt);
+bool fsMouseButtonDown(const FsWindow* window, FsMouseButton bt);
 
 /**
  * @brief Checks if a mouse button was just pressed.
@@ -202,7 +202,7 @@ bool fsIsMouseButtonDown(const FsWindow* window, FsMouseButton bt);
  * @param bt Mouse button to check (FS_LMB, FS_RMB, FS_MMB).
  * @return true if the button was just pressed, false otherwise.
  */
-bool fsIsMouseButtonJustPressed(const FsWindow* window, FsMouseButton bt);
+bool fsMouseButtonJustPressed(const FsWindow* window, FsMouseButton bt);
 
 /**
  * @brief Checks if a mouse button was just released.
@@ -214,6 +214,6 @@ bool fsIsMouseButtonJustPressed(const FsWindow* window, FsMouseButton bt);
  * @param bt Mouse button to check (FS_LMB, FS_RMB, FS_MMB).
  * @return true if the button was just released, false otherwise.
  */
-bool fsIsMouseButtonJustReleased(const FsWindow* window, FsMouseButton bt);
+bool fsMouseButtonJustReleased(const FsWindow* window, FsMouseButton bt);
 
 /** @} */

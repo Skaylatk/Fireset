@@ -17,7 +17,7 @@
  *
  * @return Current system time.
  */
-double fsGetSystemTime(void);
+double fsTimeGetSystem(void);
 
 /**
  * @brief Returns the delta time.
@@ -26,7 +26,7 @@ double fsGetSystemTime(void);
  *
  * @return Delta time.
  */
-double fsGetDeltaTime(void);
+double fsTimeGetDelta(void);
 
 /**
  * @brief Initializes the time module.

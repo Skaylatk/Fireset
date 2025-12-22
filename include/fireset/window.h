@@ -29,7 +29,7 @@ typedef struct{
  * @param window Pointer to a FsWindow struct containing the desired parameters.
  * @return Pointer to the created window (same as input).
  */
-FsWindow* fsCreateWindow(FsWindow* window);
+FsWindow* fsWindowCreate(FsWindow* window);
 
 /**
  * @brief Updates a window.
@@ -38,7 +38,7 @@ FsWindow* fsCreateWindow(FsWindow* window);
  *
  * @param window Window to update.
  */
-void fsHandleWindow(FsWindow* window);
+void fsWindowHandle(FsWindow* window);
 
 /**
  * @brief Destroys a window.
@@ -47,7 +47,7 @@ void fsHandleWindow(FsWindow* window);
  *
  * @param window Window to destroy.
  */
-void fsDestroyWindow(FsWindow* window);
+void fsWindowDestroy(FsWindow* window);
 
 /**
  * @brief Checks if a window should close.

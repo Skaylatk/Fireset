@@ -1,3 +1,7 @@
+// Copyright (c) 2025 Henrique Rodrigues Santos
+// Licensed under the MIT License
+// Repo: https://github.com/saintsHr/Fireset
+
 #include "fireset/physics.h"
 #include "settings.h"
 
@@ -24,14 +28,14 @@ static void clampVelocities(cpSpace* space){
     cpSpaceEachBody(space, clampBodyVelocity, limits);
 }
 
-FsSpace fsCreateSpace(FsVec2 gravity){
+FsSpace fsSpaceCreate(FsVec2 gravity){
     FsSpace space;
     space.raw = cpSpaceNew();
     cpSpaceSetGravity(space.raw, cpv(gravity.x, gravity.y));
     return space;
 }
 
-FsBody fsCreateBody(FsBodyType type, FsSpace* space){
+FsBody fsBodyCreate(FsBodyType type, FsSpace* space){
     FsBody body = {0};
     body.type = type;
 
@@ -52,7 +56,7 @@ FsBody fsCreateBody(FsBodyType type, FsSpace* space){
     return body;
 }
 
-FsShape fsCreateShape(FsBody* body, const FsShapeDesc* desc){
+FsShape fsShapeCreate(FsBody* body, const FsShapeDesc* desc){
     FsShape shape = {0};
 
     switch (desc->type){

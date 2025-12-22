@@ -139,7 +139,7 @@ void fsDrawCircle(const FsCircle* circle);
  * @param width  Width of the orthographic view.
  * @param height Height of the orthographic view.
  */
-void fsSetOrtho(int width, int height);
+void fsOrthoSet(int width, int height);
 
 /**
  * @brief Clears the window.

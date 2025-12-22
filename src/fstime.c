@@ -7,7 +7,7 @@
 
 #include <windows.h>
 
-double fsGetSystemTime(void){
+double fsTimeGetSystemTime(void){
     static LARGE_INTEGER freq;
     static int initialized = 0;
 
@@ -26,7 +26,7 @@ double fsGetSystemTime(void){
 
 #include <mach/mach_time.h>
 
-double fsGetSystemTime(void){
+double fsTimeGetSystemTime(void){
     static mach_timebase_info_data_t timebase;
     static int initialized = 0;
 
@@ -44,7 +44,7 @@ double fsGetSystemTime(void){
 
 #include <time.h>
 
-double fsGetSystemTime(void){
+double fsTimeGetSystemTime(void){
     struct timespec ts;
     clock_gettime(CLOCK_MONOTONIC, &ts);
     return (double)ts.tv_sec + (double)ts.tv_nsec * 1e-9;
@@ -57,11 +57,11 @@ double fsGetSystemTime(void){
 static double s_last_time = 0.0;
 
 void fsTimeInit(void){
-    s_last_time = fsGetSystemTime();
+    s_last_time = fsTimeGetSystemTime();
 }
 
-double fsGetDeltaTime(void){
-    double now = fsGetSystemTime();
+double fsTimeGetDelta(void){
+    double now = fsTimeGetSystemTime();
     double dt = now - s_last_time;
     s_last_time = now;
 

@@ -1,3 +1,7 @@
+// Copyright (c) 2025 Henrique Rodrigues Santos
+// Licensed under the MIT License
+// Repo: https://github.com/saintsHr/Fireset
+
 #pragma once
 
 #include <chipmunk/chipmunk.h>
@@ -52,9 +56,9 @@ typedef struct{
     FsShapeType type;
 }FsShape;
 
-FsSpace fsCreateSpace(FsVec2 gravity);
-FsBody fsCreateBody(FsBodyType type, FsSpace* space);
-FsShape fsCreateShape(FsBody* body, const FsShapeDesc* desc);
+FsSpace fsSpaceCreate(FsVec2 gravity);
+FsBody fsBodyCreate(FsBodyType type, FsSpace* space);
+FsShape fsShapeCreate(FsBody* body, const FsShapeDesc* desc);
 void fsSpaceAddShape(FsSpace* space, FsShape* shape);
 void fsSpaceAddBody(FsSpace* space, FsBody* body);
 void fsShapeSetFriction(FsShape* shape, float friction);

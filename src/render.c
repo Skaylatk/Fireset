@@ -124,7 +124,7 @@ void fsClear(FsColor color){
     glClear(GL_COLOR_BUFFER_BIT);
 }
 
-void fsSetOrtho(int width, int height){
+void fsOrthoSet(int width, int height){
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     glOrtho(0, width, height, 0, -1, 1);

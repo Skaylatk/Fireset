@@ -9,12 +9,12 @@ typedef struct{
     bool pressed;
     bool just_pressed;
     bool just_released;
-}KeyState;
+}FsInputKeyState;
 
 #define NUM_KEYS (GLFW_KEY_LAST + 1)
-static KeyState keys[NUM_KEYS];
+static FsInputKeyState keys[NUM_KEYS];
 
-void fsUpdateInput(FsWindow* window){
+void fsInputUpdate(FsWindow* window){
     for (int k = 0; k < NUM_KEYS; k++){
         bool isDown = glfwGetKey(window->handle, k) == GLFW_PRESS;
 
@@ -24,19 +24,19 @@ void fsUpdateInput(FsWindow* window){
     }
 }
 
-bool fsIsKeyJustPressed(FsKey key){
+bool fsKeyJustPressed(FsKey key){
     return keys[key].just_pressed;
 }
 
-bool fsIsKeyJustReleased(FsKey key){
+bool fsKeyJustReleased(FsKey key){
     return keys[key].just_released;
 }
 
-bool fsIsKeyDown(FsKey key){
+bool fsKeyDown(FsKey key){
     return keys[key].pressed;
 }
 
-FsVec2 fsGetCursorPos(const FsWindow* window){
+FsVec2 fsCursorGetPos(const FsWindow* window){
     double x, y;
 
     glfwGetCursorPos(window->handle, &x, &y);
@@ -48,7 +48,7 @@ FsVec2 fsGetCursorPos(const FsWindow* window){
     return vec;
 }
 
-bool fsIsMouseButtonDown(const FsWindow* window, FsMouseButton bt){
+bool fsMouseButtonDown(const FsWindow* window, FsMouseButton bt){
     if (bt == FS_LMB && glfwGetMouseButton(window->handle, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS){
         return true;
     }
@@ -61,17 +61,17 @@ bool fsIsMouseButtonDown(const FsWindow* window, FsMouseButton bt){
     return false;
 }
 
-bool fsIsMouseButtonJustPressed(const FsWindow* window, FsMouseButton bt){
+bool fsMouseButtonJustPressed(const FsWindow* window, FsMouseButton bt){
     static bool wasPressed = false;
-    bool isPressed = fsIsMouseButtonDown(window, bt);
+    bool isPressed = fsMouseButtonDown(window, bt);
     bool justPressed = isPressed && !wasPressed;
     wasPressed = isPressed;
     return justPressed;
 }
 
-bool fsIsMouseButtonJustReleased(const FsWindow* window, FsMouseButton bt) {
+bool fsMouseButtonJustReleased(const FsWindow* window, FsMouseButton bt) {
     static bool wasPressed = false;
-    bool isPressed = fsIsMouseButtonDown(window, bt);
+    bool isPressed = fsMouseButtonDown(window, bt);
     bool justReleased = !isPressed && wasPressed;
     wasPressed = isPressed;
     return justReleased;
