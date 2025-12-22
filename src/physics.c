@@ -1,4 +1,28 @@
 #include "fireset/physics.h"
+#include "settings.h"
+
+static void clampBodyVelocity(cpBody* body, void* data){
+    cpFloat* limits = (cpFloat*)data;
+    cpFloat maxVel = limits[0];
+    cpFloat maxAngular = limits[1];
+
+    cpVect v = cpBodyGetVelocity(body);
+    cpFloat speed = cpvlength(v);
+    if(speed > maxVel){
+        cpVect clamped = cpvmult(v, maxVel / speed);
+        cpBodySetVelocity(body, clamped);
+    }
+
+    cpFloat angVel = cpBodyGetAngularVelocity(body);
+    if(fabs(angVel) > maxAngular){
+        cpBodySetAngularVelocity(body, (angVel > 0 ? maxAngular : -maxAngular));
+    }
+}
+
+static void clampVelocities(cpSpace* space){
+    cpFloat limits[2] = { PHYS_MAX_VELOCITY, PHYS_MAX_ANGULAR };
+    cpSpaceEachBody(space, clampBodyVelocity, limits);
+}
 
 FsSpace fsCreateSpace(FsVec2 gravity){
     FsSpace space;
@@ -90,7 +114,11 @@ void fsBodySetPosition(FsBody* body, FsVec2 position){
 }
 
 void fsSpaceStep(FsSpace* space){
-    cpSpaceStep(space->raw, 1.0 / 60.0);
+    cpFloat subdt = PHYS_DT / PHYS_SUBSTEPS;
+    for(int i = 0; i < PHYS_SUBSTEPS; i++){
+        cpSpaceStep(space->raw, subdt);
+        clampVelocities(space->raw);
+    }
 }
 
 FsVec2 fsBodyGetPosition(FsBody* body){
