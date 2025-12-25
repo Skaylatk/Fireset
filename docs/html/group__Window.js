@@ -6,8 +6,8 @@ var group__Window =
       [ "name", "structFsWindow.html#a914cc7e4c1b38b872a29ffc9af2b9470", null ],
       [ "width", "structFsWindow.html#a6cc5523b876ea62bc17df2b5bbe9b3ff", null ]
     ] ],
-    [ "fsCreateWindow", "group__Window.html#ga6a82d805cad914a2dd446e66cb3469ca", null ],
-    [ "fsDestroyWindow", "group__Window.html#gaa1830e4996a8f32d33bf6196ba4115b9", null ],
-    [ "fsHandleWindow", "group__Window.html#ga97a335d2e3ae69bd3fb850037d3c6f7f", null ],
+    [ "fsWindowCreate", "group__Window.html#ga34127f76fa56b7357b85166101edd073", null ],
+    [ "fsWindowDestroy", "group__Window.html#gab93569ba69eb02b1330276582444b866", null ],
+    [ "fsWindowHandle", "group__Window.html#ga3f73f18edb9a810871b4feab8d131aa9", null ],
     [ "fsWindowShouldClose", "group__Window.html#gaac42f2b483ab082ab8bce722f4f33be0", null ]
 ];

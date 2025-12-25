@@ -1,6 +1,6 @@
 var group__Time =
 [
-    [ "fsGetDeltaTime", "group__Time.html#ga84aa5745b1c2ec79e273bd23ef445d04", null ],
-    [ "fsGetSystemTime", "group__Time.html#ga4f39d88fbf46815c0412b65d91b1e842", null ],
+    [ "fsTimeGetDelta", "group__Time.html#ga3b590aa8153424064ea182a2606c5d2f", null ],
+    [ "fsTimeGetSystem", "group__Time.html#gab22f05a364be51ed49071f2d5af5e75c", null ],
     [ "fsTimeInit", "group__Time.html#gadcaf98e33c05c790b1e8003de0a7aa68", null ]
 ];

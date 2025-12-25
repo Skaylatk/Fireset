@@ -42,5 +42,5 @@ var group__Render =
     [ "fsDrawPixel", "group__Render.html#ga1e45557551baf71485e33e6608328c14", null ],
     [ "fsDrawQuad", "group__Render.html#ga99a8cdb154c8b8d309a1bbd1c8b209fc", null ],
     [ "fsDrawTriangle", "group__Render.html#ga65dd04ee830683c5668f165109718452", null ],
-    [ "fsSetOrtho", "group__Render.html#gace0c9b4e9b9348ad865172f53e794c8c", null ]
+    [ "fsOrthoSet", "group__Render.html#gaabce2669ec09b0b2357420bbd54cd4ed", null ]
 ];

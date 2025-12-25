@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['width_0',['width',['../structFsWindow.html#a6cc5523b876ea62bc17df2b5bbe9b3ff',1,'FsWindow']]],
-  ['window_1',['Window',['../group__Window.html',1,'']]]
+  ['x_0',['x',['../structFsVec2.html#af9afe2cfd0a4eaf88f62565af112551c',1,'FsVec2']]]
 ];

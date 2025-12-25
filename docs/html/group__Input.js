@@ -89,12 +89,12 @@ var group__Input =
       [ "FS_RMB", "group__Input.html#gga1246a820f6fe5405dd16cde550759de4a77c5c8395d0b8209f2f7ecc4d543ff87", null ],
       [ "FS_MMB", "group__Input.html#gga1246a820f6fe5405dd16cde550759de4a0f8ca38d10cc99b6da60b36f9644e5a1", null ]
     ] ],
-    [ "fsGetCursorPos", "group__Input.html#gac41efff3ab2ae8cb25e774155b5a6c04", null ],
-    [ "fsIsKeyDown", "group__Input.html#ga4af61bdbad7bdc19c2ca3eb77368392e", null ],
-    [ "fsIsKeyJustPressed", "group__Input.html#gae72ec8fa36cf06fcd42d4ce05112df16", null ],
-    [ "fsIsKeyJustReleased", "group__Input.html#ga791bef5039266707af79b2f5f31098e7", null ],
-    [ "fsIsMouseButtonDown", "group__Input.html#gabbdb120ea06a54aa6a78bebe8f04a7a2", null ],
-    [ "fsIsMouseButtonJustPressed", "group__Input.html#ga4cf7c40e9df6e3a34be1e41c59e52ef9", null ],
-    [ "fsIsMouseButtonJustReleased", "group__Input.html#ga4b9efce0107be0cddd5f59050c450170", null ],
-    [ "fsUpdateInput", "group__Input.html#gab2ec7699a88cd5106b04d55df99fccec", null ]
+    [ "fsCursorGetPos", "group__Input.html#gad4421a2174bebbfb9eb44de5322c5861", null ],
+    [ "fsInputUpdate", "group__Input.html#ga5e19bfdb6c84bfab9e620b876172f192", null ],
+    [ "fsKeyDown", "group__Input.html#ga57b675c99394e360776bb9a9a04e1dff", null ],
+    [ "fsKeyJustPressed", "group__Input.html#ga3592ddeec8e0fc8f96246565ca14985b", null ],
+    [ "fsKeyJustReleased", "group__Input.html#ga6330bceb965288cc8824f3c0a465d099", null ],
+    [ "fsMouseButtonDown", "group__Input.html#ga718ad4b60a03e8ae1a3a50fdc05d6263", null ],
+    [ "fsMouseButtonJustPressed", "group__Input.html#ga3868f36096e6d2443d46a3cc85590f1e", null ],
+    [ "fsMouseButtonJustReleased", "group__Input.html#ga1fa26af866366298650795b04fdc18a5", null ]
 ];
