@@ -3,7 +3,7 @@ Version: 0.4.0
 Section: libdevel
 Priority: optional
 Architecture: amd64
-Depends: libglfw3-dev libchipmunk-dev
+Depends: libglfw3-dev
 Maintainer: Henrique <hiqkrs@gmail.com>
 Description: Fireset Engine
  Retro C Game Engine
