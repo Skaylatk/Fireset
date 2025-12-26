@@ -1,4 +1,4 @@
-# Third Party Licenses
+# Third Party Notices
 
 ## GLFW
 
@@ -8,9 +8,9 @@ Copyright (c) 2006-2019 Camilla Löwy
 GLFW is licensed under the zlib/libpng license:
 https://www.glfw.org/license.html
 
-## Chipmunk2D Physics
+## stb_image.h
 
-Copyright (c) Erin Catto / Scott Lembcke  
+Copyright (c) Sean Barrett  
 
-Licensed under the MIT License.
-https://chipmunk-physics.net/
+stb_image.h is dedicated to the public domain.  
+For more information, visit: https://github.com/nothings/stb
