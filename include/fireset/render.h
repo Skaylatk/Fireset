@@ -25,7 +25,7 @@ typedef struct{
     uint8_t r; /**< Red component (0–255) */
     uint8_t g; /**< Green component (0–255) */
     uint8_t b; /**< Blue component (0–255) */
-}FsColor;
+} FsColor;
 
 /**
  * @brief Quadrilateral primitive.
@@ -36,8 +36,8 @@ typedef struct{
     FsVec2 position; /**< Position in window space */
     FsVec2 size;     /**< Size in window space */
     FsColor color;   /**< Color */
-    float angle;     /**< Rotation angle */
-}FsQuad;
+    float angle;     /**< Rotation angle in degrees */
+} FsQuad;
 
 /**
  * @brief Triangle primitive.
@@ -48,8 +48,8 @@ typedef struct{
     FsVec2 position; /**< Position in window space */
     FsVec2 size;     /**< Size in window space */
     FsColor color;   /**< Color */
-    float angle;     /**< Rotation angle */
-}FsTriangle;
+    float angle;     /**< Rotation angle in degrees */
+} FsTriangle;
 
 /**
  * @brief Point primitive.
@@ -59,7 +59,7 @@ typedef struct{
 typedef struct{
     FsVec2 position; /**< Position in window space */
     FsColor color;   /**< Color */
-}FsPoint;
+} FsPoint;
 
 /**
  * @brief Circle primitive.
@@ -70,9 +70,9 @@ typedef struct{
     FsVec2 position; /**< Position in window space */
     FsVec2 size;     /**< Size in window space */
     FsColor color;   /**< Color */
-    float angle;     /**< Rotation angle */
+    float angle;     /**< Rotation angle in degrees */
     int segments;    /**< Number of segments used to approximate the circle */
-}FsCircle;
+} FsCircle;
 
 /**
  * @brief Line primitive.
@@ -82,21 +82,21 @@ typedef struct{
 typedef struct{
     FsVec2 position; /**< Starting position in window space */
     float length;    /**< Line length */
-    float angle;     /**< Rotation angle */
+    float angle;     /**< Rotation angle in degrees */
     float thickness; /**< Line thickness */
     FsColor color;   /**< Color */
-}FsLine;
+} FsLine;
 
 /**
  * @brief Sprite structure.
  *
- * Represents a 2D sprite in the engine.
+ * Represents a 2D textured sprite.
  */
-typedef struct {
-    FsVec2 position;   /**< Position of the sprite in the window. */
-    FsVec2 size;       /**< Size of the sprite in the window. */
-    FsTexture* texture;/**< Pointer to the sprite's texture. */
-    float angle;       /**< Rotation angle of the sprite in degrees. */
+typedef struct{
+    FsVec2 position;    /**< Position in window space */
+    FsVec2 size;        /**< Size in window space */
+    FsTexture* texture; /**< Pointer to the sprite texture */
+    float angle;        /**< Rotation angle in degrees */
 } FsSprite;
 
 /**
@@ -105,15 +105,17 @@ typedef struct {
  * Draws a colored point at the specified position.
  *
  * @param p Point to draw.
+ * @param zindex Rendering order depth.
  */
 void fsDrawPixel(const FsPoint* p, int zindex);
 
 /**
  * @brief Draws a line.
  *
- * Draws a colored line using the provided line parameters.
+ * Draws a colored line.
  *
  * @param line Line to draw.
+ * @param zindex Rendering order depth.
  */
 void fsDrawLine(const FsLine* line, int zindex);
 
@@ -123,6 +125,7 @@ void fsDrawLine(const FsLine* line, int zindex);
  * Draws a colored triangle.
  *
  * @param tri Triangle to draw.
+ * @param zindex Rendering order depth.
  */
 void fsDrawTriangle(const FsTriangle* tri, int zindex);
 
@@ -132,6 +135,7 @@ void fsDrawTriangle(const FsTriangle* tri, int zindex);
  * Draws a colored quadrilateral.
  *
  * @param quad Quadrilateral to draw.
+ * @param zindex Rendering order depth.
  */
 void fsDrawQuad(const FsQuad* quad, int zindex);
 
@@ -141,47 +145,49 @@ void fsDrawQuad(const FsQuad* quad, int zindex);
  * Draws a colored circle.
  *
  * @param circle Circle to draw.
+ * @param zindex Rendering order depth.
  */
 void fsDrawCircle(const FsCircle* circle, int zindex);
 
 /**
  * @brief Draws a 2D sprite.
  *
- * Renders a sprite on the window using its position, size, rotation angle,
- * and texture. The sprite is drawn as a textured quad with OpenGL.
+ * Renders a textured sprite using its position, size,
+ * rotation angle and texture.
  *
- * @param sprite Pointer to the FsSprite to draw.
+ * @param sprite Sprite to draw.
+ * @param zindex Rendering order depth.
  *
- * @note The sprite's texture must be loaded and valid.
- * @note Uses OpenGL immediate mode for rendering.
+ * @note The sprite texture must be valid and loaded.
+ * @note Uses OpenGL immediate mode.
  */
 void fsDrawSprite(const FsSprite* sprite, int zindex);
 
 /**
  * @brief Sets the orthographic projection.
  *
- * Defines the orthographic rendering view for the current window.
+ * Defines the orthographic rendering view.
  *
- * @param width  Width of the orthographic view.
- * @param height Height of the orthographic view.
+ * @param width  Width of the view.
+ * @param height Height of the view.
  */
 void fsOrthoSet(int width, int height);
 
 /**
  * @brief Clears the window.
  *
- * Clears the window and the OpenGL context using the specified color.
+ * Clears the window and OpenGL context using a color.
  *
  * @param color Clear color.
  */
 void fsClear(FsColor color);
 
 /**
- * @brief Creates a color.
+ * @brief Creates an RGB color.
  *
- * @param r Red component (0-255).
- * @param g Green component (0-255).
- * @param b Blue component (0-255).
+ * @param r Red component (0–255).
+ * @param g Green component (0–255).
+ * @param b Blue component (0–255).
  *
  * @return Resulting color.
  */
