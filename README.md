@@ -19,6 +19,7 @@ if you find any issue or have a cool idea/suggestion, share it on github issues 
 - Transform (Resize, Rotate, Move)
 - Window Management
 - Keyboard & Mouse Input
+- Sprites & Textures
 
 ---
 
