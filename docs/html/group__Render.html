@@ -132,7 +132,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ga4ba69393b31d27cd62ab990395acff8a" id="r_ga4ba69393b31d27cd62ab990395acff8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4ba69393b31d27cd62ab990395acff8a">fsClear</a> (<a class="el" href="structFsColor.html">FsColor</a> color)</td></tr>
 <tr class="memdesc:ga4ba69393b31d27cd62ab990395acff8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the window.  <br /></td></tr>
 <tr class="memitem:gafde4c61111eb8ae8bf12d4066a488dd0" id="r_gafde4c61111eb8ae8bf12d4066a488dd0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structFsColor.html">FsColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafde4c61111eb8ae8bf12d4066a488dd0">FsColor_new</a> (uint8_t r, uint8_t g, uint8_t b)</td></tr>
-<tr class="memdesc:gafde4c61111eb8ae8bf12d4066a488dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a color.  <br /></td></tr>
+<tr class="memdesc:gafde4c61111eb8ae8bf12d4066a488dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an RGB color.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <p>Basic 2D rendering primitives. </p>
@@ -153,7 +153,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Clears the window. </p>
-<p>Clears the window and the OpenGL context using the specified color.</p>
+<p>Clears the window and OpenGL context using a color.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">color</td><td>Clear color. </td></tr>
@@ -187,12 +187,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates a color. </p>
+<p>Creates an RGB color. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">r</td><td>Red component (0-255). </td></tr>
-    <tr><td class="paramname">g</td><td>Green component (0-255). </td></tr>
-    <tr><td class="paramname">b</td><td>Blue component (0-255).</td></tr>
+    <tr><td class="paramname">r</td><td>Red component (0–255). </td></tr>
+    <tr><td class="paramname">g</td><td>Green component (0–255). </td></tr>
+    <tr><td class="paramname">b</td><td>Blue component (0–255).</td></tr>
   </table>
   </dd>
 </dl>
@@ -224,6 +224,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">circle</td><td>Circle to draw. </td></tr>
+    <tr><td class="paramname">zindex</td><td>Rendering order depth. </td></tr>
   </table>
   </dd>
 </dl>
@@ -250,10 +251,11 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Draws a line. </p>
-<p>Draws a colored line using the provided line parameters.</p>
+<p>Draws a colored line.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">line</td><td>Line to draw. </td></tr>
+    <tr><td class="paramname">zindex</td><td>Rendering order depth. </td></tr>
   </table>
   </dd>
 </dl>
@@ -284,6 +286,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td>Point to draw. </td></tr>
+    <tr><td class="paramname">zindex</td><td>Rendering order depth. </td></tr>
   </table>
   </dd>
 </dl>
@@ -314,6 +317,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">quad</td><td>Quadrilateral to draw. </td></tr>
+    <tr><td class="paramname">zindex</td><td>Rendering order depth. </td></tr>
   </table>
   </dd>
 </dl>
@@ -340,16 +344,17 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Draws a 2D sprite. </p>
-<p>Renders a sprite on the window using its position, size, rotation angle, and texture. The sprite is drawn as a textured quad with OpenGL.</p>
+<p>Renders a textured sprite using its position, size, rotation angle and texture.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">sprite</td><td>Pointer to the <a class="el" href="structFsSprite.html" title="Sprite structure.">FsSprite</a> to draw.</td></tr>
+    <tr><td class="paramname">sprite</td><td>Sprite to draw. </td></tr>
+    <tr><td class="paramname">zindex</td><td>Rendering order depth.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>The sprite's texture must be loaded and valid. </dd>
+<dl class="section note"><dt>Note</dt><dd>The sprite texture must be valid and loaded. </dd>
 <dd>
-Uses OpenGL immediate mode for rendering. </dd></dl>
+Uses OpenGL immediate mode. </dd></dl>
 
 </div>
 </div>
@@ -377,6 +382,7 @@ Uses OpenGL immediate mode for rendering. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tri</td><td>Triangle to draw. </td></tr>
+    <tr><td class="paramname">zindex</td><td>Rendering order depth. </td></tr>
   </table>
   </dd>
 </dl>
@@ -403,11 +409,11 @@ Uses OpenGL immediate mode for rendering. </dd></dl>
 </div><div class="memdoc">
 
 <p>Sets the orthographic projection. </p>
-<p>Defines the orthographic rendering view for the current window.</p>
+<p>Defines the orthographic rendering view.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">width</td><td>Width of the orthographic view. </td></tr>
-    <tr><td class="paramname">height</td><td>Height of the orthographic view. </td></tr>
+    <tr><td class="paramname">width</td><td>Width of the view. </td></tr>
+    <tr><td class="paramname">height</td><td>Height of the view. </td></tr>
   </table>
   </dd>
 </dl>
