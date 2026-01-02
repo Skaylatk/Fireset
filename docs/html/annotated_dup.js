@@ -7,6 +7,7 @@ var annotated_dup =
     [ "FsLine", "structFsLine.html", "structFsLine" ],
     [ "FsPoint", "structFsPoint.html", "structFsPoint" ],
     [ "FsQuad", "structFsQuad.html", "structFsQuad" ],
+    [ "FsSound", "structFsSound.html", "structFsSound" ],
     [ "FsSprite", "structFsSprite.html", "structFsSprite" ],
     [ "FsTexture", "structFsTexture.html", "structFsTexture" ],
     [ "FsTriangle", "structFsTriangle.html", "structFsTriangle" ],

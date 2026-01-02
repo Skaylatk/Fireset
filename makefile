@@ -42,7 +42,7 @@ DEP := $(OBJ:.o=.d)
 # ====================================================
 DEPFLAGS := -MMD -MP
 CFLAGS := -g -O0 -Wall -Wextra -Iinclude $(DEPFLAGS)
-LDFLAGS := -lglfw -lGL -lm
+LDFLAGS := -lglfw -lGL -lm -lopenal -lsndfile
 
 # ====================================================
 # Outputs
