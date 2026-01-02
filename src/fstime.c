@@ -64,9 +64,5 @@ double fsTimeGetDelta(void){
     double now = fsTimeGetSystemTime();
     double dt = now - s_last_time;
     s_last_time = now;
-
-    if(dt < 0.0) dt = 0.0;
-    if(dt > 0.1) dt = 0.1;
-    
     return dt;
 }
