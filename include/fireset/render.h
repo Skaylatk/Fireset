@@ -106,7 +106,7 @@ typedef struct {
  *
  * @param p Point to draw.
  */
-void fsDrawPixel(const FsPoint* p);
+void fsDrawPixel(const FsPoint* p, int zindex);
 
 /**
  * @brief Draws a line.
@@ -115,7 +115,7 @@ void fsDrawPixel(const FsPoint* p);
  *
  * @param line Line to draw.
  */
-void fsDrawLine(const FsLine* line);
+void fsDrawLine(const FsLine* line, int zindex);
 
 /**
  * @brief Draws a triangle.
@@ -124,7 +124,7 @@ void fsDrawLine(const FsLine* line);
  *
  * @param tri Triangle to draw.
  */
-void fsDrawTriangle(const FsTriangle* tri);
+void fsDrawTriangle(const FsTriangle* tri, int zindex);
 
 /**
  * @brief Draws a quadrilateral.
@@ -133,7 +133,7 @@ void fsDrawTriangle(const FsTriangle* tri);
  *
  * @param quad Quadrilateral to draw.
  */
-void fsDrawQuad(const FsQuad* quad);
+void fsDrawQuad(const FsQuad* quad, int zindex);
 
 /**
  * @brief Draws a circle.
@@ -142,7 +142,7 @@ void fsDrawQuad(const FsQuad* quad);
  *
  * @param circle Circle to draw.
  */
-void fsDrawCircle(const FsCircle* circle);
+void fsDrawCircle(const FsCircle* circle, int zindex);
 
 /**
  * @brief Draws a 2D sprite.
@@ -155,7 +155,7 @@ void fsDrawCircle(const FsCircle* circle);
  * @note The sprite's texture must be loaded and valid.
  * @note Uses OpenGL immediate mode for rendering.
  */
-void fsDrawSprite(const FsSprite* sprite);
+void fsDrawSprite(const FsSprite* sprite, int zindex);
 
 /**
  * @brief Sets the orthographic projection.

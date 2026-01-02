@@ -6,9 +6,14 @@
 #include "fireset/settings.h"
 #include <math.h>
 
-void fsDrawTriangle(const FsTriangle* tri){
+void fsDrawTriangle(const FsTriangle* tri, int zindex){
+    if (zindex < 1) zindex = 1;
+    if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
+
+    float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX);
+
     glPushMatrix();
-        glTranslatef(tri->position.x, tri->position.y, 0.0f);
+        glTranslatef(tri->position.x, tri->position.y, z);
         glRotatef(tri->angle, 0, 0, 1.0f);
         glScalef(tri->size.x, tri->size.y, 1.0f);
 
@@ -25,9 +30,14 @@ void fsDrawTriangle(const FsTriangle* tri){
     glPopMatrix();
 }
 
-void fsDrawPixel(const FsPoint* p){
+void fsDrawPixel(const FsPoint* p, int zindex){
+    if (zindex < 1) zindex = 1;
+    if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
+
+    float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX);
+
     glPushMatrix();
-        glTranslatef(p->position.x, p->position.y, 0.0f);
+        glTranslatef(p->position.x, p->position.y, z);
 
         glColor3f(
             p->color.r / 255.0f,
@@ -41,9 +51,14 @@ void fsDrawPixel(const FsPoint* p){
     glPopMatrix();
 }
 
-void fsDrawLine(const FsLine* line){
+void fsDrawLine(const FsLine* line, int zindex){
+    if (zindex < 1) zindex = 1;
+    if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
+
+    float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX);
+
     glPushMatrix();
-        glTranslatef(line->position.x, line->position.y, 0.0f);
+        glTranslatef(line->position.x, line->position.y, z);
         glRotatef(line->angle, 0.0f, 0.0f, 1.0f);
         glScalef(line->length, line->thickness, 1.0f);
 
@@ -62,9 +77,14 @@ void fsDrawLine(const FsLine* line){
     glPopMatrix();
 }
 
-void fsDrawQuad(const FsQuad* quad){
+void fsDrawQuad(const FsQuad* quad, int zindex){
+    if (zindex < 1) zindex = 1;
+    if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
+
+    float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX);
+
     glPushMatrix();
-        glTranslatef(quad->position.x, quad->position.y, 0.0f);
+        glTranslatef(quad->position.x, quad->position.y, z);
         glRotatef(quad->angle, 0, 0, 1.0f);
         glScalef(quad->size.x, quad->size.y, 1.0f);
 
@@ -76,21 +96,25 @@ void fsDrawQuad(const FsQuad* quad){
 
         glBegin(GL_QUADS);
             glVertex2f(-0.5f, -0.5f);
-            glVertex2f(0.5f, -0.5f);
-            glVertex2f(0.5f, 0.5f);
-            glVertex2f(-0.5f, 0.5f);
+            glVertex2f( 0.5f, -0.5f);
+            glVertex2f( 0.5f,  0.5f);
+            glVertex2f(-0.5f,  0.5f);
         glEnd();
-        
     glPopMatrix();
 }
 
-void fsDrawCircle(const FsCircle* circle){
+void fsDrawCircle(const FsCircle* circle, int zindex){
+    if (zindex < 1) zindex = 1;
+    if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
+
+    float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX);
+
     int segments = circle->segments;
     if (segments < 8)   segments = 8;
     if (segments > 128) segments = 128;
 
     glPushMatrix();
-        glTranslatef(circle->position.x, circle->position.y, 0.0f);
+        glTranslatef(circle->position.x, circle->position.y, z);
         glRotatef(circle->angle, 0.0f, 0.0f, 1.0f);
         glScalef(circle->size.x, circle->size.y, 1.0f);
 
@@ -112,9 +136,14 @@ void fsDrawCircle(const FsCircle* circle){
     glPopMatrix();
 }
 
-void fsDrawSprite(const FsSprite* sprite){
+void fsDrawSprite(const FsSprite* sprite, int zindex){
+    if (zindex < 1) zindex = 1;
+    if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
+
+    float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX);
+
     glPushMatrix();
-        glTranslatef(sprite->position.x, sprite->position.y, 0.0f);
+        glTranslatef(sprite->position.x, sprite->position.y, z);
         glRotatef(sprite->angle, 0, 0, 1.0f);
         glScalef(sprite->size.x, sprite->size.y, 1.0f);
 
@@ -147,13 +176,13 @@ void fsClear(FsColor color){
         1.0f
     );
 
-    glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
 void fsOrthoSet(int width, int height){
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glOrtho(0, width, height, 0, -1, 1);
+    glOrtho(0, width, height, 0, -1.0f, 1.0f);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 }

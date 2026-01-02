@@ -43,11 +43,11 @@ var group__Render =
     ] ],
     [ "fsClear", "group__Render.html#ga4ba69393b31d27cd62ab990395acff8a", null ],
     [ "FsColor_new", "group__Render.html#gafde4c61111eb8ae8bf12d4066a488dd0", null ],
-    [ "fsDrawCircle", "group__Render.html#ga6444b87e85d616465bec51460cd36815", null ],
-    [ "fsDrawLine", "group__Render.html#gaaaa3c06c9e63ee46d44864271511a417", null ],
-    [ "fsDrawPixel", "group__Render.html#ga1e45557551baf71485e33e6608328c14", null ],
-    [ "fsDrawQuad", "group__Render.html#ga99a8cdb154c8b8d309a1bbd1c8b209fc", null ],
-    [ "fsDrawSprite", "group__Render.html#ga066dce44e466ddde492cf0bb8c136632", null ],
-    [ "fsDrawTriangle", "group__Render.html#ga65dd04ee830683c5668f165109718452", null ],
+    [ "fsDrawCircle", "group__Render.html#ga44de89e7523e19a444bc12addf85033e", null ],
+    [ "fsDrawLine", "group__Render.html#gad0664f5986ac36e8586b8dd5605182a0", null ],
+    [ "fsDrawPixel", "group__Render.html#gace62e45705291b636900736340b279f6", null ],
+    [ "fsDrawQuad", "group__Render.html#gabb109b9fed5cdf656f1b0e510641f045", null ],
+    [ "fsDrawSprite", "group__Render.html#ga59d8352c5337df303eb47efdc307fc26", null ],
+    [ "fsDrawTriangle", "group__Render.html#ga1b9ce3db4d00f0dec130e50f1aeb8408", null ],
     [ "fsOrthoSet", "group__Render.html#gaabce2669ec09b0b2357420bbd54cd4ed", null ]
 ];
