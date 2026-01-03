@@ -36,6 +36,9 @@ This engine builds upon the work of several excellent open-source projects:
 
 - [GLFW](https://www.glfw.org/) — Windowing and input
 - [OpenGL](https://www.khronos.org/opengl/) — Graphics API
+- [OpenAL](https://www.openal.org/) — 3D and spatial audio
+- [stb_image](https://github.com/nothings/stb) — Image loading
+- [libsndfile](http://www.mega-nerd.com/libsndfile/) — Audio file loading
 
 ## How to be listed here
 Significant contributions (code, architecture, design, documentation, or technical support)

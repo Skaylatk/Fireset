@@ -92,38 +92,42 @@ $(function(){initNavTree('window_8h_source.html','',''); });
   <div class="headertitle"><div class="title">window.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;GLFW/glfw3.h&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structFsWindow.html">   17</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structFsWindow.html#a4fcb3febcc2602688a4c689361f3a51c">   18</a></span>    GLFWwindow* <a class="code hl_variable" href="structFsWindow.html#a4fcb3febcc2602688a4c689361f3a51c">handle</a>; </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structFsWindow.html#a6cc5523b876ea62bc17df2b5bbe9b3ff">   19</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structFsWindow.html#a6cc5523b876ea62bc17df2b5bbe9b3ff">width</a>;          </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structFsWindow.html#a5b46126d043bab9134690e0192235d58">   20</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structFsWindow.html#a5b46126d043bab9134690e0192235d58">height</a>;         </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structFsWindow.html#a914cc7e4c1b38b872a29ffc9af2b9470">   21</a></span>    <span class="keywordtype">char</span>* <a class="code hl_variable" href="structFsWindow.html#a914cc7e4c1b38b872a29ffc9af2b9470">name</a>;         </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>} <a class="code hl_struct" href="structFsWindow.html">FsWindow</a>;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2025 Henrique Rodrigues Santos</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Licensed under the MIT License</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// Repo: https://github.com/saintsHr/Fireset</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;GLFW/glfw3.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structFsWindow.html">   21</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structFsWindow.html#a4fcb3febcc2602688a4c689361f3a51c">   22</a></span>    GLFWwindow* <a class="code hl_variable" href="structFsWindow.html#a4fcb3febcc2602688a4c689361f3a51c">handle</a>; </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structFsWindow.html#a6cc5523b876ea62bc17df2b5bbe9b3ff">   23</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structFsWindow.html#a6cc5523b876ea62bc17df2b5bbe9b3ff">width</a>;          </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structFsWindow.html#a5b46126d043bab9134690e0192235d58">   24</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structFsWindow.html#a5b46126d043bab9134690e0192235d58">height</a>;         </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structFsWindow.html#a914cc7e4c1b38b872a29ffc9af2b9470">   25</a></span>    <span class="keywordtype">char</span>* <a class="code hl_variable" href="structFsWindow.html#a914cc7e4c1b38b872a29ffc9af2b9470">name</a>;         </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>} <a class="code hl_struct" href="structFsWindow.html">FsWindow</a>;</div>
 </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><a class="code hl_struct" href="structFsWindow.html">FsWindow</a>* <a class="code hl_function" href="group__Window.html#ga34127f76fa56b7357b85166101edd073">fsWindowCreate</a>(<a class="code hl_struct" href="structFsWindow.html">FsWindow</a>* window);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__Window.html#ga3f73f18edb9a810871b4feab8d131aa9">fsWindowHandle</a>(<a class="code hl_struct" href="structFsWindow.html">FsWindow</a>* window);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__Window.html#gab93569ba69eb02b1330276582444b866">fsWindowDestroy</a>(<a class="code hl_struct" href="structFsWindow.html">FsWindow</a>* window);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">bool</span> <a class="code hl_function" href="group__Window.html#gaac42f2b483ab082ab8bce722f4f33be0">fsWindowShouldClose</a>(<a class="code hl_struct" href="structFsWindow.html">FsWindow</a>* window);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><a class="code hl_struct" href="structFsWindow.html">FsWindow</a>* <a class="code hl_function" href="group__Window.html#ga34127f76fa56b7357b85166101edd073">fsWindowCreate</a>(<a class="code hl_struct" href="structFsWindow.html">FsWindow</a>* window);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__Window.html#ga3f73f18edb9a810871b4feab8d131aa9">fsWindowHandle</a>(<a class="code hl_struct" href="structFsWindow.html">FsWindow</a>* window);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__Window.html#gab93569ba69eb02b1330276582444b866">fsWindowDestroy</a>(<a class="code hl_struct" href="structFsWindow.html">FsWindow</a>* window);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keywordtype">bool</span> <a class="code hl_function" href="group__Window.html#gaac42f2b483ab082ab8bce722f4f33be0">fsWindowShouldClose</a>(<a class="code hl_struct" href="structFsWindow.html">FsWindow</a>* window);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
 <div class="ttc" id="agroup__Window_html_ga34127f76fa56b7357b85166101edd073"><div class="ttname"><a href="group__Window.html#ga34127f76fa56b7357b85166101edd073">fsWindowCreate</a></div><div class="ttdeci">FsWindow * fsWindowCreate(FsWindow *window)</div><div class="ttdoc">Creates a window.</div><div class="ttdef"><b>Definition</b> window.c:17</div></div>
 <div class="ttc" id="agroup__Window_html_ga3f73f18edb9a810871b4feab8d131aa9"><div class="ttname"><a href="group__Window.html#ga3f73f18edb9a810871b4feab8d131aa9">fsWindowHandle</a></div><div class="ttdeci">void fsWindowHandle(FsWindow *window)</div><div class="ttdoc">Updates a window.</div><div class="ttdef"><b>Definition</b> window.c:49</div></div>
 <div class="ttc" id="agroup__Window_html_gaac42f2b483ab082ab8bce722f4f33be0"><div class="ttname"><a href="group__Window.html#gaac42f2b483ab082ab8bce722f4f33be0">fsWindowShouldClose</a></div><div class="ttdeci">bool fsWindowShouldClose(FsWindow *window)</div><div class="ttdoc">Checks if a window should close.</div><div class="ttdef"><b>Definition</b> window.c:60</div></div>
 <div class="ttc" id="agroup__Window_html_gab93569ba69eb02b1330276582444b866"><div class="ttname"><a href="group__Window.html#gab93569ba69eb02b1330276582444b866">fsWindowDestroy</a></div><div class="ttdeci">void fsWindowDestroy(FsWindow *window)</div><div class="ttdoc">Destroys a window.</div><div class="ttdef"><b>Definition</b> window.c:56</div></div>
-<div class="ttc" id="astructFsWindow_html"><div class="ttname"><a href="structFsWindow.html">FsWindow</a></div><div class="ttdoc">Window object.</div><div class="ttdef"><b>Definition</b> window.h:17</div></div>
-<div class="ttc" id="astructFsWindow_html_a4fcb3febcc2602688a4c689361f3a51c"><div class="ttname"><a href="structFsWindow.html#a4fcb3febcc2602688a4c689361f3a51c">FsWindow::handle</a></div><div class="ttdeci">GLFWwindow * handle</div><div class="ttdef"><b>Definition</b> window.h:18</div></div>
-<div class="ttc" id="astructFsWindow_html_a5b46126d043bab9134690e0192235d58"><div class="ttname"><a href="structFsWindow.html#a5b46126d043bab9134690e0192235d58">FsWindow::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> window.h:20</div></div>
-<div class="ttc" id="astructFsWindow_html_a6cc5523b876ea62bc17df2b5bbe9b3ff"><div class="ttname"><a href="structFsWindow.html#a6cc5523b876ea62bc17df2b5bbe9b3ff">FsWindow::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> window.h:19</div></div>
-<div class="ttc" id="astructFsWindow_html_a914cc7e4c1b38b872a29ffc9af2b9470"><div class="ttname"><a href="structFsWindow.html#a914cc7e4c1b38b872a29ffc9af2b9470">FsWindow::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition</b> window.h:21</div></div>
+<div class="ttc" id="astructFsWindow_html"><div class="ttname"><a href="structFsWindow.html">FsWindow</a></div><div class="ttdoc">Window object.</div><div class="ttdef"><b>Definition</b> window.h:21</div></div>
+<div class="ttc" id="astructFsWindow_html_a4fcb3febcc2602688a4c689361f3a51c"><div class="ttname"><a href="structFsWindow.html#a4fcb3febcc2602688a4c689361f3a51c">FsWindow::handle</a></div><div class="ttdeci">GLFWwindow * handle</div><div class="ttdef"><b>Definition</b> window.h:22</div></div>
+<div class="ttc" id="astructFsWindow_html_a5b46126d043bab9134690e0192235d58"><div class="ttname"><a href="structFsWindow.html#a5b46126d043bab9134690e0192235d58">FsWindow::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> window.h:24</div></div>
+<div class="ttc" id="astructFsWindow_html_a6cc5523b876ea62bc17df2b5bbe9b3ff"><div class="ttname"><a href="structFsWindow.html#a6cc5523b876ea62bc17df2b5bbe9b3ff">FsWindow::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> window.h:23</div></div>
+<div class="ttc" id="astructFsWindow_html_a914cc7e4c1b38b872a29ffc9af2b9470"><div class="ttname"><a href="structFsWindow.html#a914cc7e4c1b38b872a29ffc9af2b9470">FsWindow::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition</b> window.h:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
