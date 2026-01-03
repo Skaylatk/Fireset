@@ -70,3 +70,22 @@ double fsTimeGetDelta(void){
     s_last_time = now;
     return dt;
 }
+
+#ifdef _WIN32
+#include <windows.h>
+#else
+#include <time.h>
+#include <errno.h>
+#endif
+
+void fsWait(unsigned long ms){
+#ifdef _WIN32
+    Sleep(ms);
+#else
+    struct timespec ts;
+    ts.tv_sec = ms / 1000;
+    ts.tv_nsec = (ms % 1000) * 1000000L;
+
+    while (nanosleep(&ts, &ts) == -1 && errno == EINTR);
+#endif
+}

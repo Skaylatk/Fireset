@@ -37,4 +37,17 @@ double fsTimeGetDelta(void);
  */
 void fsTimeInit(void);
 
+/** 
+ * @brief Waits for a specified duration.
+ *
+ * Pauses the program execution for a given number of milliseconds.
+ * Works on Windows and POSIX systems.
+ *
+ * @param ms Duration to wait, in milliseconds.
+ *
+ * @note On Windows, uses `Sleep()`.
+ * @note On Linux/macOS, uses `nanosleep()` and handles `EINTR`.
+ */
+void fsWait(unsigned long ms);
+
 /** @} */

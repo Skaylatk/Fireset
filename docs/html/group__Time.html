@@ -104,6 +104,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga3b590aa8153424064ea182a2606c5d2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the delta time.  <br /></td></tr>
 <tr class="memitem:gadcaf98e33c05c790b1e8003de0a7aa68" id="r_gadcaf98e33c05c790b1e8003de0a7aa68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadcaf98e33c05c790b1e8003de0a7aa68">fsTimeInit</a> (void)</td></tr>
 <tr class="memdesc:gadcaf98e33c05c790b1e8003de0a7aa68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the time module.  <br /></td></tr>
+<tr class="memitem:ga7260331bc4ed82946aa241d6d47b42f5" id="r_ga7260331bc4ed82946aa241d6d47b42f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7260331bc4ed82946aa241d6d47b42f5">fsWait</a> (unsigned long ms)</td></tr>
+<tr class="memdesc:ga7260331bc4ed82946aa241d6d47b42f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for a specified duration.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <p>Time-related functions. </p>
@@ -168,6 +170,35 @@ Functions</h2></td></tr>
 <p>Initializes the time module. </p>
 <p>Initializes the internal time tracking used by the engine.</p>
 <p>This function must be called before using any other time-related function. </p>
+
+</div>
+</div>
+<a id="ga7260331bc4ed82946aa241d6d47b42f5" name="ga7260331bc4ed82946aa241d6d47b42f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7260331bc4ed82946aa241d6d47b42f5">&#9670;&#160;</a></span>fsWait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fsWait </td>
+          <td>(</td>
+          <td class="paramtype">unsigned long</td>          <td class="paramname"><span class="paramname"><em>ms</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Waits for a specified duration. </p>
+<p>Pauses the program execution for a given number of milliseconds. Works on Windows and POSIX systems.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ms</td><td>Duration to wait, in milliseconds.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>On Windows, uses <span class="tt">Sleep()</span>. </dd>
+<dd>
+On Linux/macOS, uses <span class="tt">nanosleep()</span> and handles <span class="tt">EINTR</span>. </dd></dl>
 
 </div>
 </div>

@@ -133,9 +133,10 @@ var searchData=
   ['fstriangle_130',['FsTriangle',['../structFsTriangle.html',1,'']]],
   ['fsvec2_131',['FsVec2',['../structFsVec2.html',1,'']]],
   ['fsvec2_5fnew_132',['FsVec2_new',['../group__Vertex.html#ga8c6ec9f831e824bc2beff7d60d79ea1e',1,'FsVec2_new(float x, float y):&#160;vertex.c'],['../group__Vertex.html#ga8c6ec9f831e824bc2beff7d60d79ea1e',1,'FsVec2_new(float x, float y):&#160;vertex.c']]],
-  ['fswindow_133',['FsWindow',['../structFsWindow.html',1,'']]],
-  ['fswindowcreate_134',['fsWindowCreate',['../group__Window.html#ga34127f76fa56b7357b85166101edd073',1,'fsWindowCreate(FsWindow *window):&#160;window.c'],['../group__Window.html#ga34127f76fa56b7357b85166101edd073',1,'fsWindowCreate(FsWindow *window):&#160;window.c']]],
-  ['fswindowdestroy_135',['fsWindowDestroy',['../group__Window.html#gab93569ba69eb02b1330276582444b866',1,'fsWindowDestroy(FsWindow *window):&#160;window.c'],['../group__Window.html#gab93569ba69eb02b1330276582444b866',1,'fsWindowDestroy(FsWindow *window):&#160;window.c']]],
-  ['fswindowhandle_136',['fsWindowHandle',['../group__Window.html#ga3f73f18edb9a810871b4feab8d131aa9',1,'fsWindowHandle(FsWindow *window):&#160;window.c'],['../group__Window.html#ga3f73f18edb9a810871b4feab8d131aa9',1,'fsWindowHandle(FsWindow *window):&#160;window.c']]],
-  ['fswindowshouldclose_137',['fsWindowShouldClose',['../group__Window.html#gaac42f2b483ab082ab8bce722f4f33be0',1,'fsWindowShouldClose(FsWindow *window):&#160;window.c'],['../group__Window.html#gaac42f2b483ab082ab8bce722f4f33be0',1,'fsWindowShouldClose(FsWindow *window):&#160;window.c']]]
+  ['fswait_133',['fsWait',['../group__Time.html#ga7260331bc4ed82946aa241d6d47b42f5',1,'fsWait(unsigned long ms):&#160;fstime.c'],['../group__Time.html#ga7260331bc4ed82946aa241d6d47b42f5',1,'fsWait(unsigned long ms):&#160;fstime.c']]],
+  ['fswindow_134',['FsWindow',['../structFsWindow.html',1,'']]],
+  ['fswindowcreate_135',['fsWindowCreate',['../group__Window.html#ga34127f76fa56b7357b85166101edd073',1,'fsWindowCreate(FsWindow *window):&#160;window.c'],['../group__Window.html#ga34127f76fa56b7357b85166101edd073',1,'fsWindowCreate(FsWindow *window):&#160;window.c']]],
+  ['fswindowdestroy_136',['fsWindowDestroy',['../group__Window.html#gab93569ba69eb02b1330276582444b866',1,'fsWindowDestroy(FsWindow *window):&#160;window.c'],['../group__Window.html#gab93569ba69eb02b1330276582444b866',1,'fsWindowDestroy(FsWindow *window):&#160;window.c']]],
+  ['fswindowhandle_137',['fsWindowHandle',['../group__Window.html#ga3f73f18edb9a810871b4feab8d131aa9',1,'fsWindowHandle(FsWindow *window):&#160;window.c'],['../group__Window.html#ga3f73f18edb9a810871b4feab8d131aa9',1,'fsWindowHandle(FsWindow *window):&#160;window.c']]],
+  ['fswindowshouldclose_138',['fsWindowShouldClose',['../group__Window.html#gaac42f2b483ab082ab8bce722f4f33be0',1,'fsWindowShouldClose(FsWindow *window):&#160;window.c'],['../group__Window.html#gaac42f2b483ab082ab8bce722f4f33be0',1,'fsWindowShouldClose(FsWindow *window):&#160;window.c']]]
 ];
