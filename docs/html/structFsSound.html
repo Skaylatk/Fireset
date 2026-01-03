@@ -89,9 +89,12 @@ $(function(){initNavTree('structFsSound.html','','structFsSound-members'); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">FsSound Struct Reference</div></div>
+  <div class="headertitle"><div class="title">FsSound Struct Reference<div class="ingroups"><a class="el" href="group__Audio.html">Audio</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents a loaded sound buffer.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="audio_8h_source.html">audio.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -105,7 +108,10 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a8875cbb643ceef1b865bb9f6041c8ab3" id="r_a8875cbb643ceef1b865bb9f6041c8ab3"><td class="memItemLeft" align="right" valign="top">ALenum&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8875cbb643ceef1b865bb9f6041c8ab3">format</a></td></tr>
 <tr class="memitem:a68b3f297445fbde75983e0da6621b65d" id="r_a68b3f297445fbde75983e0da6621b65d"><td class="memItemLeft" align="right" valign="top">ALuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68b3f297445fbde75983e0da6621b65d">buffer</a></td></tr>
 </table>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a loaded sound buffer. </p>
+<p>Contains audio data and OpenAL buffer information. </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a99adda80dc57eb5f6a417c88c152bc5a" name="a99adda80dc57eb5f6a417c88c152bc5a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a99adda80dc57eb5f6a417c88c152bc5a">&#9670;&#160;</a></span>bps</h2>
 
@@ -117,6 +123,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Bits per sample (usually 16) </p>
 
 </div>
 </div>
@@ -131,6 +138,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>OpenAL buffer handle </p>
 
 </div>
 </div>
@@ -145,6 +153,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Number of channels (1 = mono, 2 = stereo) </p>
 
 </div>
 </div>
@@ -159,6 +168,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>OpenAL format (AL_FORMAT_MONO16 or AL_FORMAT_STEREO16) </p>
 
 </div>
 </div>
@@ -173,6 +183,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Total number of frames </p>
 
 </div>
 </div>
@@ -187,6 +198,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Sample rate in Hz </p>
 
 </div>
 </div>
@@ -201,6 +213,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Raw PCM samples </p>
 
 </div>
 </div>
