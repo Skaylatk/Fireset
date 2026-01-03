@@ -32,6 +32,4 @@ typedef struct{
  */
 FsVec2 FsVec2_new(float x, float y);
 
-FsVec2 FsVec2_toScreen(FsVec2 vec, FsWindow* window);
-
 /** @} */
