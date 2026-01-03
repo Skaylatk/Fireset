@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-static ALuint g_sources[AUDIO_MAX_SOURCES];
+static FsSoundSource g_sources[AUDIO_MAX_SOURCES];
 static int g_sourceCount = 0;
 
 FsSound fsSoundLoad(const char* filename){
@@ -52,42 +52,27 @@ FsSound fsSoundLoad(const char* filename){
     return sound;
 }
 
-static inline void fsAudioRegisterSource(ALuint src){
-    if (g_sourceCount < AUDIO_MAX_SOURCES) g_sources[g_sourceCount++] = src;
-}
-
-void fsAudioHandle(void){
-    for (int i = 0; i < g_sourceCount;){
-        ALint state;
-        alGetSourcei(g_sources[i], AL_SOURCE_STATE, &state);
-
-        if (state == AL_STOPPED){
-            alDeleteSources(1, &g_sources[i]);
-            g_sources[i] = g_sources[--g_sourceCount];
-        }else{
-            i++;
-        }
-    }
-}
-
-void fsSoundPlayAt(FsSound* sound, FsVec2 position, int volume){
-    // create source
+void fsSoundPlay(const FsSound* sound, const FsSoundSource* source, int volume){
     ALuint src;
     alGenSources(1, &src);
+
     alSourcei(src, AL_BUFFER, sound->buffer);
     alSourcei(src, AL_SOURCE_RELATIVE, AL_FALSE);
 
-    // attenuation
-    alSourcef(src, AL_REFERENCE_DISTANCE, AUDIO_FULL_VOLUME_DISTANCE * volume);
-    alSourcef(src, AL_ROLLOFF_FACTOR, AUDIO_DECAY_FACTOR / volume);
-
     // position
-    alSource3f(src, AL_POSITION, position.x, position.y, 0);
+    alSource3f(src, AL_POSITION, source->position.x, source->position.y, 0.0f);
 
-    // registers source
-    fsAudioRegisterSource(src);
+    // attenuation
+    alSourcef(src, AL_REFERENCE_DISTANCE, AUDIO_FULL_VOLUME_DISTANCE);
+    alSourcef(src, AL_ROLLOFF_FACTOR, AUDIO_DECAY_FACTOR);
 
-    // plays audio
+    // volume
+    float gain = volume / 100.0f;
+    if (gain < 0.0f) gain = 0.0f;
+    if (gain > 1.0f) gain = 1.0f;
+    alSourcef(src, AL_GAIN, gain);
+
+    // plays the audio
     alSourcePlay(src);
 }
 

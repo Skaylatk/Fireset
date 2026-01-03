@@ -6,6 +6,6 @@
 #define REND_MAX_ZINDEX 32
 //=========== Audio ======================================================================//
 #define AUDIO_MAX_SOURCES           128
-#define AUDIO_FULL_VOLUME_DISTANCE  50
+#define AUDIO_FULL_VOLUME_DISTANCE  200
 #define AUDIO_DECAY_FACTOR          1.0
 //========================================================================================//

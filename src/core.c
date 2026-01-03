@@ -31,6 +31,7 @@ bool fsInit(void){
     }
 
     alcMakeContextCurrent(g_context);
+    alDistanceModel(AL_INVERSE_DISTANCE_CLAMPED);
 
     return true;
 }
