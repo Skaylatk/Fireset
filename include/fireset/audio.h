@@ -16,10 +16,16 @@ typedef struct{
 }FsSound;
 
 typedef struct{
-    ALuint* handle;
+    ALuint handle;
     FsVec2 position;
+    bool looping;
+    bool playing;
 }FsSoundSource;
 
 FsSound fsSoundLoad(const char* filename);
-void fsSoundPlay(const FsSound* sound, const FsSoundSource* source, int volume);
 void fsSoundFree(FsSound* sound);
+void fsSoundSourcePlay(FsSound* sound, FsSoundSource* source, int volume);
+void fsSoundSourceStop(FsSoundSource* source);
+void fsSoundSourceFree(FsSoundSource* source);
+void fsSoundSourceHandle(int count, FsSoundSource* sources);
+FsSoundSource fsSoundSourceCreate(FsVec2 position, bool looping);

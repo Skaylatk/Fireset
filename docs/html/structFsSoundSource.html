@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Fireset: FsSound Struct Reference</title>
+<title>Fireset: FsSoundSource Struct Reference</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('structFsSound.html','','structFsSound-members'); });
+$(function(){initNavTree('structFsSoundSource.html','','structFsSoundSource-members'); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -89,115 +89,80 @@ $(function(){initNavTree('structFsSound.html','','structFsSound-members'); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">FsSound Struct Reference</div></div>
+  <div class="headertitle"><div class="title">FsSoundSource Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="audio_8h_source.html">audio.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for FsSoundSource:</div>
+<div class="dyncontent">
+<div class="center"><img src="structFsSoundSource__coll__graph.png" border="0" usemap="#aFsSoundSource_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="aFsSoundSource_coll__map" id="aFsSoundSource_coll__map">
+<area shape="rect" title=" " alt="" coords="5,106,126,134"/>
+<area shape="rect" href="structFsVec2.html" title="2D vector." alt="" coords="32,5,99,33"/>
+<area shape="poly" title=" " alt="" coords="68,47,68,106,63,105,63,50"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a420230c50559e49d9200b244d3e80bcd" id="r_a420230c50559e49d9200b244d3e80bcd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a420230c50559e49d9200b244d3e80bcd">channels</a></td></tr>
-<tr class="memitem:a6d67066a84cb72daaec8a9874fe2899f" id="r_a6d67066a84cb72daaec8a9874fe2899f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d67066a84cb72daaec8a9874fe2899f">sampleRate</a></td></tr>
-<tr class="memitem:a99adda80dc57eb5f6a417c88c152bc5a" id="r_a99adda80dc57eb5f6a417c88c152bc5a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99adda80dc57eb5f6a417c88c152bc5a">bps</a></td></tr>
-<tr class="memitem:a4226d7725bbd1abdc7708d0e391e7bef" id="r_a4226d7725bbd1abdc7708d0e391e7bef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4226d7725bbd1abdc7708d0e391e7bef">frames</a></td></tr>
-<tr class="memitem:a572c9ed0e2294a597ccdc0f7d89707e8" id="r_a572c9ed0e2294a597ccdc0f7d89707e8"><td class="memItemLeft" align="right" valign="top">short *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a572c9ed0e2294a597ccdc0f7d89707e8">samples</a></td></tr>
-<tr class="memitem:a8875cbb643ceef1b865bb9f6041c8ab3" id="r_a8875cbb643ceef1b865bb9f6041c8ab3"><td class="memItemLeft" align="right" valign="top">ALenum&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8875cbb643ceef1b865bb9f6041c8ab3">format</a></td></tr>
-<tr class="memitem:a68b3f297445fbde75983e0da6621b65d" id="r_a68b3f297445fbde75983e0da6621b65d"><td class="memItemLeft" align="right" valign="top">ALuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68b3f297445fbde75983e0da6621b65d">buffer</a></td></tr>
+<tr class="memitem:a533ff7e3680d2be54caf52e5508cc552" id="r_a533ff7e3680d2be54caf52e5508cc552"><td class="memItemLeft" align="right" valign="top">ALuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a533ff7e3680d2be54caf52e5508cc552">handle</a></td></tr>
+<tr class="memitem:a33d65a6aec2a904e2d309211b065703a" id="r_a33d65a6aec2a904e2d309211b065703a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structFsVec2.html">FsVec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33d65a6aec2a904e2d309211b065703a">position</a></td></tr>
+<tr class="memitem:ab81484c3ca6c7ebe96b06fe313054176" id="r_ab81484c3ca6c7ebe96b06fe313054176"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab81484c3ca6c7ebe96b06fe313054176">looping</a></td></tr>
+<tr class="memitem:a5a484932281e938c6b0bb60427bed652" id="r_a5a484932281e938c6b0bb60427bed652"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a484932281e938c6b0bb60427bed652">playing</a></td></tr>
 </table>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="a99adda80dc57eb5f6a417c88c152bc5a" name="a99adda80dc57eb5f6a417c88c152bc5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99adda80dc57eb5f6a417c88c152bc5a">&#9670;&#160;</a></span>bps</h2>
+<a id="a533ff7e3680d2be54caf52e5508cc552" name="a533ff7e3680d2be54caf52e5508cc552"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a533ff7e3680d2be54caf52e5508cc552">&#9670;&#160;</a></span>handle</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int FsSound::bps</td>
+          <td class="memname">ALuint FsSoundSource::handle</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a68b3f297445fbde75983e0da6621b65d" name="a68b3f297445fbde75983e0da6621b65d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68b3f297445fbde75983e0da6621b65d">&#9670;&#160;</a></span>buffer</h2>
+<a id="ab81484c3ca6c7ebe96b06fe313054176" name="ab81484c3ca6c7ebe96b06fe313054176"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab81484c3ca6c7ebe96b06fe313054176">&#9670;&#160;</a></span>looping</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ALuint FsSound::buffer</td>
+          <td class="memname">bool FsSoundSource::looping</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a420230c50559e49d9200b244d3e80bcd" name="a420230c50559e49d9200b244d3e80bcd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a420230c50559e49d9200b244d3e80bcd">&#9670;&#160;</a></span>channels</h2>
+<a id="a5a484932281e938c6b0bb60427bed652" name="a5a484932281e938c6b0bb60427bed652"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a484932281e938c6b0bb60427bed652">&#9670;&#160;</a></span>playing</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int FsSound::channels</td>
+          <td class="memname">bool FsSoundSource::playing</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a8875cbb643ceef1b865bb9f6041c8ab3" name="a8875cbb643ceef1b865bb9f6041c8ab3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8875cbb643ceef1b865bb9f6041c8ab3">&#9670;&#160;</a></span>format</h2>
+<a id="a33d65a6aec2a904e2d309211b065703a" name="a33d65a6aec2a904e2d309211b065703a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33d65a6aec2a904e2d309211b065703a">&#9670;&#160;</a></span>position</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ALenum FsSound::format</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4226d7725bbd1abdc7708d0e391e7bef" name="a4226d7725bbd1abdc7708d0e391e7bef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4226d7725bbd1abdc7708d0e391e7bef">&#9670;&#160;</a></span>frames</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int FsSound::frames</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6d67066a84cb72daaec8a9874fe2899f" name="a6d67066a84cb72daaec8a9874fe2899f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d67066a84cb72daaec8a9874fe2899f">&#9670;&#160;</a></span>sampleRate</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int FsSound::sampleRate</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a572c9ed0e2294a597ccdc0f7d89707e8" name="a572c9ed0e2294a597ccdc0f7d89707e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a572c9ed0e2294a597ccdc0f7d89707e8">&#9670;&#160;</a></span>samples</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">short* FsSound::samples</td>
+          <td class="memname"><a class="el" href="structFsVec2.html">FsVec2</a> FsSoundSource::position</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -220,7 +185,7 @@ Public Attributes</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="structFsSound.html">FsSound</a></li>
+    <li class="navelem"><a href="structFsSoundSource.html">FsSoundSource</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>

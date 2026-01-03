@@ -8,9 +8,10 @@ var searchData=
   ['fspoint_5',['FsPoint',['../structFsPoint.html',1,'']]],
   ['fsquad_6',['FsQuad',['../structFsQuad.html',1,'']]],
   ['fssound_7',['FsSound',['../structFsSound.html',1,'']]],
-  ['fssprite_8',['FsSprite',['../structFsSprite.html',1,'']]],
-  ['fstexture_9',['FsTexture',['../structFsTexture.html',1,'']]],
-  ['fstriangle_10',['FsTriangle',['../structFsTriangle.html',1,'']]],
-  ['fsvec2_11',['FsVec2',['../structFsVec2.html',1,'']]],
-  ['fswindow_12',['FsWindow',['../structFsWindow.html',1,'']]]
+  ['fssoundsource_8',['FsSoundSource',['../structFsSoundSource.html',1,'']]],
+  ['fssprite_9',['FsSprite',['../structFsSprite.html',1,'']]],
+  ['fstexture_10',['FsTexture',['../structFsTexture.html',1,'']]],
+  ['fstriangle_11',['FsTriangle',['../structFsTriangle.html',1,'']]],
+  ['fsvec2_12',['FsVec2',['../structFsVec2.html',1,'']]],
+  ['fswindow_13',['FsWindow',['../structFsWindow.html',1,'']]]
 ];
