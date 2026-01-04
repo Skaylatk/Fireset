@@ -16,6 +16,7 @@ var group__Audio =
       [ "position", "structFsSoundSource.html#a33d65a6aec2a904e2d309211b065703a", null ]
     ] ],
     [ "fsSoundFree", "group__Audio.html#gaf21ea57902957759c5a66270bafdf7a5", null ],
+    [ "fsSoundListenerSetPosition", "group__Audio.html#ga70ccf65e427d248e370b1f15d92b184a", null ],
     [ "fsSoundLoad", "group__Audio.html#ga448ae6f7710b97c5ca4aa38751af67e5", null ],
     [ "fsSoundSourceCreate", "group__Audio.html#gad9cb59a6a6cc690e025ad870eccbe813", null ],
     [ "fsSoundSourceFree", "group__Audio.html#ga9ab14761080fcffa849140b5f929023e", null ],

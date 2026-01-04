@@ -4,21 +4,30 @@
 
 #include "fireset/audio.h"
 #include "fireset/settings.h"
+#include "fireset/fslog.h"
 
 #include <sndfile.h>
 #include <stdlib.h>
 #include <stdbool.h>
 
 FsSound fsSoundLoad(const char* filename){
+    FsSound nullsnd = {0};
+
     FsSound sound = {0};
     SF_INFO info = {0};
 
     // opens file
     SNDFILE* file = sf_open(filename, SFM_READ, &info);
-    if (!file) return sound;
+    if (!file){
+        fsLog(FS_WARNING,"cannot open file '%s' (audio)", filename);
+        return nullsnd;
+    }
 
     // checks channels compability
-    if (info.channels != 1 && info.channels != 2) return sound;
+    if (info.channels != 1 && info.channels != 2){
+        fsLog(FS_WARNING,"file '%s' (audio) is not mono or stereo", filename);
+        return nullsnd;
+    }
 
     // fills struct
     sound.channels   = info.channels;
@@ -29,12 +38,20 @@ FsSound fsSoundLoad(const char* filename){
         ? AL_FORMAT_MONO16
         : AL_FORMAT_STEREO16;
 
-    // fills samples
+    // allocates memory for samples
     sound.samples = malloc(sound.frames * sound.channels * sizeof(short));
-    sf_readf_short(file, sound.samples, sound.frames);
     if (!sound.samples){
+        fsLog(FS_WARNING,"cannot allocate memory for '%s' (audio) samples", filename);
+        return nullsnd;
+    }
+
+    // fills samples
+    sf_count_t frames_read = sf_readf_short(file, sound.samples, sound.frames);
+    if (frames_read != sound.frames){
+        free(sound.samples);
         sf_close(file);
-        return sound;
+        fsLog(FS_WARNING,"failed to read some samples from '%s' (audio)", filename);
+        return nullsnd;
     }
 
     // generates buffer

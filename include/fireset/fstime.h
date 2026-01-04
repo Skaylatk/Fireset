@@ -17,7 +17,7 @@
  *
  * @return Current system time.
  */
-double fsTimeGetSystem(void);
+double fsTimeGetSystemTime(void);
 
 /**
  * @brief Returns the delta time.
@@ -27,6 +27,24 @@ double fsTimeGetSystem(void);
  * @return Delta time.
  */
 double fsTimeGetDelta(void);
+
+/**
+ * @brief Returns the engine running time.
+ *
+ * Returns the elapsed time, in seconds, since the time system
+ * was initialized with fsTimeInit().
+ *
+ * This function provides a monotonic, engine-relative time value
+ * and should be used for timing, animations, logging, and
+ * time-based calculations inside the engine.
+ *
+ * @return Time in seconds since fsTimeInit() was called.
+ *
+ * @note This value is independent of the system clock and
+ *       is not affected by system time changes.
+ * @note The returned value always increases while the engine runs.
+ */
+double fsTimeGetTime(void);
 
 /**
  * @brief Initializes the time module.

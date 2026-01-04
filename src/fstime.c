@@ -7,6 +7,9 @@
 #include "fireset/fstime.h"
 #include <stdint.h>
 
+static double s_start_time = 0.0;
+static double s_last_time  = 0.0;
+
 #if defined(_WIN32)
 
 #include <windows.h>
@@ -58,10 +61,14 @@ double fsTimeGetSystemTime(void){
     #error "OS not supported"
 #endif
 
-static double s_last_time = 0.0;
-
 void fsTimeInit(void){
-    s_last_time = fsTimeGetSystemTime();
+    double now = fsTimeGetSystemTime();
+    s_start_time = now;
+    s_last_time  = now;
+}
+
+double fsTimeGetTime(void){
+    return fsTimeGetSystemTime() - s_start_time;
 }
 
 double fsTimeGetDelta(void){

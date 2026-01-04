@@ -98,10 +98,12 @@ $(function(){initNavTree('group__Time.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gab22f05a364be51ed49071f2d5af5e75c" id="r_gab22f05a364be51ed49071f2d5af5e75c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab22f05a364be51ed49071f2d5af5e75c">fsTimeGetSystem</a> (void)</td></tr>
-<tr class="memdesc:gab22f05a364be51ed49071f2d5af5e75c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current system time.  <br /></td></tr>
+<tr class="memitem:ga975d856d87bd3af71dc32682b6ee7d7a" id="r_ga975d856d87bd3af71dc32682b6ee7d7a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga975d856d87bd3af71dc32682b6ee7d7a">fsTimeGetSystemTime</a> (void)</td></tr>
+<tr class="memdesc:ga975d856d87bd3af71dc32682b6ee7d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current system time.  <br /></td></tr>
 <tr class="memitem:ga3b590aa8153424064ea182a2606c5d2f" id="r_ga3b590aa8153424064ea182a2606c5d2f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3b590aa8153424064ea182a2606c5d2f">fsTimeGetDelta</a> (void)</td></tr>
 <tr class="memdesc:ga3b590aa8153424064ea182a2606c5d2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the delta time.  <br /></td></tr>
+<tr class="memitem:gaf8fead2f163a2902c647f35af24c5708" id="r_gaf8fead2f163a2902c647f35af24c5708"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf8fead2f163a2902c647f35af24c5708">fsTimeGetTime</a> (void)</td></tr>
+<tr class="memdesc:gaf8fead2f163a2902c647f35af24c5708"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the engine running time.  <br /></td></tr>
 <tr class="memitem:gadcaf98e33c05c790b1e8003de0a7aa68" id="r_gadcaf98e33c05c790b1e8003de0a7aa68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadcaf98e33c05c790b1e8003de0a7aa68">fsTimeInit</a> (void)</td></tr>
 <tr class="memdesc:gadcaf98e33c05c790b1e8003de0a7aa68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the time module.  <br /></td></tr>
 <tr class="memitem:ga7260331bc4ed82946aa241d6d47b42f5" id="r_ga7260331bc4ed82946aa241d6d47b42f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7260331bc4ed82946aa241d6d47b42f5">fsWait</a> (unsigned long ms)</td></tr>
@@ -131,14 +133,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gab22f05a364be51ed49071f2d5af5e75c" name="gab22f05a364be51ed49071f2d5af5e75c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab22f05a364be51ed49071f2d5af5e75c">&#9670;&#160;</a></span>fsTimeGetSystem()</h2>
+<a id="ga975d856d87bd3af71dc32682b6ee7d7a" name="ga975d856d87bd3af71dc32682b6ee7d7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga975d856d87bd3af71dc32682b6ee7d7a">&#9670;&#160;</a></span>fsTimeGetSystemTime()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double fsTimeGetSystem </td>
+          <td class="memname">double fsTimeGetSystemTime </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -149,6 +151,31 @@ Functions</h2></td></tr>
 <p>Returns the current system time. </p>
 <p>Returns the current system time at the moment this function is called.</p>
 <dl class="section return"><dt>Returns</dt><dd>Current system time. </dd></dl>
+
+</div>
+</div>
+<a id="gaf8fead2f163a2902c647f35af24c5708" name="gaf8fead2f163a2902c647f35af24c5708"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf8fead2f163a2902c647f35af24c5708">&#9670;&#160;</a></span>fsTimeGetTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double fsTimeGetTime </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the engine running time. </p>
+<p>Returns the elapsed time, in seconds, since the time system was initialized with <a class="el" href="#gadcaf98e33c05c790b1e8003de0a7aa68" title="Initializes the time module.">fsTimeInit()</a>.</p>
+<p>This function provides a monotonic, engine-relative time value and should be used for timing, animations, logging, and time-based calculations inside the engine.</p>
+<dl class="section return"><dt>Returns</dt><dd>Time in seconds since <a class="el" href="#gadcaf98e33c05c790b1e8003de0a7aa68" title="Initializes the time module.">fsTimeInit()</a> was called.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This value is independent of the system clock and is not affected by system time changes. </dd>
+<dd>
+The returned value always increases while the engine runs. </dd></dl>
 
 </div>
 </div>

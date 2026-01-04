@@ -7,6 +7,7 @@
 
 #include "fireset/core.h"
 #include "fireset/fstime.h"
+#include "fireset/fslog.h"
 
 #include <AL/al.h>
 #include <AL/alc.h>
@@ -15,8 +16,9 @@ static ALCdevice* g_device = NULL;
 static ALCcontext* g_context = NULL;
 
 bool fsInit(void){
-    if(!glfwInit()) return false;
     fsTimeInit();
+    fsLogInit();
+    if(!glfwInit()) return false;
     glEnable(GL_TEXTURE_2D);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
