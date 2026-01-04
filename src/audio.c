@@ -142,3 +142,7 @@ void fsSoundSourceFree(FsSoundSource* source){
     alDeleteSources(1, &source->handle);
     source->handle = 0;
 }
+
+void fsSoundListenerSetPosition(FsVec2 position){
+    alListener3f(AL_POSITION, position.x, position.y, 0.0f);
+}

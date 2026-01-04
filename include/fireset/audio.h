@@ -111,4 +111,17 @@ void fsSoundSourceFree(FsSoundSource* source);
  */
 void fsSoundSourceHandle(int count, FsSoundSource* sources);
 
+/**
+ * @brief Sets the audio listener position.
+ *
+ * Defines the position of the audio listener in 2D space.
+ * This position is used by the audio system to calculate
+ * positional sound effects such as attenuation and panning.
+ *
+ * @param position Listener position in world space.
+ *
+ * @note Internally maps the 2D position to OpenAL using Z = 0.
+ */
+void fsSoundListenerSetPosition(FsVec2 position);
+
 /** @} */
