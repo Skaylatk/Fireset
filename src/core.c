@@ -30,12 +30,6 @@ bool fsInit(void){
 
     fsLog(FS_INFO, FS_WINDOW, "Window & Input backend (GLFW) initialized");
 
-    glEnable(GL_TEXTURE_2D);
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
-    fsLog(FS_INFO, FS_RENDER, "Rendering backend (OpenGL) initialized");
-
     g_device = alcOpenDevice(NULL);
     if (!g_device){
         fsLog(FS_ERROR, FS_AUDIO, "Cannot open OpenAL device");

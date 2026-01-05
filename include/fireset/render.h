@@ -97,6 +97,7 @@ typedef struct{
     FsVec2 size;        /**< Size in window space */
     FsTexture* texture; /**< Pointer to the sprite texture */
     float angle;        /**< Rotation angle in degrees */
+    int texRot;         /**< Texture Rotation in 90°*/
 } FsSprite;
 
 /**

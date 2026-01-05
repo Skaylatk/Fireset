@@ -8,14 +8,8 @@
 #include <math.h>
 
 void fsDrawTriangle(const FsTriangle* tri, int zindex){
-    if (zindex < 1){
-        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to 1", zindex);
-        zindex = 1;
-    }
-    if (zindex > REND_MAX_ZINDEX){
-        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to %d", zindex, REND_MAX_ZINDEX);
-        zindex = REND_MAX_ZINDEX;
-    }
+    if (zindex < 1) zindex = 1;
+    if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
 
     float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX);
 
@@ -38,14 +32,8 @@ void fsDrawTriangle(const FsTriangle* tri, int zindex){
 }
 
 void fsDrawPixel(const FsPoint* p, int zindex){
-    if (zindex < 1){
-        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to 1", zindex);
-        zindex = 1;
-    }
-    if (zindex > REND_MAX_ZINDEX){
-        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to %d", zindex, REND_MAX_ZINDEX);
-        zindex = REND_MAX_ZINDEX;
-    }
+    if (zindex < 1) zindex = 1;
+    if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
 
     float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX);
 
@@ -65,14 +53,8 @@ void fsDrawPixel(const FsPoint* p, int zindex){
 }
 
 void fsDrawLine(const FsLine* line, int zindex){
-    if (zindex < 1){
-        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to 1", zindex);
-        zindex = 1;
-    }
-    if (zindex > REND_MAX_ZINDEX){
-        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to %d", zindex, REND_MAX_ZINDEX);
-        zindex = REND_MAX_ZINDEX;
-    }
+    if (zindex < 1) zindex = 1;
+    if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
 
     float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX);
 
@@ -97,14 +79,8 @@ void fsDrawLine(const FsLine* line, int zindex){
 }
 
 void fsDrawQuad(const FsQuad* quad, int zindex){
-    if (zindex < 1){
-        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to 1", zindex);
-        zindex = 1;
-    }
-    if (zindex > REND_MAX_ZINDEX){
-        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to %d", zindex, REND_MAX_ZINDEX);
-        zindex = REND_MAX_ZINDEX;
-    }
+    if (zindex < 1) zindex = 1;
+    if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
 
     float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX);
 
@@ -129,26 +105,14 @@ void fsDrawQuad(const FsQuad* quad, int zindex){
 }
 
 void fsDrawCircle(const FsCircle* circle, int zindex){
-    if (zindex < 1){
-        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to 1", zindex);
-        zindex = 1;
-    }
-    if (zindex > REND_MAX_ZINDEX){
-        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to %d", zindex, REND_MAX_ZINDEX);
-        zindex = REND_MAX_ZINDEX;
-    }
+    if (zindex < 1) zindex = 1;
+    if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
 
     float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX);
 
     int segments = circle->segments;
-    if (segments < REND_MIN_SEGMENTS){
-        fsLog(FS_WARNING, FS_RENDER, "Segments out of range (received: %d). Clamped to %d", circle->segments, REND_MIN_SEGMENTS);
-        segments = REND_MIN_SEGMENTS;
-    }
-    if (segments > REND_MAX_SEGMENTS){
-        fsLog(FS_WARNING, FS_RENDER, "Segments out of range (received: %d). Clamped to %d", circle->segments, REND_MAX_SEGMENTS);
-        segments = REND_MAX_SEGMENTS;
-    }
+    if (segments < REND_MIN_SEGMENTS) segments = REND_MIN_SEGMENTS;
+    if (segments > REND_MAX_SEGMENTS) segments = REND_MAX_SEGMENTS;
 
     glPushMatrix();
         glTranslatef(circle->position.x, circle->position.y, z);
@@ -174,14 +138,8 @@ void fsDrawCircle(const FsCircle* circle, int zindex){
 }
 
 void fsDrawSprite(const FsSprite* sprite, int zindex){
-    if (zindex < 1){
-        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to 1", zindex);
-        zindex = 1;
-    }
-    if (zindex > REND_MAX_ZINDEX){
-        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to %d", zindex, REND_MAX_ZINDEX);
-        zindex = REND_MAX_ZINDEX;
-    }
+    if (zindex < 1) zindex = 1;
+    if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
 
     float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX);
 
@@ -191,22 +149,36 @@ void fsDrawSprite(const FsSprite* sprite, int zindex){
         glScalef(sprite->size.x, sprite->size.y, 1.0f);
 
         glEnable(GL_TEXTURE_2D);
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
         glBindTexture(GL_TEXTURE_2D, sprite->texture->id);
 
+        glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+
+        float u[4] = {0.0f, 1.0f, 1.0f, 0.0f};
+        float v[4] = {0.0f, 0.0f, 1.0f, 1.0f};
+
+        int rotIdx[4];
+        switch(sprite->texRot % 4){
+            case 0: rotIdx[0]=0; rotIdx[1]=1; rotIdx[2]=2; rotIdx[3]=3; break; // 0°
+            case 1: rotIdx[0]=3; rotIdx[1]=0; rotIdx[2]=1; rotIdx[3]=2; break; // 90°
+            case 2: rotIdx[0]=2; rotIdx[1]=3; rotIdx[2]=0; rotIdx[3]=1; break; // 180°
+            case 3: rotIdx[0]=1; rotIdx[1]=2; rotIdx[2]=3; rotIdx[3]=0; break; // 270°
+        }
+
         glBegin(GL_QUADS);
-            glTexCoord2f(0.0f, 0.0f);
-            glVertex2f(-0.5f, -0.5f);
-
-            glTexCoord2f(1.0f, 0.0f);
-            glVertex2f(0.5f, -0.5f);
-
-            glTexCoord2f(1.0f, 1.0f);
-            glVertex2f(0.5f, 0.5f);
-
-            glTexCoord2f(0.0f, 1.0f);
-            glVertex2f(-0.5f, 0.5f);
+            for(int i=0; i<4; i++){
+                glTexCoord2f(u[rotIdx[i]], v[rotIdx[i]]);
+                switch(i){
+                    case 0: glVertex2f(-0.5f, -0.5f); break;
+                    case 1: glVertex2f(0.5f, -0.5f); break;
+                    case 2: glVertex2f(0.5f, 0.5f); break;
+                    case 3: glVertex2f(-0.5f, 0.5f); break;
+                }
+            }
         glEnd();
-        
+
         glDisable(GL_TEXTURE_2D);
     glPopMatrix();
 }
