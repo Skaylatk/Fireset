@@ -5,6 +5,7 @@
 #include "fireset/window.h"
 #include "fireset/render.h"
 #include "fireset/input.h"
+#include "fireset/fslog.h"
 
 #include <stdbool.h>
 #include <stdio.h>
@@ -18,11 +19,14 @@ FsWindow* fsWindowCreate(FsWindow* window){
     // window hints
     glfwWindowHint(GLFW_DEPTH_BITS, 24);
 
+    FsWindow* nullwin = {0};
+
     // creates window object and set context
     window->handle = glfwCreateWindow(window->width, window->height, window->name, NULL, NULL);
     if (!window->handle){
         glfwTerminate();
-        return window;
+        fsLog(FS_FATAL, FS_WINDOW, "Failed to create window");
+        return nullwin;
     }
 
     // sets context and viewport

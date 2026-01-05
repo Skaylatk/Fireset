@@ -5,6 +5,7 @@
 #define _POSIX_C_SOURCE 199309L
 
 #include "fireset/fstime.h"
+#include "fireset/fslog.h"
 #include <stdint.h>
 
 static double s_start_time = 0.0;
@@ -65,6 +66,7 @@ void fsTimeInit(void){
     double now = fsTimeGetSystemTime();
     s_start_time = now;
     s_last_time  = now;
+    fsLog(FS_INFO, FS_TIME,"Time module initialized");
 }
 
 double fsTimeGetTime(void){

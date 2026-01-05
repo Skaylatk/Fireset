@@ -2,6 +2,8 @@
 // Licensed under the MIT License
 // Repo: https://github.com/saintsHr/Fireset
 
+#define VERSION "v0.5.0"
+
 #define STB_IMAGE_IMPLEMENTATION
 #include "fireset/stb_image.h"
 
@@ -18,23 +20,41 @@ static ALCcontext* g_context = NULL;
 bool fsInit(void){
     fsTimeInit();
     fsLogInit();
-    if(!glfwInit()) return false;
+
+    fsLog(FS_INFO, FS_CORE, "Logging system initialized");
+
+    if(!glfwInit()){
+        fsLog(FS_ERROR, FS_WINDOW, "Cannot initialize GLFW");
+        return false;
+    }
+
+    fsLog(FS_INFO, FS_WINDOW, "Window & Input backend (GLFW) initialized");
+
     glEnable(GL_TEXTURE_2D);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
+    fsLog(FS_INFO, FS_RENDER, "Rendering backend (OpenGL) initialized");
+
     g_device = alcOpenDevice(NULL);
-    if (!g_device) return false;
+    if (!g_device){
+        fsLog(FS_ERROR, FS_AUDIO, "Cannot open OpenAL device");
+        return false;
+    }
 
     g_context = alcCreateContext(g_device, NULL);
     if (!g_context){
         alcCloseDevice(g_device);
+        fsLog(FS_ERROR, FS_AUDIO, "Cannot create OpenAL context");
         return false;
     }
 
     alcMakeContextCurrent(g_context);
     alDistanceModel(AL_INVERSE_DISTANCE_CLAMPED);
 
+    fsLog(FS_INFO, FS_AUDIO, "Audio backend (OpenAL) initialized");
+
+    fsLog(FS_INFO, FS_CORE, "Fireset Engine %s initialized", VERSION);
     return true;
 }
 
@@ -53,4 +73,6 @@ void fsExit(void){
     alcMakeContextCurrent(NULL);
     
     glfwTerminate();
+
+    fsLog(FS_INFO, FS_CORE, "Engine shutdown");
 }

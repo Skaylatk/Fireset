@@ -4,11 +4,18 @@
 
 #include "fireset/render.h"
 #include "fireset/settings.h"
+#include "fireset/fslog.h"
 #include <math.h>
 
 void fsDrawTriangle(const FsTriangle* tri, int zindex){
-    if (zindex < 1) zindex = 1;
-    if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
+    if (zindex < 1){
+        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to 1", zindex);
+        zindex = 1;
+    }
+    if (zindex > REND_MAX_ZINDEX){
+        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to %d", zindex, REND_MAX_ZINDEX);
+        zindex = REND_MAX_ZINDEX;
+    }
 
     float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX);
 
@@ -31,8 +38,14 @@ void fsDrawTriangle(const FsTriangle* tri, int zindex){
 }
 
 void fsDrawPixel(const FsPoint* p, int zindex){
-    if (zindex < 1) zindex = 1;
-    if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
+    if (zindex < 1){
+        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to 1", zindex);
+        zindex = 1;
+    }
+    if (zindex > REND_MAX_ZINDEX){
+        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to %d", zindex, REND_MAX_ZINDEX);
+        zindex = REND_MAX_ZINDEX;
+    }
 
     float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX);
 
@@ -52,8 +65,14 @@ void fsDrawPixel(const FsPoint* p, int zindex){
 }
 
 void fsDrawLine(const FsLine* line, int zindex){
-    if (zindex < 1) zindex = 1;
-    if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
+    if (zindex < 1){
+        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to 1", zindex);
+        zindex = 1;
+    }
+    if (zindex > REND_MAX_ZINDEX){
+        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to %d", zindex, REND_MAX_ZINDEX);
+        zindex = REND_MAX_ZINDEX;
+    }
 
     float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX);
 
@@ -78,8 +97,14 @@ void fsDrawLine(const FsLine* line, int zindex){
 }
 
 void fsDrawQuad(const FsQuad* quad, int zindex){
-    if (zindex < 1) zindex = 1;
-    if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
+    if (zindex < 1){
+        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to 1", zindex);
+        zindex = 1;
+    }
+    if (zindex > REND_MAX_ZINDEX){
+        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to %d", zindex, REND_MAX_ZINDEX);
+        zindex = REND_MAX_ZINDEX;
+    }
 
     float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX);
 
@@ -104,14 +129,26 @@ void fsDrawQuad(const FsQuad* quad, int zindex){
 }
 
 void fsDrawCircle(const FsCircle* circle, int zindex){
-    if (zindex < 1) zindex = 1;
-    if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
+    if (zindex < 1){
+        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to 1", zindex);
+        zindex = 1;
+    }
+    if (zindex > REND_MAX_ZINDEX){
+        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to %d", zindex, REND_MAX_ZINDEX);
+        zindex = REND_MAX_ZINDEX;
+    }
 
     float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX);
 
     int segments = circle->segments;
-    if (segments < 8)   segments = 8;
-    if (segments > 128) segments = 128;
+    if (segments < REND_MIN_SEGMENTS){
+        fsLog(FS_WARNING, FS_RENDER, "Segments out of range (received: %d). Clamped to %d", circle->segments, REND_MIN_SEGMENTS);
+        segments = REND_MIN_SEGMENTS;
+    }
+    if (segments > REND_MAX_SEGMENTS){
+        fsLog(FS_WARNING, FS_RENDER, "Segments out of range (received: %d). Clamped to %d", circle->segments, REND_MAX_SEGMENTS);
+        segments = REND_MAX_SEGMENTS;
+    }
 
     glPushMatrix();
         glTranslatef(circle->position.x, circle->position.y, z);
@@ -137,8 +174,14 @@ void fsDrawCircle(const FsCircle* circle, int zindex){
 }
 
 void fsDrawSprite(const FsSprite* sprite, int zindex){
-    if (zindex < 1) zindex = 1;
-    if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
+    if (zindex < 1){
+        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to 1", zindex);
+        zindex = 1;
+    }
+    if (zindex > REND_MAX_ZINDEX){
+        fsLog(FS_WARNING, FS_RENDER, "Z-Index out of range (received: %d). Clamped to %d", zindex, REND_MAX_ZINDEX);
+        zindex = REND_MAX_ZINDEX;
+    }
 
     float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX);
 

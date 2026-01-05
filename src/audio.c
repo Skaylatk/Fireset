@@ -19,13 +19,13 @@ FsSound fsSoundLoad(const char* filename){
     // opens file
     SNDFILE* file = sf_open(filename, SFM_READ, &info);
     if (!file){
-        fsLog(FS_WARNING,"cannot open file '%s' (audio)", filename);
+        fsLog(FS_ERROR, FS_ASSETS,"Cannot open file '%s'.", filename);
         return nullsnd;
     }
 
     // checks channels compability
     if (info.channels != 1 && info.channels != 2){
-        fsLog(FS_WARNING,"file '%s' (audio) is not mono or stereo", filename);
+        fsLog(FS_ERROR, FS_AUDIO,"File '%s' is not mono or stereo.", filename);
         return nullsnd;
     }
 
@@ -41,7 +41,7 @@ FsSound fsSoundLoad(const char* filename){
     // allocates memory for samples
     sound.samples = malloc(sound.frames * sound.channels * sizeof(short));
     if (!sound.samples){
-        fsLog(FS_WARNING,"cannot allocate memory for '%s' (audio) samples", filename);
+        fsLog(FS_ERROR, FS_AUDIO, "Cannot allocate memory for '%s' samples.", filename);
         return nullsnd;
     }
 
@@ -50,7 +50,7 @@ FsSound fsSoundLoad(const char* filename){
     if (frames_read != sound.frames){
         free(sound.samples);
         sf_close(file);
-        fsLog(FS_WARNING,"failed to read some samples from '%s' (audio)", filename);
+        fsLog(FS_ERROR, FS_AUDIO, "Failed to read some samples from '%s'.", filename);
         return nullsnd;
     }
 
@@ -116,9 +116,16 @@ void fsSoundSourcePlay(FsSound* sound, FsSoundSource* source, int volume){
     }
 
     // Volume
+    if (volume < 0){
+        fsLog(FS_WARNING, FS_AUDIO, "Volume out of range (received: %d). Clamped to 0.", volume);
+        volume = 0;
+    }
+    if (volume > 100){
+        fsLog(FS_WARNING, FS_AUDIO, "Volume out of range (received: %d). Clamped to 100.", volume);
+        volume = 100;
+    }
+
     float gain = volume / 100.0f;
-    if (gain < 0.0f) gain = 0.0f;
-    if (gain > 1.0f) gain = 1.0f;
     alSourcef(source->handle, AL_GAIN, gain);
 
     // Looping
@@ -130,8 +137,14 @@ void fsSoundSourcePlay(FsSound* sound, FsSoundSource* source, int volume){
 }
 
 void fsSoundSourceStop(FsSoundSource* source){
-    if (!source) return;
-    if (!source->handle) return;
+    if (!source){
+        fsLog(FS_WARNING, FS_AUDIO, "Invalid or non-existing source provided.");
+        return;
+    }
+    if (!source->handle){
+        fsLog(FS_WARNING, FS_AUDIO, "Invalid or non-existing handle form source provided.");
+        return;
+    }
 
     ALint state;
     alGetSourcei(source->handle, AL_SOURCE_STATE, &state);
@@ -144,7 +157,11 @@ void fsSoundSourceStop(FsSoundSource* source){
 }
 
 void fsSoundFree(FsSound* sound){
-    if (!sound) return;
+    if (!sound){
+        fsLog(FS_WARNING, FS_AUDIO, "Invalid or non-existing sound provided.");
+        return;
+    }
+
     free(sound->samples);
     sound->samples = NULL;
     sound->channels = 0;
@@ -154,7 +171,14 @@ void fsSoundFree(FsSound* sound){
 }
 
 void fsSoundSourceFree(FsSoundSource* source){
-    if (!source || source->handle == 0) return;
+    if (!source){
+        fsLog(FS_WARNING, FS_AUDIO, "Invalid or non-existing source provided.");
+        return;
+    }
+    if (source->handle == 0){
+        fsLog(FS_WARNING, FS_AUDIO, "Invalid or non-existing handle form source provided.");
+        return;
+    }
     alSourceStop(source->handle);
     alDeleteSources(1, &source->handle);
     source->handle = 0;
