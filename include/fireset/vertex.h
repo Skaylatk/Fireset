@@ -2,8 +2,6 @@
 // Licensed under the MIT License
 // Repo: https://github.com/saintsHr/Fireset
 
-#include "fireset/window.h"
-
 #pragma once
 
 /** 

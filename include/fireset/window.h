@@ -7,6 +7,8 @@
 #include <GLFW/glfw3.h>
 #include <stdbool.h>
 
+#include "fireset/vertex.h"
+
 /** 
  * @defgroup Window Window
  * @brief Window management functions and types.
@@ -22,7 +24,7 @@ typedef struct{
     GLFWwindow* handle; /**< Backend window handle. */
     int width;          /**< Width of the window in pixels. */
     int height;         /**< Height of the window in pixels. */
-    char* name;         /**< Window title. */
+    const char* name;         /**< Window title. */
 } FsWindow;
 
 /**
@@ -30,10 +32,11 @@ typedef struct{
  *
  * Initializes a window using the provided data.
  *
- * @param window Pointer to a FsWindow struct containing the desired parameters.
- * @return Pointer to the created window (same as input).
+ * @param name The name/title of the generated window.
+ * @param size The Vec2 size of the window.
+ * @return Pointer to the created window.
  */
-FsWindow* fsWindowCreate(FsWindow* window);
+FsWindow fsWindowCreate(const char* name, FsVec2 size);
 
 /**
  * @brief Updates a window.

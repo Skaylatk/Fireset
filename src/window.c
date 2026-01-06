@@ -11,32 +11,46 @@
 #include <stdio.h>
 
 static void fsFramebufferSizeCallback(GLFWwindow* window, int width, int height){
+    (void)window;
     glViewport(0, 0, width, height);
     fsOrthoSet(width, height);
 }
 
-FsWindow* fsWindowCreate(FsWindow* window){
-    // window hints
-    glfwWindowHint(GLFW_DEPTH_BITS, 24);
+FsWindow fsWindowCreate(const char* name, FsVec2 size){
+    FsWindow window = {
+        .name = name,
+        .width = size.x,
+        .height = size.y
+    };
 
-    FsWindow* nullwin = {0};
+    FsWindow nullwin = {0};
+
+    // window hints
+    glfwWindowHint(GLFW_DEPTH_BITS, 16);
 
     // creates window object and set context
-    window->handle = glfwCreateWindow(window->width, window->height, window->name, NULL, NULL);
-    if (!window->handle){
+    window.handle = glfwCreateWindow(window.width, window.height, window.name, NULL, NULL);
+    if (!window.handle){
         glfwTerminate();
         fsLog(FS_FATAL, FS_WINDOW, "Failed to create window");
         return nullwin;
     }
 
+    // centralizes the window
+    GLFWmonitor* monitor = glfwGetPrimaryMonitor();
+    const GLFWvidmode* mode = glfwGetVideoMode(monitor);
+    int xPos = (mode->width  - window.width)  / 2;
+    int yPos = (mode->height - window.height) / 2;
+    glfwSetWindowPos(window.handle, xPos, yPos);
+
     // sets context and viewport
-    glfwMakeContextCurrent(window->handle);
-    glViewport(0, 0, window->width, window->height);
+    glfwMakeContextCurrent(window.handle);
+    glViewport(0, 0, window.width, window.height);
 
     // sets orthographic view
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    fsOrthoSet(window->width, window->height);
+    fsOrthoSet(window.width, window.height);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 
@@ -45,8 +59,9 @@ FsWindow* fsWindowCreate(FsWindow* window){
     glDepthFunc(GL_LESS);
 
     // binds resizing callback
-    glfwSetFramebufferSizeCallback(window->handle, fsFramebufferSizeCallback);
+    glfwSetFramebufferSizeCallback(window.handle, fsFramebufferSizeCallback);
 
+    // returns window
     return window;
 }
 
