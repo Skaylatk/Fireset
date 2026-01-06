@@ -33,10 +33,10 @@ typedef struct{
  * Represents a quadrilateral used for rendering and transformations.
  */
 typedef struct{
-    FsVec2 position; /**< Position in window space */
-    FsVec2 size;     /**< Size in window space */
-    FsColor color;   /**< Color */
-    float angle;     /**< Rotation angle in degrees */
+    FsVec2 position;    /**< Position in window space */
+    FsVec2 size;        /**< Size in window space */
+    FsColor color;      /**< Color */
+    float angle;        /**< Rotation angle in degrees */
 } FsQuad;
 
 /**
@@ -45,10 +45,10 @@ typedef struct{
  * Represents a triangle used for rendering and transformations.
  */
 typedef struct{
-    FsVec2 position; /**< Position in window space */
-    FsVec2 size;     /**< Size in window space */
-    FsColor color;   /**< Color */
-    float angle;     /**< Rotation angle in degrees */
+    FsVec2 position;    /**< Position in window space */
+    FsVec2 size;        /**< Size in window space */
+    FsColor color;      /**< Color */
+    float angle;        /**< Rotation angle in degrees */
 } FsTriangle;
 
 /**
@@ -57,8 +57,8 @@ typedef struct{
  * Represents a single point used for rendering.
  */
 typedef struct{
-    FsVec2 position; /**< Position in window space */
-    FsColor color;   /**< Color */
+    FsVec2 position;    /**< Position in window space */
+    FsColor color;      /**< Color */
 } FsPoint;
 
 /**
@@ -67,11 +67,11 @@ typedef struct{
  * Represents a circle used for rendering and transformations.
  */
 typedef struct{
-    FsVec2 position; /**< Position in window space */
-    FsVec2 size;     /**< Size in window space */
-    FsColor color;   /**< Color */
-    float angle;     /**< Rotation angle in degrees */
-    int segments;    /**< Number of segments used to approximate the circle */
+    FsVec2 position;    /**< Position in window space */
+    FsVec2 size;        /**< Size in window space */
+    FsColor color;      /**< Color */
+    float angle;        /**< Rotation angle in degrees */
+    int segments;       /**< Number of segments used to approximate the circle */
 } FsCircle;
 
 /**
@@ -80,11 +80,11 @@ typedef struct{
  * Represents a line used for rendering and transformations.
  */
 typedef struct{
-    FsVec2 position; /**< Starting position in window space */
-    float length;    /**< Line length */
-    float angle;     /**< Rotation angle in degrees */
-    float thickness; /**< Line thickness */
-    FsColor color;   /**< Color */
+    FsVec2 position;    /**< Starting position in window space */
+    float length;       /**< Line length */
+    float angle;        /**< Rotation angle in degrees */
+    float thickness;    /**< Line thickness */
+    FsColor color;      /**< Color */
 } FsLine;
 
 /**
@@ -108,7 +108,7 @@ typedef struct{
  * @param p Point to draw.
  * @param zindex Rendering order depth.
  */
-void fsDrawPixel(const FsPoint* p, int zindex);
+void fsDrawPoint(const FsPoint* p, int zindex);
 
 /**
  * @brief Draws a line.
