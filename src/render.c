@@ -65,7 +65,7 @@ void fsDrawPoint(const FsPoint* p, int zindex){
     if (zindex < 1) zindex = 1;
     if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
 
-    float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX);
+    float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX); 
 
     glPushMatrix();
         glTranslatef(p->position.x, p->position.y, z);
@@ -145,10 +145,10 @@ FsQuad FsQuad_new
 }
 
 void fsDrawQuad(const FsQuad* quad, int zindex){
-    if (zindex < 1) zindex = 1;
+    if (zindex < 0) zindex = 0;
     if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
 
-    float z = -1.0f + ((float)zindex / REND_MAX_ZINDEX);
+    float z = -1.0f + 2.0f * ((float)zindex / REND_MAX_ZINDEX);
 
     glPushMatrix();
         glTranslatef(quad->position.x, quad->position.y, z);

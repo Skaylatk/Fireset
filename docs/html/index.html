@@ -166,38 +166,34 @@ Compiling</h1>
 <h1 class="doxsection"><a class="anchor" id="Quickstart"></a>
 Quickstart</h1>
 <p>This example demonstrates the minimum setup required to create a window and run a basic application loop using Fireset.</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fireset/fireset.h&gt;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;fireset/fireset.h&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>){</div>
-<div class="line">    <span class="keywordflow">if</span> (!<a class="code hl_function" href="group__Core.html#ga6b6e93bb085eeb2ad8b51db7d650a5d3">fsInit</a>()) <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="comment">// initializes the engine</span></div>
+<div class="line"><a class="code hl_function" href="group__Core.html#ga6b6e93bb085eeb2ad8b51db7d650a5d3">fsInit</a>();</div>
 <div class="line"> </div>
-<div class="line">    <a class="code hl_struct" href="structFsWindow.html">FsWindow</a> window;</div>
-<div class="line">    window.<a class="code hl_variable" href="structFsWindow.html#a6cc5523b876ea62bc17df2b5bbe9b3ff">width</a> = 800;</div>
-<div class="line">    window.<a class="code hl_variable" href="structFsWindow.html#a5b46126d043bab9134690e0192235d58">height</a> = 600;</div>
-<div class="line">    window.<a class="code hl_variable" href="structFsWindow.html#a91f9d2c5a19b4ffaa0824ac6359c6390">name</a> = <span class="stringliteral">&quot;Example Game&quot;</span>;</div>
-<div class="line">    fsCreateWindow(&amp;window);</div>
+<div class="line"><span class="comment">// creates window</span></div>
+<div class="line"><a class="code hl_struct" href="structFsWindow.html">FsWindow</a> window = <a class="code hl_function" href="group__Window.html#gaac9671c169dfe1ba6bf7a8481d4745ef">fsWindowCreate</a>(<span class="stringliteral">&quot;Example Game&quot;</span>, <a class="code hl_function" href="group__Vertex.html#ga8c6ec9f831e824bc2beff7d60d79ea1e">FsVec2_new</a>(800, 600));</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">while</span> (!<a class="code hl_function" href="group__Window.html#gaac42f2b483ab082ab8bce722f4f33be0">fsWindowShouldClose</a>(window)){</div>
-<div class="line">        <a class="code hl_function" href="group__Render.html#ga4ba69393b31d27cd62ab990395acff8a">fsClear</a>((<a class="code hl_struct" href="structFsColor.html">FsColor</a>){0, 0, 0});</div>
+<div class="line"><span class="comment">// main window loop</span></div>
+<div class="line"><span class="keywordflow">while</span> (!<a class="code hl_function" href="group__Window.html#gaac42f2b483ab082ab8bce722f4f33be0">fsWindowShouldClose</a>(&amp;window)){</div>
+<div class="line">     <a class="code hl_function" href="group__Render.html#ga4ba69393b31d27cd62ab990395acff8a">fsClear</a>(<a class="code hl_function" href="group__Render.html#gafde4c61111eb8ae8bf12d4066a488dd0">FsColor_new</a>(0, 0, 0)); <span class="comment">// clears window</span></div>
+<div class="line">     <a class="code hl_function" href="group__Window.html#ga3f73f18edb9a810871b4feab8d131aa9">fsWindowHandle</a>(&amp;window);       <span class="comment">// handles window-related features</span></div>
+<div class="line">}</div>
 <div class="line"> </div>
-<div class="line">        <span class="comment">// rendering code</span></div>
-<div class="line"> </div>
-<div class="line">        fsHandleWindow(&amp;window);</div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    fsDestroyWindow(&amp;window);</div>
-<div class="line">    <a class="code hl_function" href="group__Core.html#ga3a12b515c5a4d2514cfb07014dbfa3eb">fsExit</a>();</div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="comment">// shutdowns the engine &amp; returns</span></div>
+<div class="line"><a class="code hl_function" href="group__Core.html#ga3a12b515c5a4d2514cfb07014dbfa3eb">fsExit</a>();</div>
+<div class="line"><span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__Core_html_ga3a12b515c5a4d2514cfb07014dbfa3eb"><div class="ttname"><a href="group__Core.html#ga3a12b515c5a4d2514cfb07014dbfa3eb">fsExit</a></div><div class="ttdeci">void fsExit(void)</div><div class="ttdoc">Shuts down the Fireset engine core.</div><div class="ttdef"><b>Definition</b> core.c:55</div></div>
 <div class="ttc" id="agroup__Core_html_ga6b6e93bb085eeb2ad8b51db7d650a5d3"><div class="ttname"><a href="group__Core.html#ga6b6e93bb085eeb2ad8b51db7d650a5d3">fsInit</a></div><div class="ttdeci">bool fsInit(void)</div><div class="ttdoc">Initializes the Fireset engine core.</div><div class="ttdef"><b>Definition</b> core.c:20</div></div>
 <div class="ttc" id="agroup__Render_html_ga4ba69393b31d27cd62ab990395acff8a"><div class="ttname"><a href="group__Render.html#ga4ba69393b31d27cd62ab990395acff8a">fsClear</a></div><div class="ttdeci">void fsClear(FsColor color)</div><div class="ttdoc">Clears the window.</div><div class="ttdef"><b>Definition</b> render.c:293</div></div>
+<div class="ttc" id="agroup__Render_html_gafde4c61111eb8ae8bf12d4066a488dd0"><div class="ttname"><a href="group__Render.html#gafde4c61111eb8ae8bf12d4066a488dd0">FsColor_new</a></div><div class="ttdeci">FsColor FsColor_new(uint8_t r, uint8_t g, uint8_t b)</div><div class="ttdoc">Creates an RGB color.</div><div class="ttdef"><b>Definition</b> render.c:312</div></div>
+<div class="ttc" id="agroup__Vertex_html_ga8c6ec9f831e824bc2beff7d60d79ea1e"><div class="ttname"><a href="group__Vertex.html#ga8c6ec9f831e824bc2beff7d60d79ea1e">FsVec2_new</a></div><div class="ttdeci">FsVec2 FsVec2_new(float x, float y)</div><div class="ttdoc">Creates a 2D vector.</div><div class="ttdef"><b>Definition</b> vertex.c:8</div></div>
+<div class="ttc" id="agroup__Window_html_ga3f73f18edb9a810871b4feab8d131aa9"><div class="ttname"><a href="group__Window.html#ga3f73f18edb9a810871b4feab8d131aa9">fsWindowHandle</a></div><div class="ttdeci">void fsWindowHandle(FsWindow *window)</div><div class="ttdoc">Updates a window.</div><div class="ttdef"><b>Definition</b> window.c:68</div></div>
 <div class="ttc" id="agroup__Window_html_gaac42f2b483ab082ab8bce722f4f33be0"><div class="ttname"><a href="group__Window.html#gaac42f2b483ab082ab8bce722f4f33be0">fsWindowShouldClose</a></div><div class="ttdeci">bool fsWindowShouldClose(FsWindow *window)</div><div class="ttdoc">Checks if a window should close.</div><div class="ttdef"><b>Definition</b> window.c:79</div></div>
-<div class="ttc" id="astructFsColor_html"><div class="ttname"><a href="structFsColor.html">FsColor</a></div><div class="ttdoc">RGB color representation.</div><div class="ttdef"><b>Definition</b> render.h:24</div></div>
+<div class="ttc" id="agroup__Window_html_gaac9671c169dfe1ba6bf7a8481d4745ef"><div class="ttname"><a href="group__Window.html#gaac9671c169dfe1ba6bf7a8481d4745ef">fsWindowCreate</a></div><div class="ttdeci">FsWindow fsWindowCreate(const char *name, FsVec2 size)</div><div class="ttdoc">Creates a window.</div><div class="ttdef"><b>Definition</b> window.c:19</div></div>
 <div class="ttc" id="astructFsWindow_html"><div class="ttname"><a href="structFsWindow.html">FsWindow</a></div><div class="ttdoc">Window object.</div><div class="ttdef"><b>Definition</b> window.h:23</div></div>
-<div class="ttc" id="astructFsWindow_html_a5b46126d043bab9134690e0192235d58"><div class="ttname"><a href="structFsWindow.html#a5b46126d043bab9134690e0192235d58">FsWindow::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition</b> window.h:26</div></div>
-<div class="ttc" id="astructFsWindow_html_a6cc5523b876ea62bc17df2b5bbe9b3ff"><div class="ttname"><a href="structFsWindow.html#a6cc5523b876ea62bc17df2b5bbe9b3ff">FsWindow::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition</b> window.h:25</div></div>
-<div class="ttc" id="astructFsWindow_html_a91f9d2c5a19b4ffaa0824ac6359c6390"><div class="ttname"><a href="structFsWindow.html#a91f9d2c5a19b4ffaa0824ac6359c6390">FsWindow::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition</b> window.h:27</div></div>
 </div><!-- fragment --><p>This program:</p><ul>
 <li>Initializes the engine</li>
 <li>Creates a window</li>

@@ -130,28 +130,24 @@
  * and run a basic application loop using Fireset.
  *
  * ```c
- * #include <fireset/fireset.h>
- *
+ * #include "fireset/fireset.h"
+ * 
  * int main(void){
- *     if (!fsInit()) return 1;
- *
- *     FsWindow window;
- *     window.width = 800;
- *     window.height = 600;
- *     window.name = "Example Game";
- *     fsCreateWindow(&window);
- *
- *     while (!fsWindowShouldClose(window)){
- *         fsClear((FsColor){0, 0, 0});
- *
- *         // rendering code
- *
- *         fsHandleWindow(&window);
- *     }
- *
- *     fsDestroyWindow(&window);
- *     fsExit();
- *     return 0;
+ * // initializes the engine
+ * fsInit();
+ * 
+ * // creates window
+ * FsWindow window = fsWindowCreate("Example Game", FsVec2_new(800, 600));
+ * 
+ * // main window loop
+ * while (!fsWindowShouldClose(&window)){
+ *      fsClear(FsColor_new(0, 0, 0)); // clears window
+ *      fsWindowHandle(&window);       // handles window-related features
+ * }
+ * 
+ * // shutdowns the engine & returns
+ * fsExit();
+ * return 0;
  * }
  * ```
  *
