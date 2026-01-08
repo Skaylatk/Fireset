@@ -133,21 +133,21 @@
  * #include "fireset/fireset.h"
  * 
  * int main(void){
- * // initializes the engine
- * fsInit();
+ *      // initializes the engine
+ *      fsInit();
  * 
- * // creates window
- * FsWindow window = fsWindowCreate("Example Game", FsVec2_new(800, 600));
+ *      // creates window
+ *      FsWindow window = fsWindowCreate("Example Game", FsVec2_new(800, 600));
  * 
- * // main window loop
- * while (!fsWindowShouldClose(&window)){
- *      fsClear(FsColor_new(0, 0, 0)); // clears window
- *      fsWindowHandle(&window);       // handles window-related features
- * }
+ *      // main window loop
+ *      while (!fsWindowShouldClose(&window)){
+ *              fsClear(FsColor_new(0, 0, 0)); // clears window
+ *              fsWindowHandle(&window);       // handles window-related features
+ *      }
  * 
- * // shutdowns the engine & returns
- * fsExit();
- * return 0;
+ *      // shutdowns the engine & returns
+ *      fsExit();
+ *      return 0;
  * }
  * ```
  *

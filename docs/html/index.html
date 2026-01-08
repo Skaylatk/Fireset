@@ -169,21 +169,21 @@ Quickstart</h1>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;fireset/fireset.h&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>){</div>
-<div class="line"><span class="comment">// initializes the engine</span></div>
-<div class="line"><a class="code hl_function" href="group__Core.html#ga6b6e93bb085eeb2ad8b51db7d650a5d3">fsInit</a>();</div>
+<div class="line">     <span class="comment">// initializes the engine</span></div>
+<div class="line">     <a class="code hl_function" href="group__Core.html#ga6b6e93bb085eeb2ad8b51db7d650a5d3">fsInit</a>();</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">// creates window</span></div>
-<div class="line"><a class="code hl_struct" href="structFsWindow.html">FsWindow</a> window = <a class="code hl_function" href="group__Window.html#gaac9671c169dfe1ba6bf7a8481d4745ef">fsWindowCreate</a>(<span class="stringliteral">&quot;Example Game&quot;</span>, <a class="code hl_function" href="group__Vertex.html#ga8c6ec9f831e824bc2beff7d60d79ea1e">FsVec2_new</a>(800, 600));</div>
+<div class="line">     <span class="comment">// creates window</span></div>
+<div class="line">     <a class="code hl_struct" href="structFsWindow.html">FsWindow</a> window = <a class="code hl_function" href="group__Window.html#gaac9671c169dfe1ba6bf7a8481d4745ef">fsWindowCreate</a>(<span class="stringliteral">&quot;Example Game&quot;</span>, <a class="code hl_function" href="group__Vertex.html#ga8c6ec9f831e824bc2beff7d60d79ea1e">FsVec2_new</a>(800, 600));</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">// main window loop</span></div>
-<div class="line"><span class="keywordflow">while</span> (!<a class="code hl_function" href="group__Window.html#gaac42f2b483ab082ab8bce722f4f33be0">fsWindowShouldClose</a>(&amp;window)){</div>
-<div class="line">     <a class="code hl_function" href="group__Render.html#ga4ba69393b31d27cd62ab990395acff8a">fsClear</a>(<a class="code hl_function" href="group__Render.html#gafde4c61111eb8ae8bf12d4066a488dd0">FsColor_new</a>(0, 0, 0)); <span class="comment">// clears window</span></div>
-<div class="line">     <a class="code hl_function" href="group__Window.html#ga3f73f18edb9a810871b4feab8d131aa9">fsWindowHandle</a>(&amp;window);       <span class="comment">// handles window-related features</span></div>
-<div class="line">}</div>
+<div class="line">     <span class="comment">// main window loop</span></div>
+<div class="line">     <span class="keywordflow">while</span> (!<a class="code hl_function" href="group__Window.html#gaac42f2b483ab082ab8bce722f4f33be0">fsWindowShouldClose</a>(&amp;window)){</div>
+<div class="line">             <a class="code hl_function" href="group__Render.html#ga4ba69393b31d27cd62ab990395acff8a">fsClear</a>(<a class="code hl_function" href="group__Render.html#gafde4c61111eb8ae8bf12d4066a488dd0">FsColor_new</a>(0, 0, 0)); <span class="comment">// clears window</span></div>
+<div class="line">             <a class="code hl_function" href="group__Window.html#ga3f73f18edb9a810871b4feab8d131aa9">fsWindowHandle</a>(&amp;window);       <span class="comment">// handles window-related features</span></div>
+<div class="line">     }</div>
 <div class="line"> </div>
-<div class="line"><span class="comment">// shutdowns the engine &amp; returns</span></div>
-<div class="line"><a class="code hl_function" href="group__Core.html#ga3a12b515c5a4d2514cfb07014dbfa3eb">fsExit</a>();</div>
-<div class="line"><span class="keywordflow">return</span> 0;</div>
+<div class="line">     <span class="comment">// shutdowns the engine &amp; returns</span></div>
+<div class="line">     <a class="code hl_function" href="group__Core.html#ga3a12b515c5a4d2514cfb07014dbfa3eb">fsExit</a>();</div>
+<div class="line">     <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="agroup__Core_html_ga3a12b515c5a4d2514cfb07014dbfa3eb"><div class="ttname"><a href="group__Core.html#ga3a12b515c5a4d2514cfb07014dbfa3eb">fsExit</a></div><div class="ttdeci">void fsExit(void)</div><div class="ttdoc">Shuts down the Fireset engine core.</div><div class="ttdef"><b>Definition</b> core.c:55</div></div>
 <div class="ttc" id="agroup__Core_html_ga6b6e93bb085eeb2ad8b51db7d650a5d3"><div class="ttname"><a href="group__Core.html#ga6b6e93bb085eeb2ad8b51db7d650a5d3">fsInit</a></div><div class="ttdeci">bool fsInit(void)</div><div class="ttdoc">Initializes the Fireset engine core.</div><div class="ttdef"><b>Definition</b> core.c:20</div></div>
