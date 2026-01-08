@@ -9,36 +9,31 @@ var group__Render =
       [ "angle", "structFsQuad.html#a27375f501a6fc7030bc94599c218c73e", null ],
       [ "color", "structFsQuad.html#a8c488482658a50bff31d1bde8aae1ecb", null ],
       [ "position", "structFsQuad.html#a3061a281282713ca2e167f956866c004", null ],
-      [ "size", "structFsQuad.html#aa8680b9a04a3315633abcc6de17c43bd", null ],
-      [ "transparency", "structFsQuad.html#aec01e1e3593a2a1f2559baf16d22f4bc", null ]
+      [ "size", "structFsQuad.html#aa8680b9a04a3315633abcc6de17c43bd", null ]
     ] ],
     [ "FsTriangle", "structFsTriangle.html", [
       [ "angle", "structFsTriangle.html#abf3077b211692d5cf7fdbface0350721", null ],
       [ "color", "structFsTriangle.html#a5b5e3fb571a1b486d6d4a38f81e3bb8b", null ],
       [ "position", "structFsTriangle.html#ac716c2dd89207edf13bea26e63f16414", null ],
-      [ "size", "structFsTriangle.html#a24dea77d61e5c29b2b21ccdfce7a3d8d", null ],
-      [ "transparency", "structFsTriangle.html#a4a01292561f3c99eaf6176e482d1d9bc", null ]
+      [ "size", "structFsTriangle.html#a24dea77d61e5c29b2b21ccdfce7a3d8d", null ]
     ] ],
     [ "FsPoint", "structFsPoint.html", [
       [ "color", "structFsPoint.html#a89fed26be63405f6230439fc711b0a61", null ],
-      [ "position", "structFsPoint.html#a52d24a40249e6236820251bcfd65a664", null ],
-      [ "transparency", "structFsPoint.html#a5b3beafcee896641513daf7e177a7639", null ]
+      [ "position", "structFsPoint.html#a52d24a40249e6236820251bcfd65a664", null ]
     ] ],
     [ "FsCircle", "structFsCircle.html", [
       [ "angle", "structFsCircle.html#ac9aa8bbdf7987e896eccb8f85616c53c", null ],
       [ "color", "structFsCircle.html#ad25df836cb2bfa22cf66000dd8238b1f", null ],
       [ "position", "structFsCircle.html#a695f64d2f52ce7682705c79cf8b026b3", null ],
       [ "segments", "structFsCircle.html#ace31ac33e8e3a77020f6d2e9ea010172", null ],
-      [ "size", "structFsCircle.html#ad8a30f671d5628aefc8b83c485c6f16e", null ],
-      [ "transparency", "structFsCircle.html#a845546d15917393598ba41f8ba758cd0", null ]
+      [ "size", "structFsCircle.html#ad8a30f671d5628aefc8b83c485c6f16e", null ]
     ] ],
     [ "FsLine", "structFsLine.html", [
       [ "angle", "structFsLine.html#aefe506cda09cf897c0b29040224ee343", null ],
       [ "color", "structFsLine.html#aa055a7ed0e0f8f68af02f1dc4211d418", null ],
       [ "length", "structFsLine.html#ae1e2b5b942a00e36c83bfddb525f1b7b", null ],
       [ "position", "structFsLine.html#a3bf5de7bd9d8b83b4a03af7a1652de9e", null ],
-      [ "thickness", "structFsLine.html#a8d984c80df31daed72588b8d43da5b57", null ],
-      [ "transparency", "structFsLine.html#a0772f927eb04a1f579eafe1853f12c23", null ]
+      [ "thickness", "structFsLine.html#a8d984c80df31daed72588b8d43da5b57", null ]
     ] ],
     [ "FsSprite", "structFsSprite.html", [
       [ "angle", "structFsSprite.html#ac37b93f3621a0886aac1cb3c9ff9961e", null ],
@@ -47,6 +42,7 @@ var group__Render =
       [ "texRot", "structFsSprite.html#a27c1fd18e0a78cda20846286b2e76241", null ],
       [ "texture", "structFsSprite.html#a783ac4caa24d79f198bb8cea15494210", null ]
     ] ],
+    [ "FsCircle_new", "group__Render.html#ga16a58c6db52cce1ddbd246fc30d930ec", null ],
     [ "fsClear", "group__Render.html#ga4ba69393b31d27cd62ab990395acff8a", null ],
     [ "FsColor_new", "group__Render.html#gafde4c61111eb8ae8bf12d4066a488dd0", null ],
     [ "fsDrawCircle", "group__Render.html#ga44de89e7523e19a444bc12addf85033e", null ],
@@ -55,5 +51,10 @@ var group__Render =
     [ "fsDrawQuad", "group__Render.html#gabb109b9fed5cdf656f1b0e510641f045", null ],
     [ "fsDrawSprite", "group__Render.html#ga59d8352c5337df303eb47efdc307fc26", null ],
     [ "fsDrawTriangle", "group__Render.html#ga1b9ce3db4d00f0dec130e50f1aeb8408", null ],
-    [ "fsOrthoSet", "group__Render.html#gaabce2669ec09b0b2357420bbd54cd4ed", null ]
+    [ "FsLine_new", "group__Render.html#gaf45ad8c31b9c92be787929f764d92753", null ],
+    [ "fsOrthoSet", "group__Render.html#gaabce2669ec09b0b2357420bbd54cd4ed", null ],
+    [ "FsPoint_new", "group__Render.html#ga8445fe5fb0083af4689c0415a3cd5e96", null ],
+    [ "FsQuad_new", "group__Render.html#ga4d922c1bac593da5fe7a1be37b0cf66b", null ],
+    [ "FsSprite_new", "group__Render.html#ga81c1151b8ac2b2f396442d4bdd03b153", null ],
+    [ "FsTriangle_new", "group__Render.html#ga7a6a416f0352023fbfe1227bb92957cb", null ]
 ];

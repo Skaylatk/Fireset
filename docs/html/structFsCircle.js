@@ -4,6 +4,5 @@ var structFsCircle =
     [ "color", "structFsCircle.html#ad25df836cb2bfa22cf66000dd8238b1f", null ],
     [ "position", "structFsCircle.html#a695f64d2f52ce7682705c79cf8b026b3", null ],
     [ "segments", "structFsCircle.html#ace31ac33e8e3a77020f6d2e9ea010172", null ],
-    [ "size", "structFsCircle.html#ad8a30f671d5628aefc8b83c485c6f16e", null ],
-    [ "transparency", "structFsCircle.html#a845546d15917393598ba41f8ba758cd0", null ]
+    [ "size", "structFsCircle.html#ad8a30f671d5628aefc8b83c485c6f16e", null ]
 ];

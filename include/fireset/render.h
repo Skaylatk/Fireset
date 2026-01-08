@@ -101,6 +101,129 @@ typedef struct{
 } FsSprite;
 
 /**
+ * @brief Creates a triangle primitive.
+ *
+ * Initializes and returns a triangle with the given position, size,
+ * color, and rotation angle.
+ *
+ * @param position Position of the triangle in window space.
+ * @param size     Size of the triangle in window space.
+ * @param color    Color of the triangle.
+ * @param angle    Rotation angle in degrees.
+ *
+ * @return Initialized FsTriangle.
+ */
+FsTriangle FsTriangle_new(
+    FsVec2 position,
+    FsVec2 size,
+    FsColor color,
+    float angle
+);
+
+/**
+ * @brief Creates a point primitive.
+ *
+ * Initializes and returns a point with the given position and color.
+ *
+ * @param position Position of the point in window space.
+ * @param color    Color of the point.
+ *
+ * @return Initialized FsPoint.
+ */
+FsPoint FsPoint_new(
+    FsVec2 position,
+    FsColor color
+);
+
+/**
+ * @brief Creates a line primitive.
+ *
+ * Initializes and returns a line with the given position, length,
+ * thickness, color, and rotation angle.
+ *
+ * @param position  Starting position of the line in window space.
+ * @param color     Color of the line.
+ * @param angle     Rotation angle in degrees.
+ * @param length    Length of the line.
+ * @param thickness Thickness of the line.
+ *
+ * @return Initialized FsLine.
+ */
+FsLine FsLine_new(
+    FsVec2 position,
+    FsColor color,
+    float angle,
+    float length,
+    float thickness
+);
+
+/**
+ * @brief Creates a quadrilateral primitive.
+ *
+ * Initializes and returns a quad with the given position, size,
+ * color, and rotation angle.
+ *
+ * @param position Position of the quad in window space.
+ * @param size     Size of the quad in window space.
+ * @param color    Color of the quad.
+ * @param angle    Rotation angle in degrees.
+ *
+ * @return Initialized FsQuad.
+ */
+FsQuad FsQuad_new(
+    FsVec2 position,
+    FsVec2 size,
+    FsColor color,
+    float angle
+);
+
+/**
+ * @brief Creates a circle primitive.
+ *
+ * Initializes and returns a circle with the given position, size,
+ * color, rotation angle, and number of segments.
+ *
+ * @param position Position of the circle in window space.
+ * @param size     Size of the circle in window space.
+ * @param color    Color of the circle.
+ * @param angle    Rotation angle in degrees.
+ * @param segments Number of segments used to approximate the circle.
+ *
+ * @return Initialized FsCircle.
+ */
+FsCircle FsCircle_new(
+    FsVec2 position,
+    FsVec2 size,
+    FsColor color,
+    float angle,
+    int segments
+);
+
+/**
+ * @brief Creates a sprite.
+ *
+ * Initializes and returns a sprite with the given position, size,
+ * texture, texture rotation, and rotation angle.
+ *
+ * @param position Position of the sprite in window space.
+ * @param size     Size of the sprite in window space.
+ * @param texture  Pointer to the texture used by the sprite.
+ * @param texRot   Texture rotation mode or index.
+ * @param angle    Rotation angle in degrees.
+ *
+ * @return Initialized FsSprite.
+ *
+ * @note The texture pointer must remain valid while the sprite is in use.
+ */
+FsSprite FsSprite_new(
+    FsVec2 position,
+    FsVec2 size,
+    FsTexture* texture,
+    int texRot,
+    float angle
+);
+
+/**
  * @brief Draws a pixel.
  *
  * Draws a colored point at the specified position.

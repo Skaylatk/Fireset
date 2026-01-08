@@ -4,6 +4,5 @@ var structFsLine =
     [ "color", "structFsLine.html#aa055a7ed0e0f8f68af02f1dc4211d418", null ],
     [ "length", "structFsLine.html#ae1e2b5b942a00e36c83bfddb525f1b7b", null ],
     [ "position", "structFsLine.html#a3bf5de7bd9d8b83b4a03af7a1652de9e", null ],
-    [ "thickness", "structFsLine.html#a8d984c80df31daed72588b8d43da5b57", null ],
-    [ "transparency", "structFsLine.html#a0772f927eb04a1f579eafe1853f12c23", null ]
+    [ "thickness", "structFsLine.html#a8d984c80df31daed72588b8d43da5b57", null ]
 ];
