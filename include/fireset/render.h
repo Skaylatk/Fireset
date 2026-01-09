@@ -9,6 +9,19 @@
 #include "fireset/vertex.h"
 #include "fireset/image.h"
 
+/**
+ * @brief Direction enumeration.
+ *
+ * Represents the four cardinal directions commonly used
+ * for movement, orientation, and logic in 2D space.
+ */
+typedef enum {
+    FS_DIRECTION_UP,    /**< Upward direction */
+    FS_DIRECTION_RIGHT, /**< Rightward direction */
+    FS_DIRECTION_DOWN,  /**< Downward direction */
+    FS_DIRECTION_LEFT   /**< Leftward direction */
+} FsDirection;
+
 /** 
  * @defgroup Render Render
  * @brief Basic 2D rendering primitives.
@@ -222,6 +235,8 @@ FsSprite FsSprite_new(
     int texRot,
     float angle
 );
+
+float fsLookAt(FsVec2 origin, FsVec2 target, FsDirection forward);
 
 /**
  * @brief Draws a pixel.

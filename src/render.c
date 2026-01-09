@@ -7,6 +7,38 @@
 #include "fireset/fslog.h"
 #include <math.h>
 
+float fsLookAt(FsVec2 origin, FsVec2 target, FsDirection forward){
+    float dx = target.x - origin.x;
+    float dy = target.y - origin.y;
+
+    float base_angle = atan2f(dy, dx) * (180.0f / PI);
+    float angle = base_angle;
+
+    switch(forward){
+        case FS_DIRECTION_UP:
+            angle = base_angle - 90.0f;
+            break;
+
+        case FS_DIRECTION_RIGHT:
+            angle = base_angle;
+            break;
+
+        case FS_DIRECTION_DOWN:
+            angle = base_angle + 90.0f;
+            break;
+
+        case FS_DIRECTION_LEFT:
+            angle = base_angle - 180.0f;
+            break;
+
+        default:
+            angle = 0;
+            break;
+    }
+
+    return angle;
+}
+
 FsTriangle FsTriangle_new
 (
     FsVec2 position,
@@ -41,9 +73,9 @@ void fsDrawTriangle(const FsTriangle* tri, int zindex){
             tri->color.b / 255.0f
         );
         glBegin(GL_TRIANGLES);
-            glVertex2f( 0.0f,    0.5f);
-            glVertex2f(-0.433f, -0.25f);
-            glVertex2f( 0.433f, -0.25f);
+            glVertex2f( 0.0f,   -0.5f);
+            glVertex2f(-0.433f,  0.25f);
+            glVertex2f( 0.433f,  0.25f);
         glEnd();
     glPopMatrix();
 }
