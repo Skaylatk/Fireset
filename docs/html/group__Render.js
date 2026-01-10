@@ -52,6 +52,7 @@ var group__Render =
     [ "fsDrawSprite", "group__Render.html#ga59d8352c5337df303eb47efdc307fc26", null ],
     [ "fsDrawTriangle", "group__Render.html#ga1b9ce3db4d00f0dec130e50f1aeb8408", null ],
     [ "FsLine_new", "group__Render.html#gaf45ad8c31b9c92be787929f764d92753", null ],
+    [ "fsLookAt", "group__Render.html#gaac020912b2d0d6720f51667476f2b9b3", null ],
     [ "fsOrthoSet", "group__Render.html#gaabce2669ec09b0b2357420bbd54cd4ed", null ],
     [ "FsPoint_new", "group__Render.html#ga8445fe5fb0083af4689c0415a3cd5e96", null ],
     [ "FsQuad_new", "group__Render.html#ga4d922c1bac593da5fe7a1be37b0cf66b", null ],

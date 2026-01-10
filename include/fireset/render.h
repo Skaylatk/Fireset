@@ -236,6 +236,22 @@ FsSprite FsSprite_new(
     float angle
 );
 
+/**
+ * @brief Calculates the angle to face a target position.
+ *
+ * Computes the rotation angle (in degrees) required for an object at
+ * a given origin position to face a target position in 2D space.
+ *
+ * The resulting angle is adjusted based on the object's forward
+ * direction, allowing different default orientations (up, right,
+ * down, or left).
+ *
+ * @param origin   Origin position.
+ * @param target   Target position to look at.
+ * @param forward  Forward direction of the object.
+ *
+ * @return Angle in degrees required to face the target.
+ */
 float fsLookAt(FsVec2 origin, FsVec2 target, FsDirection forward);
 
 /**
