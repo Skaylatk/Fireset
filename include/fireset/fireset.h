@@ -1,6 +1,6 @@
-// Copyright (c) 2025 Henrique Rodrigues Santos
+// Copyright (c) 2025-2026 Henrique Rodrigues Santos
 // Licensed under the MIT License
-// Repo: https://github.com/saintsHr/Fireset
+// Github: https://github.com/saintsHr/Fireset
 
 #pragma once
 
@@ -45,7 +45,7 @@
  * ```
  * - Compile your project using:
  * ```bash
- * -Ifireset -lfireset -lglfw -lGL -lm
+ * -Ifireset -lfireset -lglfw -lGL -lm -lopenal
  * ```
  * or, preferably:
  * ```bash

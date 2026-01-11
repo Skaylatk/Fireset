@@ -1,6 +1,6 @@
-// Copyright (c) 2025 Henrique Rodrigues Santos
+// Copyright (c) 2025-2026 Henrique Rodrigues Santos
 // Licensed under the MIT License
-// Repo: https://github.com/saintsHr/Fireset
+// Github: https://github.com/saintsHr/Fireset
 
 #include <stdio.h>
 #include <stdlib.h>

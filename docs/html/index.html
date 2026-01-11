@@ -108,7 +108,7 @@ Debian</h2>
 <li>Open the <b>Releases</b> tab and download the latest stable version.</li>
 <li>Install the <span class="tt">.deb</span> package: <div class="fragment"><div class="line">sudo apt install ./fireset-dev.deb</div>
 </div><!-- fragment --></li>
-<li>Compile your project using: <div class="fragment"><div class="line">-Ifireset -lfireset -lglfw -lGL -lm</div>
+<li>Compile your project using: <div class="fragment"><div class="line">-Ifireset -lfireset -lglfw -lGL -lm -lopenal</div>
 </div><!-- fragment --> or, preferably: <div class="fragment"><div class="line">$(pkg-config --cflags --libs fireset)</div>
 </div><!-- fragment --></li>
 <li>Include Fireset in your source files: <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fireset/fireset.h&gt;</span></div>

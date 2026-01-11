@@ -1,6 +1,6 @@
-// Copyright (c) 2025 Henrique Rodrigues Santos
+// Copyright (c) 2025-2026 Henrique Rodrigues Santos
 // Licensed under the MIT License
-// Repo: https://github.com/saintsHr/Fireset
+// Github: https://github.com/saintsHr/Fireset
 
 #include "fireset/audio.h"
 #include "fireset/settings.h"
@@ -8,7 +8,6 @@
 
 #include <sndfile.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
 FsSound fsSoundLoad(const char* filename){
     FsSound nullsnd = {0};

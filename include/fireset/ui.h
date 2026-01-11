@@ -1,3 +1,7 @@
+// Copyright (c) 2025-2026 Henrique Rodrigues Santos
+// Licensed under the MIT License
+// Github: https://github.com/saintsHr/Fireset
+
 #pragma once
 
 #include "fireset/vertex.h"

@@ -1,11 +1,12 @@
-// Copyright (c) 2025 Henrique Rodrigues Santos
+// Copyright (c) 2025-2026 Henrique Rodrigues Santos
 // Licensed under the MIT License
-// Repo: https://github.com/saintsHr/Fireset
+// Github: https://github.com/saintsHr/Fireset
 
 #pragma once
 
 #include <AL/al.h>
 #include <AL/alc.h>
+#include <stdbool.h>
 
 #include "fireset/vertex.h"
 
