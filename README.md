@@ -21,6 +21,7 @@ if you find any issue or have a cool idea/suggestion, share it on github issues 
 - Keyboard & Mouse Input
 - Sprites & Textures
 - Spatial Audio
+- Physics
 
 ---
 
