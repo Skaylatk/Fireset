@@ -1,10 +1,15 @@
+// Copyright (c) 2025-2026 Henrique Rodrigues Santos
+// Licensed under the MIT License
+// Github: https://github.com/saintsHr/Fireset
+
 #include "fireset/physics.h"
 #include "fireset/fslog.h"
 
-FsSpace fsSpaceCreate(FsVec2 gravity){
+FsSpace fsSpaceCreate(FsVec2 gravity, FsVec2 damping){
     FsSpace s = {
         .bodyCount = 0,
-        .gravity = gravity
+        .gravity = gravity,
+        .damping = damping
     };
 
     for (int i = 0; i < PHYS_MAX_BODIES; i++){
@@ -40,6 +45,10 @@ void fsSpaceStep(FsSpace* space, float stepTime){
             // apply gravity
             body->velocity.x += space->gravity.x * intervalo;
             body->velocity.y += space->gravity.y * intervalo;
+
+            // apply damping
+            body->velocity.x *= space->damping.x;
+            body->velocity.y *= space->damping.y;
 
             // apply velocity
             body->position.x += body->velocity.x * intervalo;

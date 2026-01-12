@@ -1,3 +1,7 @@
+// Copyright (c) 2025-2026 Henrique Rodrigues Santos
+// Licensed under the MIT License
+// Github: https://github.com/saintsHr/Fireset
+
 #pragma once
 
 #include "fireset/render.h"
@@ -19,12 +23,13 @@ typedef struct{
 
 typedef struct{
     FsVec2 gravity;
+    FsVec2 damping;
 
     int bodyCount;
     FsBody* bodies[PHYS_MAX_BODIES];
 }FsSpace;
 
-FsSpace fsSpaceCreate(FsVec2 gravity);
+FsSpace fsSpaceCreate(FsVec2 gravity, FsVec2 damping);
 void fsSpaceAddBody(FsSpace* space, FsBody* body);
 void fsSpaceStep(FsSpace* space, float stepTime);
 bool fsIsQuadColiding(FsBody quad1, FsBody quad2);
