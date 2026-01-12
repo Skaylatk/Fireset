@@ -26,3 +26,12 @@ http://www.mega-nerd.com/libsndfile/
 OpenAL is an open audio API.  
 Most open source implementations (like OpenAL Soft) are licensed under the LGPL.  
 For more information, visit: https://www.openal.org/
+
+## stb_image
+
+Copyright (c) Sean Barrett  
+
+stb_image is a single-header, header-only image loading library.  
+It is dual-licensed under the public domain or the MIT license.  
+See https://github.com/nothings/stb/blob/master/stb_image.h  
+for full license details.
