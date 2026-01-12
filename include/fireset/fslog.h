@@ -27,6 +27,7 @@ typedef enum{
     FS_INPUT,
     FS_RENDER,
     FS_WINDOW,
+    FS_PHYSICS,
 
     FS_MOD_COUNT
 }FS_MODULE;
@@ -45,7 +46,8 @@ static const char* FS_MODULE_STRING[FS_MOD_COUNT] = {
     "Assets",
     "Input",
     "Render",
-    "Window"
+    "Window",
+    "Physics"
 };
 
 static const char* FS_ERROR_COLOR[FS_SEV_COUNT] = {

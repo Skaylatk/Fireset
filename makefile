@@ -52,7 +52,7 @@ LIB := lib/lib$(TARGET).a
 # ====================================================
 # Phony targets
 # ====================================================
-.PHONY: all debug release clean doc deb install uninstall
+.PHONY: all debug release clean doc cloc deb install uninstall
 
 # ====================================================
 # Build targets
@@ -91,6 +91,12 @@ $(BUILD_DIR)/%.o: src/%.c
 # ====================================================
 doc:
 	doxygen Doxyfile
+
+# ====================================================
+# cloc (count lines of code)
+# ====================================================
+cloc:
+	cloc ./src ./include --exclude-list-file=clocignore.txt
 
 # ====================================================
 # Package configuration files (.pc)
