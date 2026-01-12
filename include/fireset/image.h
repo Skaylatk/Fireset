@@ -64,3 +64,28 @@ FsImage fsImageLoad(const char* filename);
  *       when it is no longer needed.
  */
 FsTexture fsTextureLoad(const char* filename);
+
+/**
+ * @brief Frees an image.
+ *
+ * Releases the memory associated with an image buffer
+ * previously loaded by the engine.
+ *
+ * After calling this function, the image is reset to
+ * a safe empty state.
+ *
+ * @param image Pointer to the FsImage to free.
+ */
+void fsImageFree(FsImage* image);
+
+/**
+ * @brief Frees a texture.
+ *
+ * Deletes the OpenGL texture associated with the given
+ * texture object and resets its data.
+ *
+ * @param texture Pointer to the FsTexture to free.
+ *
+ * @note Requires a valid OpenGL context.
+ */
+void fsTextureFree(FsTexture* texture);
