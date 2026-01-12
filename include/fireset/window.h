@@ -34,9 +34,10 @@ typedef struct{
  *
  * @param name The name/title of the generated window.
  * @param size The Vec2 size of the window.
+ * @param fullscreen If window is or not Fullscreen
  * @return Pointer to the created window.
  */
-FsWindow fsWindowCreate(const char* name, FsVec2 size);
+FsWindow fsWindowCreate(const char* name, FsVec2 size, bool fullscreen);
 
 /**
  * @brief Updates a window.

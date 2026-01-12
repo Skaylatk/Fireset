@@ -16,7 +16,7 @@ static void fsFramebufferSizeCallback(GLFWwindow* window, int width, int height)
     fsOrthoSet(width, height);
 }
 
-FsWindow fsWindowCreate(const char* name, FsVec2 size){
+FsWindow fsWindowCreate(const char* name, FsVec2 size, bool fullscreen){
     FsWindow window = {
         .name = name,
         .width = size.x,
@@ -28,8 +28,34 @@ FsWindow fsWindowCreate(const char* name, FsVec2 size){
     // window hints
     glfwWindowHint(GLFW_DEPTH_BITS, 16);
 
-    // creates window object and set context
-    window.handle = glfwCreateWindow(window.width, window.height, window.name, NULL, NULL);
+    // get monitor info
+    GLFWmonitor* monitor = glfwGetPrimaryMonitor();
+    const GLFWvidmode* mode = glfwGetVideoMode(monitor);
+    if (!monitor) {
+        fsLog(FS_ERROR, FS_WINDOW, "Cannot get primary monitor");
+        glfwTerminate();
+        return nullwin;
+    }
+
+    // creates window object
+    if (fullscreen){
+        window.handle = glfwCreateWindow(
+            mode->width,
+            mode->height,
+            window.name,
+            monitor,
+            NULL
+        );
+    } else {
+        window.handle = glfwCreateWindow(
+            window.width,
+            window.height,
+            window.name,
+            NULL,
+            NULL
+        );
+    }
+
     if (!window.handle){
         glfwTerminate();
         fsLog(FS_FATAL, FS_WINDOW, "Failed to create window");
@@ -37,8 +63,6 @@ FsWindow fsWindowCreate(const char* name, FsVec2 size){
     }
 
     // centralizes the window
-    GLFWmonitor* monitor = glfwGetPrimaryMonitor();
-    const GLFWvidmode* mode = glfwGetVideoMode(monitor);
     int xPos = (mode->width  - window.width)  / 2;
     int yPos = (mode->height - window.height) / 2;
     glfwSetWindowPos(window.handle, xPos, yPos);
