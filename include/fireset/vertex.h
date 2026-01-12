@@ -20,14 +20,4 @@ typedef struct{
     float y; /**< Vertical component */
 } FsVec2;
 
-/**
- * @brief Creates a 2D vector.
- *
- * @param x Horizontal component.
- * @param y Vertical component.
- *
- * @return FsVec2 instance with specified components.
- */
-FsVec2 FsVec2_new(float x, float y);
-
 /** @} */

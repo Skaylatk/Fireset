@@ -44,7 +44,7 @@ FsVec2 fsCursorGetPos(const FsWindow* window){
     float fx = (float)x;
     float fy = (float)y;
 
-    FsVec2 vec = FsVec2_new(fx, fy);
+    FsVec2 vec = (FsVec2){fx, fy};
     return vec;
 }
 

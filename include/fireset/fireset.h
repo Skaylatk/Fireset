@@ -12,7 +12,6 @@
 #include "fireset/input.h"
 #include "fireset/image.h"
 #include "fireset/audio.h"
-#include "fireset/ui.h"
 
 /**
  * \mainpage Fireset

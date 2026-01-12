@@ -39,23 +39,6 @@ float fsLookAt(FsVec2 origin, FsVec2 target, FsDirection forward){
     return angle;
 }
 
-FsTriangle FsTriangle_new
-(
-    FsVec2 position,
-    FsVec2 size,
-    FsColor color,
-    float angle
-){
-    FsTriangle r = {
-        .angle = angle,
-        .color = color,
-        .position = position,
-        .size = size
-    };
-
-    return r;
-}
-
 void fsDrawTriangle(const FsTriangle* tri, int zindex){
     if (zindex < 1) zindex = 1;
     if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
@@ -80,19 +63,6 @@ void fsDrawTriangle(const FsTriangle* tri, int zindex){
     glPopMatrix();
 }
 
-FsPoint FsPoint_new
-(
-    FsVec2 position,
-    FsColor color
-){
-    FsPoint r = {
-        .color = color,
-        .position = position,
-    };
-
-    return r;
-}
-
 void fsDrawPoint(const FsPoint* p, int zindex){
     if (zindex < 1) zindex = 1;
     if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
@@ -112,25 +82,6 @@ void fsDrawPoint(const FsPoint* p, int zindex){
             glVertex2f(0.0f, 0.0f);
         glEnd();
     glPopMatrix();
-}
-
-FsLine FsLine_new
-(
-    FsVec2 position,
-    FsColor color,
-    float angle,
-    float length,
-    float thickness
-){
-    FsLine r = {
-        .angle = angle,
-        .thickness = thickness,
-        .length = length,
-        .color = color,
-        .position = position
-    };
-
-    return r;
 }
 
 void fsDrawLine(const FsLine* line, int zindex){
@@ -159,23 +110,6 @@ void fsDrawLine(const FsLine* line, int zindex){
     glPopMatrix();
 }
 
-FsQuad FsQuad_new
-(
-    FsVec2 position,
-    FsVec2 size,
-    FsColor color,
-    float angle
-){
-    FsQuad r = {
-        .angle = angle,
-        .color = color,
-        .position = position,
-        .size = size
-    };
-
-    return r;
-}
-
 void fsDrawQuad(const FsQuad* quad, int zindex){
     if (zindex < 0) zindex = 0;
     if (zindex > REND_MAX_ZINDEX) zindex = REND_MAX_ZINDEX;
@@ -200,25 +134,6 @@ void fsDrawQuad(const FsQuad* quad, int zindex){
             glVertex2f(-0.5f,  0.5f);
         glEnd();
     glPopMatrix();
-}
-
-FsCircle FsCircle_new
-(
-    FsVec2 position,
-    FsVec2 size,
-    FsColor color,
-    float angle,
-    int segments
-){
-    FsCircle r = {
-        .angle = angle,
-        .color = color,
-        .position = position,
-        .size = size,
-        .segments = segments
-    };
-
-    return r;
 }
 
 void fsDrawCircle(const FsCircle* circle, int zindex){
@@ -252,25 +167,6 @@ void fsDrawCircle(const FsCircle* circle, int zindex){
             }
         glEnd();
     glPopMatrix();
-}
-
-FsSprite FsSprite_new
-(
-    FsVec2 position,
-    FsVec2 size,
-    FsTexture* texture,
-    int texRot,
-    float angle
-){
-    FsSprite r = {
-        .angle = angle,
-        .position = position,
-        .size = size,
-        .texRot = texRot,
-        .texture = texture
-    };
-
-    return r;
 }
 
 void fsDrawSprite(const FsSprite* sprite, int zindex){
@@ -339,8 +235,4 @@ void fsOrthoSet(int width, int height){
     glOrtho(0, width, height, 0, -1.0f, 1.0f);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-}
-
-FsColor FsColor_new(uint8_t r, uint8_t g, uint8_t b){
-    return (FsColor){r, g, b};
 }
