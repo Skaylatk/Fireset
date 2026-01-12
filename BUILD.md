@@ -41,41 +41,41 @@ sudo apt install \
 
 ## Building
 
-To build the project, you have some alternatives:
+**To build the project, you have some alternatives:**
 
+to build the project as debug:
 ```bash
 make
 ```
-to build the project as debug
 
+to build the project as release:
 ```bash
 make release
 ```
-to build the project as release
 
+to build the documentation:
 ```bash
 make doc
 ```
-to build the documentation
 
+to build the .deb installer:
 ```bash
 make deb
 ```
-to build the .deb installer
 
+to install fireset to the system (Ubuntu/Debian only):
 ```bash
 make install
 ```
-to install fireset to the system (Ubuntu/Debian only)
 
+to uninstall fireset from the system (Ubuntu/Debian only):
 ```bash
 make uninstall
 ```
-to uninstall fireset from the system (Ubuntu/Debian only)
 
+to clear all build files:
 ```bash
 make clean
 ```
-to clear all build files
 
 ---
