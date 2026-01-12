@@ -89,9 +89,12 @@ $(function(){initNavTree('structFsBody.html','','structFsBody-members'); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">FsBody Struct Reference</div></div>
+  <div class="headertitle"><div class="title">FsBody Struct Reference<div class="ingroups"><a class="el" href="group__Physics.html">Physics</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Physics body.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="physics_8h_source.html">physics.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -99,7 +102,7 @@ Collaboration diagram for FsBody:</div>
 <div class="dyncontent">
 <div class="center"><img src="structFsBody__coll__graph.png" border="0" usemap="#aFsBody_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="aFsBody_coll__map" id="aFsBody_coll__map">
-<area shape="rect" title=" " alt="" coords="5,151,75,178"/>
+<area shape="rect" title="Physics body." alt="" coords="5,151,75,178"/>
 <area shape="rect" href="structFsVec2.html" title="2D vector." alt="" coords="6,5,74,33"/>
 <area shape="poly" title=" " alt="" coords="43,48,43,150,37,150,37,49"/>
 </map>
@@ -107,12 +110,15 @@ Collaboration diagram for FsBody:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a6bf09ecf92e4d547b3ab940a26cf0b38" id="r_a6bf09ecf92e4d547b3ab940a26cf0b38"><td class="memItemLeft" align="right" valign="top">FsBodyType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bf09ecf92e4d547b3ab940a26cf0b38">type</a></td></tr>
+<tr class="memitem:a6bf09ecf92e4d547b3ab940a26cf0b38" id="r_a6bf09ecf92e4d547b3ab940a26cf0b38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Physics.html#ga4d88955a896379ec0ca631be728c0ca6">FsBodyType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bf09ecf92e4d547b3ab940a26cf0b38">type</a></td></tr>
 <tr class="memitem:ab160adf8ac4a09fe1c4caa501149f361" id="r_ab160adf8ac4a09fe1c4caa501149f361"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structFsVec2.html">FsVec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab160adf8ac4a09fe1c4caa501149f361">position</a></td></tr>
-<tr class="memitem:a6d743474f4ee388bbc4f8ede29b20803" id="r_a6d743474f4ee388bbc4f8ede29b20803"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structFsVec2.html">FsVec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d743474f4ee388bbc4f8ede29b20803">size</a></td></tr>
 <tr class="memitem:a4c160c7d528778761e5885b460f67a59" id="r_a4c160c7d528778761e5885b460f67a59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structFsVec2.html">FsVec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c160c7d528778761e5885b460f67a59">velocity</a></td></tr>
+<tr class="memitem:a6d743474f4ee388bbc4f8ede29b20803" id="r_a6d743474f4ee388bbc4f8ede29b20803"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structFsVec2.html">FsVec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d743474f4ee388bbc4f8ede29b20803">size</a></td></tr>
 </table>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Physics body. </p>
+<p>Represents a physical object inside a physics space. Stores position, velocity, size and body type. </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="ab160adf8ac4a09fe1c4caa501149f361" name="ab160adf8ac4a09fe1c4caa501149f361"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab160adf8ac4a09fe1c4caa501149f361">&#9670;&#160;</a></span>position</h2>
 
@@ -124,6 +130,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>World position (center-based) </p>
 
 </div>
 </div>
@@ -138,6 +145,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Size of the body (width, height) </p>
 
 </div>
 </div>
@@ -148,10 +156,11 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">FsBodyType FsBody::type</td>
+          <td class="memname"><a class="el" href="group__Physics.html#ga4d88955a896379ec0ca631be728c0ca6">FsBodyType</a> FsBody::type</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Body shape/type </p>
 
 </div>
 </div>
@@ -166,6 +175,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Linear velocity </p>
 
 </div>
 </div>

@@ -111,10 +111,34 @@ Functions</h2></td></tr>
 <tr class="memdesc:gab93569ba69eb02b1330276582444b866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys a window.  <br /></td></tr>
 <tr class="memitem:gaac42f2b483ab082ab8bce722f4f33be0" id="r_gaac42f2b483ab082ab8bce722f4f33be0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaac42f2b483ab082ab8bce722f4f33be0">fsWindowShouldClose</a> (<a class="el" href="structFsWindow.html">FsWindow</a> *window)</td></tr>
 <tr class="memdesc:gaac42f2b483ab082ab8bce722f4f33be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a window should close.  <br /></td></tr>
+<tr class="memitem:gac6a0ca3d9f475c883c2c5b3e86c068c6" id="r_gac6a0ca3d9f475c883c2c5b3e86c068c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structFsVec2.html">FsVec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac6a0ca3d9f475c883c2c5b3e86c068c6">fsMonitorGetSize</a> ()</td></tr>
+<tr class="memdesc:gac6a0ca3d9f475c883c2c5b3e86c068c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the primary monitor resolution.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <p>Window management functions and types. </p>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="gac6a0ca3d9f475c883c2c5b3e86c068c6" name="gac6a0ca3d9f475c883c2c5b3e86c068c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac6a0ca3d9f475c883c2c5b3e86c068c6">&#9670;&#160;</a></span>fsMonitorGetSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structFsVec2.html">FsVec2</a> fsMonitorGetSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the primary monitor resolution. </p>
+<p>Retrieves the width and height, in pixels, of the primary monitor currently in use.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structFsVec2.html" title="2D vector.">FsVec2</a> containing the monitor width (x) and height (y) in pixels.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Requires GLFW to be initialized. </dd></dl>
+
+</div>
+</div>
 <a id="gaefa05de64f0b4fc16c791f7c5ad0097b" name="gaefa05de64f0b4fc16c791f7c5ad0097b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaefa05de64f0b4fc16c791f7c5ad0097b">&#9670;&#160;</a></span>fsWindowCreate()</h2>
 

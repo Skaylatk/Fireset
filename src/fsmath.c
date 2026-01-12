@@ -18,6 +18,12 @@ FsVec2 fsVecMul(FsVec2 vec1, FsVec2 vec2){
 }
 
 FsVec2 fsVecDiv(FsVec2 vec1, FsVec2 vec2){
+    if (
+        vec1.x == 0 ||
+        vec1.y == 0 ||
+        vec2.x == 0 ||
+        vec2.y == 0
+    ) return (FsVec2){0};
     return (FsVec2){vec1.x / vec2.x, vec1.y / vec2.y,};
 }
 

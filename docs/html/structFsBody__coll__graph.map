@@ -1,5 +1,5 @@
 <map id="FsBody" name="FsBody">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,151,75,178"/>
+<area shape="rect" id="Node000001" title="Physics body." alt="" coords="5,151,75,178"/>
 <area shape="rect" id="Node000002" href="$structFsVec2.html" title="2D vector." alt="" coords="6,5,74,33"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="43,48,43,150,37,150,37,49"/>
 </map>

@@ -67,4 +67,17 @@ void fsWindowDestroy(FsWindow* window);
  */
 bool fsWindowShouldClose(FsWindow* window);
 
+/**
+ * @brief Returns the primary monitor resolution.
+ *
+ * Retrieves the width and height, in pixels, of the
+ * primary monitor currently in use.
+ *
+ * @return FsVec2 containing the monitor width (x)
+ *         and height (y) in pixels.
+ *
+ * @note Requires GLFW to be initialized.
+ */
+FsVec2 fsMonitorGetSize();
+
 /** @} */

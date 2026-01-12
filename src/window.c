@@ -16,6 +16,15 @@ static void fsFramebufferSizeCallback(GLFWwindow* window, int width, int height)
     fsOrthoSet(width, height);
 }
 
+FsVec2 fsMonitorGetSize(){
+    GLFWmonitor* monitor = glfwGetPrimaryMonitor();
+    const GLFWvidmode* mode = glfwGetVideoMode(monitor);
+
+    if (monitor == NULL || mode == NULL) return (FsVec2){0};
+
+    return (FsVec2){mode->width, mode->height};
+}
+
 FsWindow fsWindowCreate(const char* name, FsVec2 size, bool fullscreen){
     FsWindow window = {
         .name = name,
