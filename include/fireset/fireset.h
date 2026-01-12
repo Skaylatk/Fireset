@@ -66,7 +66,7 @@
  * - Move them to any location of your choice.
  * - Compile your project using:
  * ```bash
- * -Lpath/to/lib -lfireset -lglfw -lGL -lm -Ipath/to/include
+ * -Lpath/to/lib -lfireset -lglfw -lGL -lm -lopenal -Ipath/to/include
  * ```
  * - If you encounter OpenGL or GLFW linker errors, ensure the libraries are installed
  *   and that the appropriate `-L` flags are provided.

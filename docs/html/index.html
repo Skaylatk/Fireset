@@ -123,7 +123,7 @@ Manual</h2>
 <li>Extract the <span class="tt">.zip</span> archive.</li>
 <li>You should see the <b>lib</b> and <b>include</b> directories.</li>
 <li>Move them to any location of your choice.</li>
-<li>Compile your project using: <div class="fragment"><div class="line">-Lpath/to/lib -lfireset -lglfw -lGL -lm -Ipath/to/include</div>
+<li>Compile your project using: <div class="fragment"><div class="line">-Lpath/to/lib -lfireset -lglfw -lGL -lm -lopenal -Ipath/to/include</div>
 </div><!-- fragment --></li>
 <li>If you encounter OpenGL or GLFW linker errors, ensure the libraries are installed and that the appropriate <span class="tt">-L</span> flags are provided.</li>
 <li>Include Fireset in your source files: <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;fireset/fireset.h&gt;</span></div>
