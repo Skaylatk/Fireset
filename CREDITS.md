@@ -6,7 +6,7 @@ Your contributions are genuinely appreciated.
 ---
 
 ## Creator / Maintainer
-- [saintsHr](https://github.com/saintsHr)
+- [saintsHr](https://github.com/saintsHr) - Creator
 
 ---
 
