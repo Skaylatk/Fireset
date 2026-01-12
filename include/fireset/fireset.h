@@ -136,12 +136,12 @@
  *      fsInit();
  * 
  *      // creates window
- *      FsWindow window = fsWindowCreate("Example Game", FsVec2_new(800, 600));
+ *      FsWindow window = fsWindowCreate("Example Game", (FsVec2){800, 600});
  * 
  *      // main window loop
  *      while (!fsWindowShouldClose(&window)){
- *              fsClear(FsColor_new(0, 0, 0)); // clears window
- *              fsWindowHandle(&window);       // handles window-related features
+ *              fsClear((FsColor){0, 0, 0}); // clears window
+ *              fsWindowHandle(&window);     // handles window-related features
  *      }
  * 
  *      // shutdowns the engine & returns
