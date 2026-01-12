@@ -27,7 +27,7 @@ Individual contributions such as features, bug fixes, improvements, or documenta
 ## Special Thanks
 People, communities, or projects that provided indirect help, inspiration, or feedback.
 
-- To be listed
+- [bvdberg](https://github.com/bvdberg) - Github Issue #3
 
 ---
 
