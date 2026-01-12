@@ -2,7 +2,7 @@
 // Licensed under the MIT License
 // Github: https://github.com/saintsHr/Fireset
 
-#define VERSION "v0.5.0"
+#define VERSION "v0.3.0"
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "fireset/stb_image.h"
