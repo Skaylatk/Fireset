@@ -7,7 +7,7 @@
 #include <GLFW/glfw3.h>
 #include <stdbool.h>
 
-#include "fireset/vertex.h"
+#include "fireset/vector.h"
 
 /** 
  * @defgroup Window Window

@@ -8,7 +8,7 @@
 #include <stdbool.h>
 
 #include "fireset/window.h"
-#include "fireset/vertex.h"
+#include "fireset/vector.h"
 
 /** 
  * @defgroup Input Input

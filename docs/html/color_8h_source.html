@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Fireset: include/fireset/fireset.h Source File</title>
+<title>Fireset: include/fireset/color.h Source File</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('fireset_8h_source.html','',''); });
+$(function(){initNavTree('color_8h_source.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -89,7 +89,7 @@ $(function(){initNavTree('fireset_8h_source.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">fireset.h</div></div>
+  <div class="headertitle"><div class="title">color.h</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright (c) 2025-2026 Henrique Rodrigues Santos</span></div>
@@ -98,25 +98,26 @@ $(function(){initNavTree('fireset_8h_source.html','',''); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;fireset/window.h&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;fireset/core.h&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;fireset/render.h&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;fireset/vector.h&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;fireset/fstime.h&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;fireset/input.h&quot;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;fireset/image.h&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;fireset/audio.h&quot;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;fireset/physics.h&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;fireset/color.h&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;fireset/fsmath.h&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structFsColor.html">   15</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structFsColor.html#aa0b150b1eb57041cabc37cf85f3088f0">   16</a></span>    uint8_t <a class="code hl_variable" href="structFsColor.html#aa0b150b1eb57041cabc37cf85f3088f0">r</a>; </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structFsColor.html#ad5d0cfc3db8cc351ecd80db8e6ba9fb7">   17</a></span>    uint8_t <a class="code hl_variable" href="structFsColor.html#ad5d0cfc3db8cc351ecd80db8e6ba9fb7">g</a>; </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structFsColor.html#a013012030ebea97f26eccedfe229b3c4">   18</a></span>    uint8_t <a class="code hl_variable" href="structFsColor.html#a013012030ebea97f26eccedfe229b3c4">b</a>; </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>} <a class="code hl_struct" href="structFsColor.html">FsColor</a>;</div>
+</div>
+<div class="ttc" id="astructFsColor_html"><div class="ttname"><a href="structFsColor.html">FsColor</a></div><div class="ttdoc">RGB color representation.</div><div class="ttdef"><b>Definition</b> color.h:15</div></div>
+<div class="ttc" id="astructFsColor_html_a013012030ebea97f26eccedfe229b3c4"><div class="ttname"><a href="structFsColor.html#a013012030ebea97f26eccedfe229b3c4">FsColor::b</a></div><div class="ttdeci">uint8_t b</div><div class="ttdef"><b>Definition</b> color.h:18</div></div>
+<div class="ttc" id="astructFsColor_html_aa0b150b1eb57041cabc37cf85f3088f0"><div class="ttname"><a href="structFsColor.html#aa0b150b1eb57041cabc37cf85f3088f0">FsColor::r</a></div><div class="ttdeci">uint8_t r</div><div class="ttdef"><b>Definition</b> color.h:16</div></div>
+<div class="ttc" id="astructFsColor_html_ad5d0cfc3db8cc351ecd80db8e6ba9fb7"><div class="ttname"><a href="structFsColor.html#ad5d0cfc3db8cc351ecd80db8e6ba9fb7">FsColor::g</a></div><div class="ttdeci">uint8_t g</div><div class="ttdef"><b>Definition</b> color.h:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_258788930f237705a65652cd224641a5.html">fireset</a></li><li class="navelem"><b>fireset.h</b></li>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_258788930f237705a65652cd224641a5.html">fireset</a></li><li class="navelem"><b>color.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>

@@ -1,10 +1,5 @@
 var group__Render =
 [
-    [ "FsColor", "structFsColor.html", [
-      [ "b", "structFsColor.html#a013012030ebea97f26eccedfe229b3c4", null ],
-      [ "g", "structFsColor.html#ad5d0cfc3db8cc351ecd80db8e6ba9fb7", null ],
-      [ "r", "structFsColor.html#aa0b150b1eb57041cabc37cf85f3088f0", null ]
-    ] ],
     [ "FsQuad", "structFsQuad.html", [
       [ "angle", "structFsQuad.html#a27375f501a6fc7030bc94599c218c73e", null ],
       [ "color", "structFsQuad.html#a8c488482658a50bff31d1bde8aae1ecb", null ],

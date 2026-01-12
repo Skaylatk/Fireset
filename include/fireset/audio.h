@@ -8,7 +8,7 @@
 #include <AL/alc.h>
 #include <stdbool.h>
 
-#include "fireset/vertex.h"
+#include "fireset/vector.h"
 
 /** 
  * @defgroup Audio Audio

@@ -3,7 +3,7 @@
 // Github: https://github.com/saintsHr/Fireset
 
 #include "fireset/input.h"
-#include "fireset/vertex.h"
+#include "fireset/vector.h"
 
 typedef struct{
     bool pressed;

@@ -6,8 +6,9 @@
 
 #include <GL/gl.h>
 #include <stdint.h>
-#include "fireset/vertex.h"
+#include "fireset/vector.h"
 #include "fireset/image.h"
+#include "fireset/color.h"
 
 /**
  * @brief Direction enumeration.
@@ -27,18 +28,6 @@ typedef enum {
  * @brief Basic 2D rendering primitives.
  * @{
  */
-
-/**
- * @brief RGB color representation.
- *
- * Represents a color using three 8-bit integer components
- * in the RGB color space.
- */
-typedef struct{
-    uint8_t r; /**< Red component (0–255) */
-    uint8_t g; /**< Green component (0–255) */
-    uint8_t b; /**< Blue component (0–255) */
-} FsColor;
 
 /**
  * @brief Quadrilateral primitive.

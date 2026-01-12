@@ -7,12 +7,14 @@
 #include "fireset/window.h"
 #include "fireset/core.h"
 #include "fireset/render.h"
-#include "fireset/vertex.h"
+#include "fireset/vector.h"
 #include "fireset/fstime.h"
 #include "fireset/input.h"
 #include "fireset/image.h"
 #include "fireset/audio.h"
 #include "fireset/physics.h"
+#include "fireset/color.h"
+#include "fireset/fsmath.h"
 
 /**
  * \mainpage Fireset
