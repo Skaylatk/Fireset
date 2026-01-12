@@ -1,17 +1,19 @@
 var searchData=
 [
-  ['fscircle_0',['FsCircle',['../structFsCircle.html',1,'']]],
-  ['fscolor_1',['FsColor',['../structFsColor.html',1,'']]],
-  ['fsimage_2',['FsImage',['../structFsImage.html',1,'']]],
-  ['fsinputkeystate_3',['FsInputKeyState',['../structFsInputKeyState.html',1,'']]],
-  ['fsline_4',['FsLine',['../structFsLine.html',1,'']]],
-  ['fspoint_5',['FsPoint',['../structFsPoint.html',1,'']]],
-  ['fsquad_6',['FsQuad',['../structFsQuad.html',1,'']]],
-  ['fssound_7',['FsSound',['../structFsSound.html',1,'']]],
-  ['fssoundsource_8',['FsSoundSource',['../structFsSoundSource.html',1,'']]],
-  ['fssprite_9',['FsSprite',['../structFsSprite.html',1,'']]],
-  ['fstexture_10',['FsTexture',['../structFsTexture.html',1,'']]],
-  ['fstriangle_11',['FsTriangle',['../structFsTriangle.html',1,'']]],
-  ['fsvec2_12',['FsVec2',['../structFsVec2.html',1,'']]],
-  ['fswindow_13',['FsWindow',['../structFsWindow.html',1,'']]]
+  ['fsbody_0',['FsBody',['../structFsBody.html',1,'']]],
+  ['fscircle_1',['FsCircle',['../structFsCircle.html',1,'']]],
+  ['fscolor_2',['FsColor',['../structFsColor.html',1,'']]],
+  ['fsimage_3',['FsImage',['../structFsImage.html',1,'']]],
+  ['fsinputkeystate_4',['FsInputKeyState',['../structFsInputKeyState.html',1,'']]],
+  ['fsline_5',['FsLine',['../structFsLine.html',1,'']]],
+  ['fspoint_6',['FsPoint',['../structFsPoint.html',1,'']]],
+  ['fsquad_7',['FsQuad',['../structFsQuad.html',1,'']]],
+  ['fssound_8',['FsSound',['../structFsSound.html',1,'']]],
+  ['fssoundsource_9',['FsSoundSource',['../structFsSoundSource.html',1,'']]],
+  ['fsspace_10',['FsSpace',['../structFsSpace.html',1,'']]],
+  ['fssprite_11',['FsSprite',['../structFsSprite.html',1,'']]],
+  ['fstexture_12',['FsTexture',['../structFsTexture.html',1,'']]],
+  ['fstriangle_13',['FsTriangle',['../structFsTriangle.html',1,'']]],
+  ['fsvec2_14',['FsVec2',['../structFsVec2.html',1,'']]],
+  ['fswindow_15',['FsWindow',['../structFsWindow.html',1,'']]]
 ];

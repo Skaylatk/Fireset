@@ -1,5 +1,8 @@
 <map id="FsSpace" name="FsSpace">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,106,81,134"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,271,81,299"/>
 <area shape="rect" id="Node000002" href="$structFsVec2.html" title="2D vector." alt="" coords="9,5,77,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="45,47,46,106,40,105,41,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="40,46,37,116,37,198,44,271,39,271,31,198,32,116,39,51"/>
+<area shape="rect" id="Node000003" href="$structFsBody.html" title=" " alt="" coords="111,160,180,188"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="61,44,139,159,134,161,59,48"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="125,201,57,273,53,269,121,198"/>
 </map>

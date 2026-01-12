@@ -103,8 +103,8 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaac9671c169dfe1ba6bf7a8481d4745ef" id="r_gaac9671c169dfe1ba6bf7a8481d4745ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structFsWindow.html">FsWindow</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaac9671c169dfe1ba6bf7a8481d4745ef">fsWindowCreate</a> (const char *name, <a class="el" href="structFsVec2.html">FsVec2</a> size)</td></tr>
-<tr class="memdesc:gaac9671c169dfe1ba6bf7a8481d4745ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a window.  <br /></td></tr>
+<tr class="memitem:gaefa05de64f0b4fc16c791f7c5ad0097b" id="r_gaefa05de64f0b4fc16c791f7c5ad0097b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structFsWindow.html">FsWindow</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaefa05de64f0b4fc16c791f7c5ad0097b">fsWindowCreate</a> (const char *name, <a class="el" href="structFsVec2.html">FsVec2</a> size, bool fullscreen)</td></tr>
+<tr class="memdesc:gaefa05de64f0b4fc16c791f7c5ad0097b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a window.  <br /></td></tr>
 <tr class="memitem:ga3f73f18edb9a810871b4feab8d131aa9" id="r_ga3f73f18edb9a810871b4feab8d131aa9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3f73f18edb9a810871b4feab8d131aa9">fsWindowHandle</a> (<a class="el" href="structFsWindow.html">FsWindow</a> *window)</td></tr>
 <tr class="memdesc:ga3f73f18edb9a810871b4feab8d131aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates a window.  <br /></td></tr>
 <tr class="memitem:gab93569ba69eb02b1330276582444b866" id="r_gab93569ba69eb02b1330276582444b866"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab93569ba69eb02b1330276582444b866">fsWindowDestroy</a> (<a class="el" href="structFsWindow.html">FsWindow</a> *window)</td></tr>
@@ -115,8 +115,8 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <p>Window management functions and types. </p>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="gaac9671c169dfe1ba6bf7a8481d4745ef" name="gaac9671c169dfe1ba6bf7a8481d4745ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaac9671c169dfe1ba6bf7a8481d4745ef">&#9670;&#160;</a></span>fsWindowCreate()</h2>
+<a id="gaefa05de64f0b4fc16c791f7c5ad0097b" name="gaefa05de64f0b4fc16c791f7c5ad0097b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaefa05de64f0b4fc16c791f7c5ad0097b">&#9670;&#160;</a></span>fsWindowCreate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -129,7 +129,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structFsVec2.html">FsVec2</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="structFsVec2.html">FsVec2</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>fullscreen</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -140,6 +145,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">name</td><td>The name/title of the generated window. </td></tr>
     <tr><td class="paramname">size</td><td>The Vec2 size of the window. </td></tr>
+    <tr><td class="paramname">fullscreen</td><td>If window is or not Fullscreen </td></tr>
   </table>
   </dd>
 </dl>
