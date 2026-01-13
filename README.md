@@ -3,6 +3,8 @@
 ![Static Badge](https://img.shields.io/badge/Language%20-%20C%20-%20rgb(50%2C%2050%2C%20255))
 ![GitHub License](https://img.shields.io/github/license/saintsHr/Fireset)
 ![GitHub Downloads](https://img.shields.io/github/downloads/saintsHr/Fireset/total)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/saintsHr/Fireset/.github%2Fworkflows%2Fci.yml)
+
 
 ![placeholder](assets/logo.png)
 
