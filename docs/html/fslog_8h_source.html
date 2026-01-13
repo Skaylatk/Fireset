@@ -161,17 +161,17 @@ $(function(){initNavTree('fslog_8h_source.html','',''); });
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">double</span> time = <a class="code hl_function" href="group__Time.html#gaf8fead2f163a2902c647f35af24c5708">fsTimeGetTime</a>();</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">long</span> <span class="keywordtype">long</span> totalMs = (<span class="keywordtype">long</span> long)(time * 1000.0);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> totalMs = (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> long)(time * 1000.0);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">int</span> ms = totalMs % 1000;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">int</span> totalSeconds = totalMs / 1000;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> ms = totalMs % 1000;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> totalSeconds = totalMs / 1000;</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">int</span> s = totalSeconds % 60;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">int</span> m = (totalSeconds / 60) % 60;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">int</span> h = totalSeconds / 3600;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> s = totalSeconds % 60;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> m = (totalSeconds / 60) % 60;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> h = totalSeconds / 3600;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    printf(</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="stringliteral">&quot;[%02d:%02d:%02d.%03d][%s%s\033[0m][%s] &quot;</span>,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="stringliteral">&quot;[%02lld:%02lld:%02lld.%03lld][%s%s\033[0m][%s] &quot;</span>,</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        h, m, s, ms,</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        FS_ERROR_COLOR[sev],</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        FS_ERROR_STRING[sev],</div>

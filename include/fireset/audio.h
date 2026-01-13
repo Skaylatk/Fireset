@@ -25,7 +25,7 @@ typedef struct {
     int channels;    /**< Number of channels (1 = mono, 2 = stereo) */
     int sampleRate;  /**< Sample rate in Hz */
     int bps;         /**< Bits per sample (usually 16) */
-    int frames;      /**< Total number of frames */
+    long frames;      /**< Total number of frames */
     short* samples;  /**< Raw PCM samples */
     ALenum format;   /**< OpenAL format (AL_FORMAT_MONO16 or AL_FORMAT_STEREO16) */
     ALuint buffer;   /**< OpenAL buffer handle */
@@ -82,7 +82,7 @@ FsSoundSource fsSoundSourceCreate(FsVec2 position, bool looping);
  * @param source Pointer to the FsSoundSource.
  * @param volume Volume in percentage (0–100).
  */
-void fsSoundSourcePlay(FsSound* sound, FsSoundSource* source, int volume);
+void fsSoundSourcePlay(FsSound* sound, FsSoundSource* source, float volume);
 
 /**
  * @brief Stops a sound source.

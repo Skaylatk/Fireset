@@ -30,29 +30,29 @@ void fsSpaceAddBody(FsSpace* space, FsBody* body){
 }
 
 void fsSpaceStep(FsSpace* space, float stepTime){
-    static float acumulador = 0.0f;
-    float intervalo = 1.0f / stepTime;
+    static double acumulador = 0.0f;
+    float interval = 1.0f / stepTime;
 
     acumulador += fsTimeGetDelta();
 
-    while (acumulador >= intervalo){
-        acumulador -= intervalo;
+    while (acumulador >= interval){
+        acumulador -= interval;
 
         for (int i = 0; i < space->bodyCount; i++){
             FsBody* body = space->bodies[i];
             if (!body) continue;
 
             // apply gravity
-            body->velocity.x += space->gravity.x * intervalo;
-            body->velocity.y += space->gravity.y * intervalo;
+            body->velocity.x += space->gravity.x * interval;
+            body->velocity.y += space->gravity.y * interval;
 
             // apply damping
             body->velocity.x *= space->damping.x;
             body->velocity.y *= space->damping.y;
 
             // apply velocity
-            body->position.x += body->velocity.x * intervalo;
-            body->position.y += body->velocity.y * intervalo;
+            body->position.x += body->velocity.x * interval;
+            body->position.y += body->velocity.y * interval;
         }
     }
 }

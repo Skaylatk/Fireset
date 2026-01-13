@@ -7,12 +7,12 @@
 #include "fireset/fslog.h"
 #include <math.h>
 
-float fsLookAt(FsVec2 origin, FsVec2 target, FsDirection forward){
+double fsLookAt(FsVec2 origin, FsVec2 target, FsDirection forward){
     float dx = target.x - origin.x;
     float dy = target.y - origin.y;
 
-    float base_angle = atan2f(dy, dx) * (180.0f / PI);
-    float angle = base_angle;
+    double base_angle = atan2f(dy, dx) * (180.0f / PI);
+    double angle = base_angle;
 
     switch(forward){
         case FS_DIRECTION_UP:
@@ -160,7 +160,7 @@ void fsDrawCircle(const FsCircle* circle, int zindex){
         glBegin(GL_TRIANGLE_FAN);
             glVertex2f(0.0f, 0.0f);
             for(int i = 0; i <= segments; i++){
-                float theta = (float)i / (float)segments * 2.0f * PI;
+                float theta = (float)i / (float)segments * 2.0f * (float)PI;
                 float x = cosf(theta) * 0.5f;
                 float y = sinf(theta) * 0.5f;
                 glVertex2f(x, y);

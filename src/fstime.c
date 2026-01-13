@@ -87,7 +87,7 @@ double fsTimeGetDelta(void){
 #include <errno.h>
 #endif
 
-void fsWait(unsigned long ms){
+void fsWait(long ms){
 #ifdef _WIN32
     Sleep(ms);
 #else

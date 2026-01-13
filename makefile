@@ -6,7 +6,7 @@
 # Project
 # ====================================================
 TARGET := fireset
-VERSION := 0.1.0
+VERSION := 0.3.0
 
 # ====================================================
 # Paths
@@ -101,9 +101,12 @@ cloc:
 # ====================================================
 # CI (Continuous Integration)
 # ====================================================
+
+SRC_NO_STB = $(filter-out src/stb_image.c, $(SRC))
+
 ci:
 	$(MAKE) clean || true
-	$(MAKE) CFLAGS="$(CFLAGS) -Werror -Wshadow -Wconversion -Wpedantic -fno-common"
+	$(MAKE) SRCS="$(filter-out src/stb_image_impl.c, $(SRCS))" CFLAGS="$(CFLAGS) -Werror -Wshadow -Wconversion -Wpedantic -fno-common"
 
 # ====================================================
 # Package configuration files (.pc)

@@ -118,7 +118,7 @@ typedef struct{
  *
  * @return Angle in degrees required to face the target.
  */
-float fsLookAt(FsVec2 origin, FsVec2 target, FsDirection forward);
+double fsLookAt(FsVec2 origin, FsVec2 target, FsDirection forward);
 
 /**
  * @brief Draws a pixel.

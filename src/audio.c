@@ -38,7 +38,7 @@ FsSound fsSoundLoad(const char* filename){
         : AL_FORMAT_STEREO16;
 
     // allocates memory for samples
-    sound.samples = malloc(sound.frames * sound.channels * sizeof(short));
+    sound.samples = malloc((size_t)sound.frames * (size_t)sound.channels * sizeof(short));
     if (!sound.samples){
         fsLog(FS_ERROR, FS_AUDIO, "Cannot allocate memory for '%s' samples.", filename);
         return nullsnd;
@@ -53,6 +53,11 @@ FsSound fsSoundLoad(const char* filename){
         return nullsnd;
     }
 
+    size_t byteCount =
+        (size_t)sound.frames *
+        (size_t)sound.channels *
+        sizeof(short);
+
     // generates buffer
     ALuint buffer;
     alGenBuffers(1, &buffer);
@@ -60,7 +65,7 @@ FsSound fsSoundLoad(const char* filename){
         buffer,
         sound.format,
         sound.samples,
-        sound.frames * sound.channels * sizeof(short),
+        (ALsizei)byteCount,
         sound.sampleRate
     );
     sound.buffer = buffer;
@@ -104,10 +109,10 @@ void fsSoundSourceHandle(int count, FsSoundSource* sources){
     }
 }
 
-void fsSoundSourcePlay(FsSound* sound, FsSoundSource* source, int volume){
+void fsSoundSourcePlay(FsSound* sound, FsSoundSource* source, float volume){
     if (source->handle == 0) {
         alGenSources(1, &source->handle);
-        alSourcei(source->handle, AL_BUFFER, sound->buffer);
+        alSourcei(source->handle, AL_BUFFER, (ALint)sound->buffer);
         alSourcei(source->handle, AL_SOURCE_RELATIVE, AL_FALSE);
         alSource3f(source->handle, AL_POSITION, source->position.x, source->position.y, 0.0f);
         alSourcef(source->handle, AL_REFERENCE_DISTANCE, AUDIO_FULL_VOLUME_DISTANCE);

@@ -22,14 +22,14 @@ FsVec2 fsMonitorGetSize(){
 
     if (monitor == NULL || mode == NULL) return (FsVec2){0};
 
-    return (FsVec2){mode->width, mode->height};
+    return (FsVec2){(float)mode->width, (float)mode->height};
 }
 
 FsWindow fsWindowCreate(const char* name, FsVec2 size, bool fullscreen){
     FsWindow window = {
         .name = name,
-        .width = size.x,
-        .height = size.y
+        .width = (int)size.x,
+        .height = (int)size.y
     };
 
     FsWindow nullwin = {0};

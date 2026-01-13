@@ -4,8 +4,12 @@
 
 #define VERSION "v0.3.0"
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wconversion"
+#pragma GCC diagnostic ignored "-Wsign-conversion"
 #define STB_IMAGE_IMPLEMENTATION
 #include "fireset/stb_image.h"
+#pragma GCC diagnostic pop
 
 #include "fireset/core.h"
 #include "fireset/fstime.h"

@@ -44,6 +44,6 @@ var group__Render =
     [ "fsDrawQuad", "group__Render.html#gabb109b9fed5cdf656f1b0e510641f045", null ],
     [ "fsDrawSprite", "group__Render.html#ga59d8352c5337df303eb47efdc307fc26", null ],
     [ "fsDrawTriangle", "group__Render.html#ga1b9ce3db4d00f0dec130e50f1aeb8408", null ],
-    [ "fsLookAt", "group__Render.html#gaac020912b2d0d6720f51667476f2b9b3", null ],
+    [ "fsLookAt", "group__Render.html#ga39decb4a8e535bda7d11ba3395df3bf4", null ],
     [ "fsOrthoSet", "group__Render.html#gaabce2669ec09b0b2357420bbd54cd4ed", null ]
 ];

@@ -67,17 +67,17 @@ static inline void fsLog(FS_SEVERITY sev, FS_MODULE mod, const char* fmt, ...){
 
     double time = fsTimeGetTime();
 
-    long long totalMs = (long long)(time * 1000.0);
+    unsigned long long totalMs = (unsigned long long)(time * 1000.0);
 
-    int ms = totalMs % 1000;
-    int totalSeconds = totalMs / 1000;
+    unsigned long long ms = totalMs % 1000;
+    unsigned long long totalSeconds = totalMs / 1000;
 
-    int s = totalSeconds % 60;
-    int m = (totalSeconds / 60) % 60;
-    int h = totalSeconds / 3600;
+    unsigned long long s = totalSeconds % 60;
+    unsigned long long m = (totalSeconds / 60) % 60;
+    unsigned long long h = totalSeconds / 3600;
 
     printf(
-        "[%02d:%02d:%02d.%03d][%s%s\033[0m][%s] ",
+        "[%02lld:%02lld:%02lld.%03lld][%s%s\033[0m][%s] ",
         h, m, s, ms,
         FS_ERROR_COLOR[sev],
         FS_ERROR_STRING[sev],

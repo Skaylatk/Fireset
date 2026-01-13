@@ -66,6 +66,6 @@ void fsTimeInit(void);
  * @note On Windows, uses `Sleep()`.
  * @note On Linux/macOS, uses `nanosleep()` and handles `EINTR`.
  */
-void fsWait(unsigned long ms);
+void fsWait(long ms);
 
 /** @} */
