@@ -35,8 +35,11 @@ void fsSpaceStep(FsSpace* space, float stepTime){
 
     acumulador += fsTimeGetDelta();
 
-    while (acumulador >= interval){
+    int maxSteps = 4;
+    int steps = 0;
+    while (acumulador >= interval && steps < maxSteps){
         acumulador -= interval;
+        steps++;
 
         for (int i = 0; i < space->bodyCount; i++){
             FsBody* body = space->bodies[i];
