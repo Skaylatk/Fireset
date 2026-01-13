@@ -99,6 +99,13 @@ cloc:
 	cloc ./src ./include --exclude-list-file=clocignore.txt
 
 # ====================================================
+# CI (Continuous Integration)
+# ====================================================
+ci:
+	$(MAKE) clean || true
+	$(MAKE) CFLAGS="$(CFLAGS) -Werror -Wshadow -Wconversion -Wpedantic -fno-common"
+
+# ====================================================
 # Package configuration files (.pc)
 # ====================================================
 $(BUILD_DIR)/$(TARGET).pc: debian/$(TARGET).pc.in
