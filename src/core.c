@@ -2,7 +2,7 @@
 // Licensed under the MIT License
 // Github: https://github.com/saintsHr/Fireset
 
-#define VERSION "v0.3.0"
+#define VERSION "v0.4.0"
 
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wconversion"
